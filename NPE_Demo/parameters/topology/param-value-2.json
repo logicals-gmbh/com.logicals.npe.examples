@@ -1,0 +1,259 @@
+{
+  "id": "SM0002_SI4_110",
+  "groups": [
+    {
+      "id": "SM0002_Basic_Node",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0002_MinFwRev",
+          "value": "256",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_SAdr-ToSCM",
+          "value": "1023",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0002_Safety_Response_Time",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0002_ManualResponseTimeConfiguration",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_SafeDataDuration",
+          "value": "20000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_TPL",
+          "value": "1",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_NodeGuardingPackets",
+          "value": "5",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0002_SafeDigitalInput01",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0002_SI01_0Psrc",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_2_1",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_2_2",
+          "value": "20000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_2_3",
+          "value": "5000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_2_4_2",
+          "value": "1",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0002_SafeDigitalInput02",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0002_SI02_0Psrc",
+          "value": "2",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_3_1",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_3_2",
+          "value": "200000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_Discrepance_Time_us_02",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_TwoChannelProcessingMode03",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0002_SafeDigitalInput03",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0002_SI03_0Psrc",
+          "value": "3",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_4_1",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_4_2",
+          "value": "200000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_4_3",
+          "value": "50000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_4_4_2",
+          "value": "1",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0002_SafeDigitalInput04",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0002_SI04_0Psrc",
+          "value": "4",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_5_1",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_5_2",
+          "value": "200000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_Discrepance_Time_us_04",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_5_4",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0002_PulseOutput",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0002_PulseOut1_Mode",
+          "value": "1",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_PulseOut2_Mode",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_PulseOut3_Mode",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_PulseOut4_Mode",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0002_HiddenGroup",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0002_CRC_Number_of_RxSpdos",
+          "value": "1",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_CRC_Number_of_TxSpdos",
+          "value": "1",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_CRC_Number_of_Maps_per_Spdo",
+          "value": "8",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_CRC_Number_of_Machine_Options",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_ParameterVersionSI",
+          "value": "4",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_ParameterLengthSI",
+          "value": "68",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_TestpulsePeriod_ms",
+          "value": "100",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_ExtLowTime_us",
+          "value": "2500",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_Module_Cycle_Time_min_us",
+          "value": "400",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_Module_Cycle_Time_max_us",
+          "value": "799",
+          "commissionable": false
+        },
+        {
+          "id": "SM0002_SODautoDefault",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    }
+  ],
+  "values": []
+}

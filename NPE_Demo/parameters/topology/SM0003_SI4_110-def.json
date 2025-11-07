@@ -1,0 +1,845 @@
+{
+  "id": "SM0003_SI4_110",
+  "name": "SM003 DI_4Ch - DI_4Cha",
+  "visibility": "true",
+  "customData": {
+    "HiddenChannels": "[{\"groupName\":\"General\",\"ioChannels\":[]},{\"groupName\":\"Input0104\",\"ioChannels\":[]}]",
+    "cData": "{\"goesOperational\":true,\"enabled\":true,\"deviceInformation\":{\"vendorId\":\"00:60:65\",\"productCode\":\"0x1DBD\",\"revisionDate\":\"2015-01-26T13:07:38\",\"revisionNumber\":\"1.0.0\",\"hWTypeCode\":27},\"timeConfiguration\":{\"quartzTolerance\":\"50ppm\",\"minReactionTime\":500},\"dataTransport\":{\"acyclicTransport\":[{\"name\":\"SSDO_IN\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\",\"dataAlignment\":{\"type\":\"K_OSDD_DATA_ALIGN_BYTE_SIZE\",\"value\":27},\"octetSize\":27,\"useForScm\":true},{\"name\":\"SSDO_OUT\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\",\"dataAlignment\":{\"type\":\"K_OSDD_DATA_ALIGN_BYTE_SIZE\",\"value\":27},\"octetSize\":27,\"useForScm\":true}],\"crossMapping\":[]},\"dataTransportOSTD\":{\"genericTransports\":[]},\"channelConfiguration\":{\"dataTransport\":{\"spdoTransport\":[{\"name\":\"SafeIN\",\"channelDirection\":\"K_OSDD_DATA_DIRECTION_INPUT\",\"octetSize\":15,\"dataAlignment\":{\"type\":\"K_OSDD_DATA_ALIGN_BYTE_SIZE\",\"value\":15},\"maxReactionTime\":100,\"maxNrMappings\":4},{\"name\":\"SafeTIME\",\"channelDirection\":\"K_OSDD_DATA_DIRECTION_OUTPUT\",\"octetSize\":11,\"dataAlignment\":{\"type\":\"K_OSDD_DATA_ALIGN_BYTE_SIZE\",\"value\":11},\"maxReactionTime\":100,\"maxNrMappings\":0}]}},\"info\":[{\"infoName\":\"Interface\",\"type\":\"\",\"value\":\"IF6.ST3\"},{\"infoName\":\"HWC_Revision\",\"type\":\"\",\"value\":\"2.4.0.0\"},{\"infoName\":\"HWC_LastEdit\",\"type\":\"\",\"value\":\"08/03/2022 17:31:28\"},{\"infoName\":\"AS_Name\",\"type\":\"\",\"value\":\"X20SI4100a\"},{\"infoName\":\"FirstPublishedSafetyRelease\",\"type\":\"\",\"value\":\"5.4\"},{\"infoName\":\"Description-de\",\"type\":\"\",\"value\":\"X20 Safe Digital In, 4xE, 24V\"},{\"infoName\":\"Description-en\",\"type\":\"\",\"value\":\"X20 Safe Digital In, 4xI, 24V\"}],\"mSpecificObjectDictionary\":[]}"
+  },
+  "groups": [
+    {
+      "id": "SM0003_Basic_Node",
+      "name": "Basic_Node",
+      "visibility": "true",
+      "customData": {
+        "cData": "{}"
+      },
+      "parameters": [
+        {
+          "id": "SM0003_MinFwRev",
+          "name": "Min. required firmware revision",
+          "type": "UInt32",
+          "unit": "",
+          "default": "256",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"vendorInfo\":[\"ExtVisibility,DesignerSpecific\"],\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Test version",
+              "value": "1"
+            },
+            {
+              "name": "Basic release",
+              "value": "256"
+            }
+          ]
+        },
+        {
+          "id": "SM0003_SAdr-ToSCM",
+          "name": "SAdr-ToSCM",
+          "type": "UInt16",
+          "default": "1023",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"SoD\",\"sodPosition\":{\"index\":\"0x1200\",\"subIndex\":\"0x02\"},\"vendorInfo\":[\"CopyToDomainCRC,false\"],\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0003_Safety_Response_Time",
+      "name": "Safety_Response_Time",
+      "visibility": "true",
+      "customData": {
+        "cData": "{\"vendorInfo\":[\"CopyLimitation,ToIOs\"]}"
+      },
+      "parameters": [
+        {
+          "id": "SM0003_ManualResponseTimeConfiguration",
+          "name": "Manual configuration",
+          "type": "UInt8",
+          "unit": "",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"vendorInfo\":[\"ExtVisibility,DesignerSpecific\"],\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "No",
+              "value": "0"
+            },
+            {
+              "name": "Yes",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "id": "SM0003_SafeDataDuration",
+          "name": "Safe data duration",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "20000",
+          "step": "1",
+          "min": "2000",
+          "max": "10000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"vendorInfo\":[\"ExtVisibility,DesignerSpecific\"],\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_TPL",
+          "name": "Additional tolerated packet loss",
+          "type": "UInt32",
+          "unit": "Packets",
+          "default": "1",
+          "step": "1",
+          "min": "0",
+          "max": "10",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"vendorInfo\":[\"ExtVisibility,DesignerSpecific\"],\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_NodeGuardingPackets",
+          "name": "Node guarding packets",
+          "type": "UInt8",
+          "unit": "Packets",
+          "default": "5",
+          "step": "1",
+          "min": "1",
+          "max": "255",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"vendorInfo\":[\"ExtVisibility,DesignerSpecific\"],\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0003_SafeDigitalInput01",
+      "name": "SafeDigitalInput01",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0003_SI01_0Psrc",
+          "name": "Pulse source",
+          "type": "UInt8",
+          "unit": "",
+          "default": "1",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":5},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Pulse 1",
+              "value": "1"
+            },
+            {
+              "name": "Pulse 2",
+              "value": "2"
+            },
+            {
+              "name": "Pulse 3",
+              "value": "3"
+            },
+            {
+              "name": "Pulse 4",
+              "value": "4"
+            },
+            {
+              "name": "No pulse",
+              "value": "0"
+            },
+            {
+              "name": "Other module",
+              "value": "255"
+            }
+          ]
+        },
+        {
+          "id": "SM0003_2_1",
+          "name": "Filter off",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "500000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":6},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_2_2",
+          "name": "Filter on",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "200000",
+          "step": "1",
+          "min": "0",
+          "max": "500000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":7},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_2_3",
+          "name": "Discrepancy time",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "50000",
+          "step": "1",
+          "min": "0",
+          "max": "10000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":8},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_2_4_2",
+          "name": "Dual-channel processing mode",
+          "type": "UInt8",
+          "unit": "",
+          "default": "1",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":9},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Equivalent",
+              "value": "1"
+            },
+            {
+              "name": "Antivalent",
+              "value": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SM0003_SafeDigitalInput02",
+      "name": "SafeDigitalInput02",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0003_SI02_0Psrc",
+          "name": "Pulse source",
+          "type": "UInt8",
+          "unit": "",
+          "default": "2",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":10},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Pulse 1",
+              "value": "1"
+            },
+            {
+              "name": "Pulse 2",
+              "value": "2"
+            },
+            {
+              "name": "Pulse 3",
+              "value": "3"
+            },
+            {
+              "name": "Pulse 4",
+              "value": "4"
+            },
+            {
+              "name": "No pulse",
+              "value": "0"
+            },
+            {
+              "name": "Other module",
+              "value": "255"
+            }
+          ]
+        },
+        {
+          "id": "SM0003_3_1",
+          "name": "Filter off",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "500000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":11},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_3_2",
+          "name": "Filter on",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "200000",
+          "step": "1",
+          "min": "0",
+          "max": "500000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":12},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_Discrepance_Time_us_02",
+          "name": "Discrepance_Time_us_02",
+          "type": "UInt32",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":13},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_TwoChannelProcessingMode03",
+          "name": "TwoChannelProcessingMode03",
+          "type": "UInt8",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":14},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0003_SafeDigitalInput03",
+      "name": "SafeDigitalInput03",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0003_SI03_0Psrc",
+          "name": "Pulse source",
+          "type": "UInt8",
+          "unit": "",
+          "default": "3",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":15},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Pulse 1",
+              "value": "1"
+            },
+            {
+              "name": "Pulse 2",
+              "value": "2"
+            },
+            {
+              "name": "Pulse 3",
+              "value": "3"
+            },
+            {
+              "name": "Pulse 4",
+              "value": "4"
+            },
+            {
+              "name": "No pulse",
+              "value": "0"
+            },
+            {
+              "name": "Other module",
+              "value": "255"
+            }
+          ]
+        },
+        {
+          "id": "SM0003_4_1",
+          "name": "Filter off",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "500000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":16},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_4_2",
+          "name": "Filter on",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "200000",
+          "step": "1",
+          "min": "0",
+          "max": "500000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":17},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_4_3",
+          "name": "Discrepancy time",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "50000",
+          "step": "1",
+          "min": "0",
+          "max": "10000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":18},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_4_4_2",
+          "name": "Dual-channel processing mode",
+          "type": "UInt8",
+          "unit": "",
+          "default": "1",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":19},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Equivalent",
+              "value": "1"
+            },
+            {
+              "name": "Antivalent",
+              "value": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SM0003_SafeDigitalInput04",
+      "name": "SafeDigitalInput04",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0003_SI04_0Psrc",
+          "name": "Pulse source",
+          "type": "UInt8",
+          "unit": "",
+          "default": "4",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":20},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Pulse 1",
+              "value": "1"
+            },
+            {
+              "name": "Pulse 2",
+              "value": "2"
+            },
+            {
+              "name": "Pulse 3",
+              "value": "3"
+            },
+            {
+              "name": "Pulse 4",
+              "value": "4"
+            },
+            {
+              "name": "No pulse",
+              "value": "0"
+            },
+            {
+              "name": "Other module",
+              "value": "255"
+            }
+          ]
+        },
+        {
+          "id": "SM0003_5_1",
+          "name": "Filter off",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "500000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":21},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_5_2",
+          "name": "Filter on",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "200000",
+          "step": "1",
+          "min": "0",
+          "max": "500000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":22},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_Discrepance_Time_us_04",
+          "name": "Discrepance_Time_us_04",
+          "type": "UInt32",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":23},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_5_4",
+          "name": "5_4",
+          "type": "UInt8",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":24},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0003_PulseOutput",
+      "name": "PulseOutput",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0003_PulseOut1_Mode",
+          "name": "Pulse 1 mode",
+          "type": "UInt8",
+          "unit": "",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":25},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Internal",
+              "value": "0"
+            },
+            {
+              "name": "External",
+              "value": "1"
+            },
+            {
+              "name": "DYNlink",
+              "value": "2"
+            },
+            {
+              "name": "DYNlink inverted",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "id": "SM0003_PulseOut2_Mode",
+          "name": "Pulse 2 mode",
+          "type": "UInt8",
+          "unit": "",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":26},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Internal",
+              "value": "0"
+            },
+            {
+              "name": "External",
+              "value": "1"
+            },
+            {
+              "name": "DYNlink",
+              "value": "2"
+            },
+            {
+              "name": "DYNlink inverted",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "id": "SM0003_PulseOut3_Mode",
+          "name": "Pulse 3 mode",
+          "type": "UInt8",
+          "unit": "",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":27},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Internal",
+              "value": "0"
+            },
+            {
+              "name": "External",
+              "value": "1"
+            },
+            {
+              "name": "DYNlink",
+              "value": "2"
+            },
+            {
+              "name": "DYNlink inverted",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "id": "SM0003_PulseOut4_Mode",
+          "name": "Pulse 4 mode",
+          "type": "UInt8",
+          "unit": "",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":28},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Internal",
+              "value": "0"
+            },
+            {
+              "name": "External",
+              "value": "1"
+            },
+            {
+              "name": "DYNlink",
+              "value": "2"
+            },
+            {
+              "name": "DYNlink inverted",
+              "value": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SM0003_HiddenGroup",
+      "name": "HiddenGroup",
+      "visibility": "false",
+      "parameters": [
+        {
+          "id": "SM0003_CRC_Number_of_RxSpdos",
+          "name": "CRC_Number_of_RxSpdos",
+          "type": "UInt32",
+          "default": "1",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_CRC_Number_of_TxSpdos",
+          "name": "CRC_Number_of_TxSpdos",
+          "type": "UInt32",
+          "default": "1",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_CRC_Number_of_Maps_per_Spdo",
+          "name": "CRC_Number_of_Maps_per_Spdo",
+          "type": "UInt32",
+          "default": "8",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_CRC_Number_of_Machine_Options",
+          "name": "CRC_Number_of_Machine_Options",
+          "type": "UInt32",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_ParameterVersionSI",
+          "name": "ParameterVersionSI",
+          "type": "UInt16",
+          "default": "4",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":1},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_ParameterLengthSI",
+          "name": "ParameterLengthSI",
+          "type": "UInt16",
+          "default": "68",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":2},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_TestpulsePeriod_ms",
+          "name": "TestpulsePeriod_ms",
+          "type": "UInt16",
+          "default": "100",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":3},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_ExtLowTime_us",
+          "name": "ExtLowTime_us",
+          "type": "UInt16",
+          "default": "2500",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":4},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_Module_Cycle_Time_min_us",
+          "name": "Module_Cycle_Time_min_us",
+          "type": "UInt32",
+          "default": "400",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_Module_Cycle_Time_max_us",
+          "name": "Module_Cycle_Time_max_us",
+          "type": "UInt32",
+          "default": "799",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0003_SODautoDefault",
+          "name": "SODautoDefault",
+          "type": "UInt32",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        }
+      ]
+    }
+  ]
+}

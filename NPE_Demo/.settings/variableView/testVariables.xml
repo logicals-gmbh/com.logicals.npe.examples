@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <configuration name="LocalConfiguration">
+        <resource name="local">
+            <variable instancePath="DriveControl.safety_plcopen_SF_EmergencyStop1.Activate"/>
+            <variable instancePath="DriveControl.safety_plcopen_SF_EmergencyStop1.DiagCode"/>
+            <variable instancePath="DriveControl.SafetyScanner.SF_Equivalent_Right.DiscrepancyTimer.Q"/>
+            <variable instancePath="DriveControl.SafetyScanner.SF_Equivalent_Right.DiscrepancyTimer.ET"/>
+            <variable instancePath="DriveControl.SafetyScanner.SF_Equivalent_Right.Activate"/>
+            <variable instancePath="DriveControl.SafetyScanner.SF_Equivalent_Right.S_ChannelA"/>
+            <variable instancePath="DriveControl.SafetyScanner.SF_Equivalent_Right.S_ChannelB"/>
+            <variable instancePath="DriveControl.SafetyScanner.SF_Equivalent_Right.DiscrepancyTime"/>
+            <variable instancePath="DriveControl.SafetyScanner.SF_Equivalent_Right.Ready"/>
+            <variable instancePath="DriveControl.SafetyScanner.SF_Equivalent_Right.S_EquivalentOut"/>
+            <variable instancePath="DriveControl.SafetyScanner.SF_Equivalent_Right.SafetyDemand"/>
+            <variable instancePath="DriveControl.SafetyScanner.SF_Equivalent_Right.Error"/>
+            <variable instancePath="DriveControl.SafetyScanner.SF_Equivalent_Right.DiagCode"/>
+            <variable instancePath="DriveControl.SafetyScanner.Activate"/>
+            <variable instancePath="DriveControl.SafetyScanner.FieldA_Ch1"/>
+            <variable instancePath="DriveControl.SafetyScanner.FieldA_Ch2"/>
+            <variable instancePath="DriveControl.SafetyScanner.FieldB_Ch1"/>
+            <variable instancePath="DriveControl.SafetyScanner.FieldB_Ch2"/>
+            <variable instancePath="DriveControl.SafetyScanner.DiscrepancyTime"/>
+            <variable instancePath="DriveControl.SafetyScanner.LeftOK"/>
+            <variable instancePath="DriveControl.SafetyScanner.AheadOK"/>
+            <variable instancePath="DriveControl.SafetyScanner.RightOK"/>
+        </resource>
+    </configuration>
+</project>

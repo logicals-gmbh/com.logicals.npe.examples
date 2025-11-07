@@ -1,0 +1,1942 @@
+{
+  "id": "SM0007_8BVSV2SAFE11_110",
+  "name": "SM007 - SafeMotion-1",
+  "visibility": "true",
+  "customData": {
+    "HiddenChannels": "[{\"groupName\":\"General\",\"ioChannels\":[]},{\"groupName\":\"AX1_ControlBasicFS\",\"ioChannels\":[{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlBasicReserved1\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x01\\\",\\\"bitMask\\\":\\\"0x20\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x01\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":5}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlSTO1\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x01\\\",\\\"bitMask\\\":\\\"0x40\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x01\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":6}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlBasicVendor02\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x01\\\",\\\"bitMask\\\":\\\"0x80\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x01\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":7}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"}]},{\"groupName\":\"AX1_ControlSpeedFS\",\"ioChannels\":[{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlSS2\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x02\\\",\\\"bitMask\\\":\\\"0x02\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x02\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":9}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlSLA\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x02\\\",\\\"bitMask\\\":\\\"0x04\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x02\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":10}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlSLS1\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x02\\\",\\\"bitMask\\\":\\\"0x08\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x02\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":11}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlSLS2\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x02\\\",\\\"bitMask\\\":\\\"0x10\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x02\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":12}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlSpeedReserved1\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x02\\\",\\\"bitMask\\\":\\\"0x20\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x02\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":13}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlSLS3\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x02\\\",\\\"bitMask\\\":\\\"0x40\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x02\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":14}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlSLS4\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x02\\\",\\\"bitMask\\\":\\\"0x80\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x02\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":15}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"}]},{\"groupName\":\"AX1_ControlAdvancedFS\",\"ioChannels\":[{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlSDI_Pos\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x03\\\",\\\"bitMask\\\":\\\"0x01\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x03\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":16}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlSDI_Neg\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x03\\\",\\\"bitMask\\\":\\\"0x02\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x03\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":17}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlSLI\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x03\\\",\\\"bitMask\\\":\\\"0x04\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x03\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":18}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlSBT\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x03\\\",\\\"bitMask\\\":\\\"0x08\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x03\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":19}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlAdvancedReserved1\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x03\\\",\\\"bitMask\\\":\\\"0x10\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x03\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":20}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlSLT\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x03\\\",\\\"bitMask\\\":\\\"0x20\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x03\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":21}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlAdvancedVendor1\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x03\\\",\\\"bitMask\\\":\\\"0x40\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x03\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":22}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlAdvancedVendor2\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x03\\\",\\\"bitMask\\\":\\\"0x80\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x03\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":23}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"}]},{\"groupName\":\"AX1_ControlAbsPosFS\",\"ioChannels\":[{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlAbsPosReserverd1\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x01\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x04\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":24}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlHoming\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x02\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x04\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":25}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlReferenceSwitch\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x04\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x04\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":26}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlSLP\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x08\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x04\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":27}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlAbsPosReserved2\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x10\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x04\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":28}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlAbsPosReserved3\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x20\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x04\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":29}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlSwitchHomingMode\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x40\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x04\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":30}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_ControlAbsPosVendor2\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsCtrlChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x80\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6300\\\",\\\"subIndex\\\":\\\"0x04\\\"},\\\"vendorInfo\\\":[\\\"IsCtrlChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":31}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"}]},{\"groupName\":\"AX1_StatusBasicFS\",\"ioChannels\":[{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_NotErrorFunc\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x01\\\",\\\"bitMask\\\":\\\"0x01\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x01\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":32}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_Operational\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x01\\\",\\\"bitMask\\\":\\\"0x02\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x01\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":33}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSTO\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x01\\\",\\\"bitMask\\\":\\\"0x04\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x01\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":34}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSBC\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x01\\\",\\\"bitMask\\\":\\\"0x08\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x01\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":35}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSS1\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x01\\\",\\\"bitMask\\\":\\\"0x10\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x01\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":36}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_NotErrorEnc\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x01\\\",\\\"bitMask\\\":\\\"0x20\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x01\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":37}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSTO1\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x01\\\",\\\"bitMask\\\":\\\"0x40\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x01\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":38}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSDC\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x01\\\",\\\"bitMask\\\":\\\"0x80\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x01\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":39}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"}]},{\"groupName\":\"AX1_StatusSpeedFS\",\"ioChannels\":[{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSOS\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x02\\\",\\\"bitMask\\\":\\\"0x01\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x02\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":40}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSS2\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x02\\\",\\\"bitMask\\\":\\\"0x02\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x02\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":41}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSLA\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x02\\\",\\\"bitMask\\\":\\\"0x04\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x02\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":42}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSLS1\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x02\\\",\\\"bitMask\\\":\\\"0x08\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x02\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":43}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSLS2\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x02\\\",\\\"bitMask\\\":\\\"0x10\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x02\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":44}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSpeedReserved1\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x02\\\",\\\"bitMask\\\":\\\"0x20\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x02\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":45}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSLS3\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x02\\\",\\\"bitMask\\\":\\\"0x40\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x02\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":46}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSLS4\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x02\\\",\\\"bitMask\\\":\\\"0x80\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x02\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":47}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"}]},{\"groupName\":\"AX1_StatusAdvancedFS\",\"ioChannels\":[{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSDI_Pos\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x03\\\",\\\"bitMask\\\":\\\"0x01\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x03\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":48}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSDI_Neg\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x03\\\",\\\"bitMask\\\":\\\"0x02\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x03\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":49}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSLI\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x03\\\",\\\"bitMask\\\":\\\"0x04\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x03\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":50}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSBT\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x03\\\",\\\"bitMask\\\":\\\"0x08\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x03\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":51}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_SafetyActiveSBT\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x03\\\",\\\"bitMask\\\":\\\"0x10\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x03\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":52}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_SafetyActiveSLT\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x03\\\",\\\"bitMask\\\":\\\"0x20\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x03\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":53}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSFR\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x03\\\",\\\"bitMask\\\":\\\"0x40\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x03\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":54}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusAllReqActive\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x03\\\",\\\"bitMask\\\":\\\"0x80\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x03\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":55}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"}]},{\"groupName\":\"AX1_StatusAbsPosFS\",\"ioChannels\":[{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_NotErrorEnc1\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x01\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x04\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":56}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusHoming\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x02\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x04\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":57}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusRequestHomingOK\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x04\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x04\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":58}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSLP\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x08\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x04\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":59}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSMP\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x10\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x04\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":60}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusAbsPosReserved1\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x20\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x04\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":61}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusRSPValid\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x40\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x04\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":62}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"AX1_StatusSetPosAlive\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"IsStateChannel,true\",\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x80\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x04\\\"},\\\"vendorInfo\\\":[\\\"IsStateChannel,true\\\",\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":63}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"}]},{\"groupName\":\"AX1_SafePos\",\"ioChannels\":[{\"type\":\"K_OSDD_TYPE_INT_32\",\"id\":\"AX1_SafePOSITION_4Byte\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x05\\\",\\\"bitMask\\\":\\\"0x01\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x05\\\"},\\\"vendorInfo\\\":[\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":64}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"}]},{\"groupName\":\"AX1_SafeSpeed\",\"ioChannels\":[{\"type\":\"K_OSDD_TYPE_INT_32\",\"id\":\"AX1_SafeSPEED_4Byte\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"NotVisible,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x09\\\",\\\"bitMask\\\":\\\"0x01\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6100\\\",\\\"subIndex\\\":\\\"0x06\\\"},\\\"vendorInfo\\\":[\\\"NotVisible,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":65}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0007\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"}]},{\"groupName\":\"Current 0104\",\"ioChannels\":[]}]",
+    "cData": "{\"goesOperational\":true,\"enabled\":true,\"deviceInformation\":{\"vendorId\":\"00:60:65\",\"productCode\":\"0xA72E\",\"revisionDate\":\"2014-10-22T05:48:35\",\"revisionNumber\":\"1.0.0\",\"hWTypeCode\":275},\"timeConfiguration\":{\"quartzTolerance\":\"50ppm\",\"minReactionTime\":500},\"dataTransport\":{\"acyclicTransport\":[{\"name\":\"SSDO_IN\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\",\"dataAlignment\":{\"type\":\"K_OSDD_DATA_ALIGN_BYTE_SIZE\",\"value\":27},\"octetSize\":27,\"useForScm\":true},{\"name\":\"SSDO_OUT\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\",\"dataAlignment\":{\"type\":\"K_OSDD_DATA_ALIGN_BYTE_SIZE\",\"value\":27},\"octetSize\":27,\"useForScm\":true}],\"crossMapping\":[]},\"dataTransportOSTD\":{\"genericTransports\":[{\"name\":\"PDOi\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\",\"octetSize\":5,\"isSafe\":false}]},\"channelConfiguration\":{\"dataTransport\":{\"spdoTransport\":[{\"name\":\"SafeIN\",\"channelDirection\":\"K_OSDD_DATA_DIRECTION_INPUT\",\"octetSize\":37,\"dataAlignment\":{\"type\":\"K_OSDD_DATA_ALIGN_BYTE_SIZE\",\"value\":37},\"maxReactionTime\":100,\"maxNrMappings\":6},{\"name\":\"SafeOUT\",\"channelDirection\":\"K_OSDD_DATA_DIRECTION_OUTPUT\",\"octetSize\":19,\"dataAlignment\":{\"type\":\"K_OSDD_DATA_ALIGN_BYTE_SIZE\",\"value\":19},\"maxReactionTime\":100,\"maxNrMappings\":4}]}},\"info\":[{\"infoName\":\"Interface\",\"type\":\"\",\"value\":\"IF6.ST6\"},{\"infoName\":\"HWC_Revision\",\"type\":\"\",\"value\":\"2.5.0.0\"},{\"infoName\":\"HWC_LastEdit\",\"type\":\"\",\"value\":\"08/03/2022 17:31:28\"},{\"infoName\":\"AS_Name\",\"type\":\"\",\"value\":\"X20SA4430\"},{\"infoName\":\"FirstPublishedSafetyRelease\",\"type\":\"\",\"value\":\"5.4\"},{\"infoName\":\"Description-de\",\"type\":\"\",\"value\":\"X20 Safe Analog In, 4 bis 20 mA\"},{\"infoName\":\"Description-en\",\"type\":\"\",\"value\":\"Safe motion drive\"}],\"mSpecificObjectDictionary\":[{\"index\":\"0x6100\",\"subIndex\":\"0x01\",\"data\":\"1\"},{\"index\":\"0x6100\",\"subIndex\":\"0x02\",\"data\":\"2\"},{\"index\":\"0x6100\",\"subIndex\":\"0x03\",\"data\":\"3\"},{\"index\":\"0x6100\",\"subIndex\":\"0x04\",\"data\":\"4\"},{\"index\":\"0x6100\",\"subIndex\":\"0x05\",\"data\":\"5\"},{\"index\":\"0x6100\",\"subIndex\":\"0x06\",\"data\":\"6\"},{\"index\":\"0x6300\",\"subIndex\":\"0x01\",\"data\":\"7\"},{\"index\":\"0x6300\",\"subIndex\":\"0x02\",\"data\":\"8\"},{\"index\":\"0x6300\",\"subIndex\":\"0x03\",\"data\":\"9\"},{\"index\":\"0x6300\",\"subIndex\":\"0x04\",\"data\":\"10\"}]}"
+  },
+  "groups": [
+    {
+      "id": "SM0007_Basic_Node",
+      "name": "Basic_Node",
+      "visibility": "true",
+      "customData": {
+        "cData": "{}"
+      },
+      "parameters": [
+        {
+          "id": "SM0007_MinFwRev",
+          "name": "Min. required firmware revision",
+          "type": "UInt32",
+          "unit": "",
+          "default": "256",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"vendorInfo\":[\"ExtVisibility,DesignerSpecific\"],\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Test version",
+              "value": "1"
+            },
+            {
+              "name": "Basic release",
+              "value": "256"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_SAdr-ToSCM",
+          "name": "SAdr-ToSCM",
+          "type": "UInt16",
+          "default": "1023",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"SoD\",\"sodPosition\":{\"index\":\"0x1200\",\"subIndex\":\"0x02\"},\"vendorInfo\":[\"CopyToDomainCRC,false\"],\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Safety_Response_Time",
+      "name": "Safety_Response_Time",
+      "visibility": "true",
+      "customData": {
+        "cData": "{\"vendorInfo\":[\"CopyLimitation,ToIOs\"]}"
+      },
+      "parameters": [
+        {
+          "id": "SM0007_ManualResponseTimeConfiguration",
+          "name": "Manual configuration",
+          "type": "UInt8",
+          "unit": "",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"vendorInfo\":[\"ExtVisibility,DesignerSpecific\"],\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "No",
+              "value": "0"
+            },
+            {
+              "name": "Yes",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_SafeDataDuration",
+          "name": "Safe data duration",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "20000",
+          "step": "1",
+          "min": "2000",
+          "max": "10000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"vendorInfo\":[\"ExtVisibility,DesignerSpecific\"],\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_TPL",
+          "name": "Additional tolerated packet loss",
+          "type": "UInt32",
+          "unit": "Packets",
+          "default": "1",
+          "step": "1",
+          "min": "0",
+          "max": "10",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"vendorInfo\":[\"ExtVisibility,DesignerSpecific\"],\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+		  "validation": {
+            "condition": "model['SM0007_ManualResponseTimeConfiguration'].typedValue === 1 || model['SM0007_TPL'].typedValue <= 7",
+            "action": {
+              "severity": "WARNING",
+              "message": ">> Manual configuration needs to be YES for packet losses larger than 8  <<"
+            }
+          }
+        },
+        {
+          "id": "SM0007_NodeGuardingPackets",
+          "name": "Node guarding packets",
+          "type": "UInt8",
+          "unit": "Packets",
+          "default": "5",
+          "step": "1",
+          "min": "1",
+          "max": "255",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"vendorInfo\":[\"ExtVisibility,DesignerSpecific\"],\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Safe machine options",
+      "name": "Safe machine options",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0007_ucActivateAddPar",
+          "name": "Safe machine options - Enable",
+          "type": "UInt8",
+          "unit": "",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":42},\"vendorInfo\":[\"AdditionalSetType,SafeMOTION_EnDat22_Opts_typ\"],\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Disabled",
+              "value": "0"
+            },
+            {
+              "name": "Enabled",
+              "value": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SM0007_General settings  Automatic reset on start",
+      "name": "General settings  Automatic reset on start",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0007_48",
+          "name": "Automatic reset on start - Enable",
+          "type": "Bool",
+          "unit": "",
+          "default": "true",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":27},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Enabled",
+              "value": "false"
+            },
+            {
+              "name": "Disabled",
+              "value": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SM0007_General settings  Behavior of Functional Fail Safe (FFS)",
+      "name": "General settings  Behavior of Functional Fail Safe (FFS)",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0007_56",
+          "name": "FFS - Mode",
+          "type": "Bool",
+          "unit": "",
+          "default": "false",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":43},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "STO",
+              "value": "false"
+            },
+            {
+              "name": "STO1 and STO with time delay",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_DUMMYbit2",
+          "name": "DUMMYbit2",
+          "type": "Bool",
+          "default": "false",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":45},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_DUMMYbit3",
+          "name": "DUMMYbit3",
+          "type": "Bool",
+          "default": "false",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":46},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_DUMMYbit4",
+          "name": "DUMMYbit4",
+          "type": "Bool",
+          "default": "false",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":47},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_DUMMYbit5",
+          "name": "DUMMYbit5",
+          "type": "Bool",
+          "default": "false",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":48},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_DUMMYbit6",
+          "name": "DUMMYbit6",
+          "type": "Bool",
+          "default": "false",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":49},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_DUMMYbit7",
+          "name": "DUMMYbit7",
+          "type": "Bool",
+          "default": "false",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":50},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_57",
+          "name": "FFS - STO Enable delay time",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "300000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":51},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_62",
+          "name": "FFS - Delay time until brake engages",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "300000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":52},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_bFFSEncErrOnlySFEnabled",
+          "name": "FFS - Caused by encoder error",
+          "type": "Bool",
+          "unit": "",
+          "default": "false",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":44},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Always",
+              "value": "false"
+            },
+            {
+              "name": "Only if safety functions requiring an encoder are enabled",
+              "value": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SM0007_General settings  Blackout Mode",
+      "name": "General settings  Blackout Mode",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0007_ucBMMode",
+          "name": "BM - Mode",
+          "type": "UInt8",
+          "unit": "",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":24},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Off",
+              "value": "0"
+            },
+            {
+              "name": "Prev. enabled SF",
+              "value": "1"
+            },
+            {
+              "name": "Prev. enabled and configured SF",
+              "value": "2"
+            },
+            {
+              "name": "Configured SF",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_lBMDELAYFFS",
+          "name": "BM - Delay time to FFS",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "300000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":88},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_ulBMConfiguredSF",
+          "name": "BM - Configured SF",
+          "type": "UInt32",
+          "unit": "",
+          "default": "4294967295",
+          "step": "1",
+          "min": "0",
+          "max": "4294967295",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":89},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_General settings  Encoder Unit System (EUS)",
+      "name": "General settings  Encoder Unit System (EUS)",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0007_84",
+          "name": "EUS - Encoder type",
+          "type": "UInt8",
+          "unit": "",
+          "default": "1",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":84},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Encoder not used",
+              "value": "0"
+            },
+            {
+              "name": "Encoder used",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_DUMMYbyte3",
+          "name": "DUMMYbyte3",
+          "type": "UInt8",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":85},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_DUMMYbyte4",
+          "name": "DUMMYbyte4",
+          "type": "UInt8",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":86},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_DUMMYbyte5",
+          "name": "DUMMYbyte5",
+          "type": "UInt8",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":87},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_36",
+          "name": "EUS - Count of physical reference system",
+          "type": "UInt32",
+          "unit": "",
+          "default": "1",
+          "step": "1",
+          "min": "1",
+          "max": "1073741823",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":5},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+		  "visibility": "model['SM0007_84'].typedValue === 1",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_37",
+          "name": "EUS - Units per count of physical reference system",
+          "type": "UInt32",
+          "unit": "units",
+          "default": "1000",
+          "step": "1",
+          "min": "1",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":6},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+		  "visibility": "model['SM0007_84'].typedValue === 1",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_38",
+          "name": "EUS - Counting direction",
+          "type": "UInt32",
+          "unit": "",
+          "default": "0",
+          "commissionable": true,
+		  "visibility": "model['SM0007_84'].typedValue === 1",
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":7},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+		   "visibility": "model['SM0007_84'].typedValue === 1",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Standard",
+              "value": "0"
+            },
+            {
+              "name": "Inverse",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_39",
+          "name": "EUS - Length of physical reference system for linear encoder",
+          "type": "UInt32",
+          "unit": "nm",
+          "default": "1000000000",
+          "step": "1",
+          "min": "1",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":8},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+		  "visibility": "model['SM0007_84'].typedValue === 1",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_DUMMYbyteMaximumSpeed",
+          "name": "DUMMYbyteMaximumSpeed",
+          "type": "UInt32",
+          "default": "32767",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":9},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_77",
+          "name": "EUS - Encoder acceleration limit",
+          "type": "Int32",
+          "unit": "rad/s^2 or mm/s^2",
+          "default": "100000",
+          "step": "1",
+          "min": "1",
+          "max": "2147483",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":10},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+		  "visibility": "model['SM0007_84'].typedValue === 1",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_General settings  Encoder monitoring",
+      "name": "General settings  Encoder monitoring",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0007_ucEncMonitoringModeSEM",
+          "name": "Encoder monitoring - Safe encoder mounting",
+          "type": "Bool",
+          "unit": "",
+          "default": "true",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":37},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Approved by user",
+              "value": "false"
+            },
+            {
+              "name": "From motor data record",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_59",
+          "name": "Encoder monitoring - Position error monitoring - Enable",
+          "type": "Bool",
+          "unit": "",
+          "default": "false",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":34},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Disabled",
+              "value": "false"
+            },
+            {
+              "name": "Enabled",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_60",
+          "name": "Encoder monitoring - Speed error monitoring - Enable",
+          "type": "Bool",
+          "unit": "",
+          "default": "false",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":35},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Disabled",
+              "value": "false"
+            },
+            {
+              "name": "Enabled",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_61",
+          "name": "Encoder monitoring - Position setpoint alive testing (SPA) - Enable ",
+          "type": "Bool",
+          "unit": "",
+          "default": "false",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":36},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+		  "visibility": "model['SM0007_59'].typedValue === true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Disabled",
+              "value": "false"
+            },
+            {
+              "name": "Enabled",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_DUMMYbit12",
+          "name": "DUMMYbit12",
+          "type": "Bool",
+          "default": "false",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":38},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_DUMMYbit13",
+          "name": "DUMMYbit13",
+          "type": "Bool",
+          "default": "false",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":39},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_DUMMYbit14",
+          "name": "DUMMYbit14",
+          "type": "Bool",
+          "default": "false",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":40},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_DUMMYbit15",
+          "name": "DUMMYbit15",
+          "type": "Bool",
+          "default": "false",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":41},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_35",
+          "name": "Encoder monitoring - Position error tolerance",
+          "type": "UInt32",
+          "unit": "units",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "1073741823",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":77},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+		  "visibility": "model['SM0007_59'].typedValue === true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_34",
+          "name": "Encoder monitoring - Speed error tolerance",
+          "type": "UInt32",
+          "unit": "units/s",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":78},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+		  "visibility": "model['SM0007_60'].typedValue === true",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_General settings  Standstill monitoring",
+      "name": "General settings  Standstill monitoring",
+      "visibility": "true",
+	  "visibility": "model['SM0007_59'].typedValue === true",
+      "parameters": [
+        {
+          "id": "SM0007_19",
+          "name": "Standstill monitoring - Position tolerance",
+          "type": "UInt32",
+          "unit": "units",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":63},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_18",
+          "name": "Standstill monitoring - Speed tolerance",
+          "type": "UInt32",
+          "unit": "units/s",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":62},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_General settings  Early limit monitoring",
+      "name": "General settings  Early limit monitoring",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0007_33",
+          "name": "Early limit monitoring - Enable",
+          "type": "Bool",
+          "unit": "",
+          "default": "false",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":32},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Disabled",
+              "value": "false"
+            },
+            {
+              "name": "Enabled",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_21",
+          "name": "Early limit monitoring - Time",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "300000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":76},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_General settings  Ramp monitoring",
+      "name": "General settings  Ramp monitoring",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0007_12",
+          "name": "Ramp monitoring - Speed deceleration limit",
+          "type": "UInt32",
+          "unit": "units/s^2",
+          "default": "1073676289",
+          "step": "1",
+          "min": "1",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":25},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_20",
+          "name": "Ramp monitoring - Enable delay time",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "300000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":72},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Basic functions  STO1",
+      "name": "Basic functions  STO1",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0007_29",
+          "name": "STO1 - Channel",
+          "type": "Bool",
+          "unit": "",
+          "default": "false",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":28},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Lowside",
+              "value": "true"
+            },
+            {
+              "name": "Highside",
+              "value": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Basic functions  SS1",
+      "name": "Basic functions  SS1",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0007_30",
+          "name": "SS1 - Ramp monitoring - Enable",
+          "type": "Bool",
+          "unit": "",
+          "default": "true",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":29},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Disabled",
+              "value": "false"
+            },
+            {
+              "name": "Enabled",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_41",
+          "name": "SS1 - Ramp monitoring - Time",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "300000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":66},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Basic functions  SBC",
+      "name": "Basic functions  SBC",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0007_51",
+          "name": "SBC - Enable delay time",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "300000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":74},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Speed functions  SS2",
+      "name": "Speed functions  SS2",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0007_31",
+          "name": "SS2 - Ramp monitoring - Enable",
+          "type": "Bool",
+          "unit": "",
+          "default": "true",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":30},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Disabled",
+              "value": "false"
+            },
+            {
+              "name": "Enabled",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_42",
+          "name": "SS2 - Ramp monitoring - Time",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "300000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":67},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Speed functions  SLA",
+      "name": "Speed functions  SLA",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0007_78",
+          "name": "SLA - Acceleration limit in positive direction",
+          "type": "Int32",
+          "unit": "units/s^2",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":79},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_82",
+          "name": "SLA - Deceleration limit in positive direction",
+          "type": "Int32",
+          "unit": "units/s^2",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":80},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_81",
+          "name": "SLA - Acceleration limit in negative direction",
+          "type": "Int32",
+          "unit": "units/s^2",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":81},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_83",
+          "name": "SLA - Deceleration limit in negative direction",
+          "type": "Int32",
+          "unit": "units/s^2",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":82},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_80",
+          "name": "SLA - Enable delay time",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "300000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":83},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Speed functions  SMSSLS",
+      "name": "Speed functions  SMSSLS",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0007_25",
+          "name": "SMS - Enable",
+          "type": "Bool",
+          "unit": "",
+          "default": "true",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":26},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Enabled",
+              "value": "false"
+            },
+            {
+              "name": "Disabled",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_13",
+          "name": "SMS - Speed limit",
+          "type": "UInt32",
+          "unit": "units/s",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":53},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+		  "visibility": "model['SM0007_25'].typedValue === false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_14",
+          "name": "SLS1 - Speed limit",
+          "type": "UInt32",
+          "unit": "units/s",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":54},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_15",
+          "name": "SLS2  -Speed limit",
+          "type": "UInt32",
+          "unit": "units/s",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":55},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_16",
+          "name": "SLS3 - Speed limit",
+          "type": "UInt32",
+          "unit": "units/s",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":56},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_17",
+          "name": "SLS4 - Speed limit",
+          "type": "UInt32",
+          "unit": "units/s",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":57},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_32",
+          "name": "SLS -  Ramp monitoring - Enable",
+          "type": "Bool",
+          "unit": "",
+          "default": "true",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":31},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Disabled",
+              "value": "false"
+            },
+            {
+              "name": "Enabled",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_43",
+          "name": "SLS1 - Ramp monitoring - Time",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "10000",
+          "step": "1",
+          "min": "0",
+          "max": "300000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":68},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+		  "visibility": "model['SM0007_32'].typedValue === true",
+		  "validation": {
+            "condition": "model['SM0007_43'].typedValue + model['SM0007_44'].typedValue + model['SM0007_45'].typedValue + model['SM0007_46'].typedValue === 40000",
+            "action": {
+              "severity": "INFO",
+              "message": ">> the sum of Ramp monitoring time SLS1,SLS2,SLS3,SLS4 must be 40000  <<"
+            }
+          },
+
+          "readonly": false
+        },
+        {
+          "id": "SM0007_44",
+          "name": "SLS2 - Ramp monitoring - Time",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "10000",
+          "step": "1",
+          "min": "0",
+          "max": "300000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":69},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+		  "visibility": "model['SM0007_32'].typedValue === true",
+		  "validation": {
+            "condition": "model['SM0007_43'].typedValue + model['SM0007_44'].typedValue + model['SM0007_45'].typedValue + model['SM0007_46'].typedValue === 40000",
+            "action": {
+              "severity": "INFO",
+              "message": ">> the sum of Ramp monitoring time SLS1,SLS2,SLS3,SLS4 must be 40000  <<"
+            }
+          },
+          "readonly": false
+        },
+        {
+          "id": "SM0007_45",
+          "name": "SLS3 - Ramp monitoring - Time",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "10000",
+          "step": "1",
+          "min": "0",
+          "max": "300000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":70},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+		  "visibility": "model['SM0007_32'].typedValue === true",
+		  "validation": {
+            "condition": "model['SM0007_43'].typedValue + model['SM0007_44'].typedValue + model['SM0007_45'].typedValue + model['SM0007_46'].typedValue === 40000",
+            "action": {
+              "severity": "INFO",
+              "message": ">> the sum of Ramp monitoring time SLS1,SLS2,SLS3,SLS4 must be 40000  <<"
+            }
+          },
+          "readonly": false
+        },
+        {
+          "id": "SM0007_46",
+          "name": "SLS4 - Ramp monitoring - Time",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "10000",
+          "step": "1",
+          "min": "0",
+          "max": "300000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":71},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+		  "visibility": "model['SM0007_32'].typedValue === true",
+		  "validation": {
+            "condition": "model['SM0007_43'].typedValue + model['SM0007_44'].typedValue + model['SM0007_45'].typedValue + model['SM0007_46'].typedValue === 40000",
+            "action": {
+              "severity": "INFO",
+              "message": ">> the sum of Ramp monitoring time SLS1,SLS2,SLS3,SLS4 must be 40000  <<"
+            }
+          },
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Advanced functions  SDI",
+      "name": "Advanced functions  SDI",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0007_49",
+          "name": "SDI - Enable delay time",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "300000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":73},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Advanced functions  SLI",
+      "name": "Advanced functions  SLI",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0007_24",
+          "name": "SLI - Position limit",
+          "type": "UInt32",
+          "unit": "units",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":64},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_55",
+          "name": "SLI - Disable delay time",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "300000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":65},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Absolute position functions  Homing",
+      "name": "Absolute position functions  Homing",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0007_66",
+          "name": "Homing - Mode",
+          "type": "UInt8",
+          "unit": "",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":14},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Direct",
+              "value": "0"
+            },
+            {
+              "name": "Reference switch",
+              "value": "1"
+            },
+            {
+              "name": "Home offset",
+              "value": "2"
+            },
+            {
+              "name": "Home offset with correction",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_63",
+          "name": "Homing - Home position or home offset",
+          "type": "Int32",
+          "unit": "units",
+          "default": "0",
+          "step": "1",
+          "min": "-2147483648",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":11},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_85",
+          "name": "Homing - Enable RSP (Remanent safe position)",
+          "type": "Bool",
+          "unit": "",
+          "default": "false",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":18},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Disabled",
+              "value": "false"
+            },
+            {
+              "name": "Enabled",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_67",
+          "name": "Homing - Edge of reference switch",
+          "type": "Bool",
+          "unit": "",
+          "default": "true",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":15},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Negative",
+              "value": "false"
+            },
+            {
+              "name": "Positive",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_68",
+          "name": "Homing - Trigger direction",
+          "type": "Bool",
+          "unit": "",
+          "default": "true",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":16},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Negative",
+              "value": "false"
+            },
+            {
+              "name": "Positive",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_69",
+          "name": "Homing - Enable reference pulse",
+          "type": "Bool",
+          "unit": "",
+          "default": "false",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":17},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Disabled",
+              "value": "false"
+            },
+            {
+              "name": "Enabled",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_DUMMYbit21",
+          "name": "DUMMYbit21",
+          "type": "Bool",
+          "default": "false",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":19},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_DUMMYbit22",
+          "name": "DUMMYbit22",
+          "type": "Bool",
+          "default": "false",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":20},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_DUMMYbit23",
+          "name": "DUMMYbit23",
+          "type": "Bool",
+          "default": "false",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":21},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_DUMMYbit24",
+          "name": "DUMMYbit24",
+          "type": "Bool",
+          "default": "false",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":22},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_70",
+          "name": "Homing - Blocking distance",
+          "type": "UInt8",
+          "unit": "% Encoder reference system",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "100",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":23},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_64",
+          "name": "Homing - Maximum trigger speed",
+          "type": "UInt32",
+          "unit": "uints/s",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":12},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_65",
+          "name": "Homing - Monitoring time",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "300000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":13},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Absolute position functions  SMP  SLP",
+      "name": "Absolute position functions  SMP  SLP",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0007_71",
+          "name": "SMP - Enable",
+          "type": "Bool",
+          "unit": "",
+          "default": "true",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":33},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Enabled",
+              "value": "false"
+            },
+            {
+              "name": "Disabled",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "id": "SM0007_72",
+          "name": "SMP - Lower position limit",
+          "type": "Int32",
+          "unit": "units",
+          "default": "0",
+          "step": "1",
+          "min": "-2147483648",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":58},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+		  "visibility": "model['SM0007_71'].typedValue === false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_73",
+          "name": "SMP - Upper position limit",
+          "type": "Int32",
+          "unit": "units",
+          "default": "0",
+          "step": "1",
+          "min": "-2147483648",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":59},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+		  "visibility": "model['SM0007_71'].typedValue === false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_74",
+          "name": "SLP - Lower position limit",
+          "type": "Int32",
+          "unit": "units",
+          "default": "0",
+          "step": "1",
+          "min": "-2147483648",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":60},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+		  "visibility": "model['SM0007_71'].typedValue === false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_75",
+          "name": "SLP - Upper position limit",
+          "type": "Int32",
+          "unit": "units",
+          "default": "0",
+          "step": "1",
+          "min": "-2147483648",
+          "max": "2147483647",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":61},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+		  "visibility": "model['SM0007_71'].typedValue === false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_76",
+          "name": "SLP - Enable delay time",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "0",
+          "step": "1",
+          "min": "0",
+          "max": "300000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":75},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+		  "visibility": "model['SM0007_71'].typedValue === false",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_hiddenGroup",
+      "name": "HiddenGroup",
+      "visibility": "false",
+      "parameters": [
+        {
+          "id": "SM0007_CRC_Number_of_RxSpdos",
+          "name": "CRC_Number_of_RxSpdos",
+          "type": "UInt32",
+          "default": "1",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_CRC_Number_of_TxSpdos",
+          "name": "CRC_Number_of_TxSpdos",
+          "type": "UInt32",
+          "default": "1",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_CRC_Number_of_Maps_per_Spdo",
+          "name": "CRC_Number_of_Maps_per_Spdo",
+          "type": "UInt32",
+          "default": "3",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_CRC_Number_of_Machine_Options",
+          "name": "CRC_Number_of_Machine_Options",
+          "type": "UInt32",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_CRC_Number_of_SODCRCs",
+          "name": "CRC_Number_of_SODCRCs",
+          "type": "UInt32",
+          "default": "2",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_Module_Cycle_Time_min_us",
+          "name": "Module_Cycle_Time_min_us",
+          "type": "UInt32",
+          "default": "784",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_Module_Cycle_Time_max_us",
+          "name": "Module_Cycle_Time_max_us",
+          "type": "UInt32",
+          "default": "816",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_Module_Off_Delay_max_us",
+          "name": "Module_Off_Delay_max_us",
+          "type": "UInt32",
+          "default": "5000",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_AxisTypeID",
+          "name": "AxisTypeID",
+          "type": "UInt16",
+          "default": "2",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":1},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_FILLER",
+          "name": "FILLER",
+          "type": "UInt16",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":2},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_ParameterVersion",
+          "name": "ParameterVersion",
+          "type": "UInt32",
+          "default": "13",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":3},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0007_ParameterLength",
+          "name": "ParameterLength",
+          "type": "UInt32",
+          "default": "204",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":4},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        }
+      ]
+    }
+  ]
+}

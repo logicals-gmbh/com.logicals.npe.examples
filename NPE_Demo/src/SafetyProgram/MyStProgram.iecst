@@ -1,0 +1,34 @@
+{SAFESIMPLIFIED}
+PROGRAM MyStProgram
+
+VAR_EXTERNAL
+	InputModule1Channel1 : BOOL;
+	OutputModule1Channel2 : BOOL;
+END_VAR
+
+VAR
+		InputA, InputB, OutputA : INT;
+		InputValue : REAL;
+		Input1 : BOOL;
+		Input2 : BOOL;
+		Output : BOOL;
+		Output2 : BOOL;
+END_VAR
+
+	OutputA := InputA + InputB;
+	
+	IF InputModule1Channel1 = TRUE THEN
+	  Output := TRUE;
+	  InputValue := InputValue + 0.01;
+	  OutputModule1Channel2:= TRUE;
+	ELSE
+	  Output := FALSE;
+	  Output2 := TRUE;
+	  InputValue := 0;
+	  OutputModule1Channel2 := FALSE;
+	END_IF;
+	
+	
+	(*龦 *)
+	
+END_PROGRAM

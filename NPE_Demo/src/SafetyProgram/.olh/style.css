@@ -1,0 +1,24 @@
+#tableborders table {
+     border-spacing: 2px;
+}
+
+#tableborders td {
+	border-style: solid;
+	border-color: grey;
+    border-width: 1px;
+	padding: 2px;
+}
+
+.tableHeaderCell {
+	border:1px solid grey;
+	background:#ddd;
+	font-weight:bold;
+}
+
+body {
+  	font-family: "Helvetica Neue", Arial, sans-serif;
+	min-height: 100%;
+	position: static;
+    overflow-x: auto;
+	overflow-y: auto;
+}

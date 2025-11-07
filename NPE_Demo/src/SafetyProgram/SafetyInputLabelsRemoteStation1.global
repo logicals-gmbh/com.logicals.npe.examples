@@ -1,0 +1,29 @@
+GLOBALS SafetyInputLabelsRemoteStation1
+	VAR_GLOBAL
+		{ SECTION_NAME := "1" } Estop : BOOL;
+		RemoteStation1_SafetyInput02 AT %IX1.2.3 : BOOL := 1 { description := "qweETegardfjk";
+		customDataJson := "wtwrt";
+		};
+		RemoteStation1_SafetyInput03 : BOOL;
+		RemoteStation1_SafetyInput04 : BOOL { description := "龦";
+		comment := "龦";
+		};
+		RemoteStation1_SafetyInput05 : BOOL;
+		RemoteStation1_SafetyInput06 : BOOL;
+		RemoteStation1_SafetyInput07 : BOOL;
+		RemoteStation1_SafetyInput08 : BOOL;
+		RemoteStation1_SafetyInput09 : BOOL;
+		RemoteStation1_SafetyInput10 : BOOL;
+		RemoteStation1_SafetyInput11 : BOOL;
+		RemoteStation1_SafetyInput12 : BOOL;
+		RemoteStation1_SafetyInput13 : BOOL;
+		RemoteStation1_SafetyInput14 : SAFEBOOL;
+		RemoteStation1_SafetyInput15 : BOOL;
+		RemoteStation1_SafetyInput16 : BOOL;
+	END_VAR
+	VAR_GLOBAL
+		{ SECTION_NAME := "2" } END_VAR
+	VAR_GLOBAL
+		{ SECTION_NAME := "Constants" } CONSTANT SafeWorkspaceLength : SAFEREAL := 500;
+	END_VAR
+END_GLOBALS

@@ -1,0 +1,15 @@
+{ Creator := "Device Topology Transformer"; }
+GLOBALS SM0001_SafeCPU_MainSN
+	USING namespace1;
+	USING namespace2;
+	VAR_GLOBAL
+		SM0001_SafeDigitalInput01 { "SM0001_SafeDigitalInput01" } AT %I* : SAFEBOOL := FALSE { description := "SM0001_SafeDigitalInput01";
+		comment := "";
+		customDataJson := "";
+		};
+		SM0001_SafeDigitalInput02 { "SM0001_SafeDigitalInput02" } AT %I* : SAFEBOOL := FALSE { description := "SM0001_SafeDigitalInput02";
+		comment := "";
+		customDataJson := "";
+		};
+	END_VAR
+END_GLOBALS

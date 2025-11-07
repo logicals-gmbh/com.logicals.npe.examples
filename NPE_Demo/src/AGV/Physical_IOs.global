@@ -1,0 +1,17 @@
+GLOBALS Physical_IOs
+	VAR_GLOBAL
+
+		Estop_Ch1 : SAFEBOOL;
+		Estop_Ch2 : SAFEBOOL;
+		ScannerFieldDetection_A_Ch1 : SAFEBOOL;
+		ScannerFieldDetection_A_Ch2 : SAFEBOOL;
+		ScannerFieldDetection_B_Ch1 : SAFEBOOL;
+		ScannerFieldDetection_B_Ch2 : SAFEBOOL;
+		SafetyOverrideRequest : BOOL;
+		DriveRequest : BOOL;
+		DriveEnable_Ch1 : SAFEBOOL;
+		DriveEnable_Ch2 : SAFEBOOL;
+		SLSEnable_Ch1 : SAFEBOOL;
+		SLSEnable_Ch2 : SAFEBOOL;
+	END_VAR
+END_GLOBALS

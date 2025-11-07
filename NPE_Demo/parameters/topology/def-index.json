@@ -1,0 +1,44 @@
+{
+  "groups": [
+    {
+      "id": "SM0002_SI4_110",
+      "name": "SM002 DI_4Ch - DI_4Ch",
+      "path": "SM0002_SI4_110-def.json"
+    },
+    {
+      "id": "SM0003_SI4_110",
+      "name": "SM003 DI_4Ch - DI_4Cha",
+      "path": "SM0003_SI4_110-def.json"
+    },
+    {
+      "id": "SM0004_SO4110",
+      "name": "SM004 DO_4Ch - DO_4Ch",
+      "path": "SM0004_SO4110-def.json"
+    },
+    {
+      "id": "SM0005_SO4110",
+      "name": "SM005 DO_4Ch - DO_4Cha",
+      "path": "SM0005_SO4110-def.json"
+    },
+    {
+      "id": "SM0006_SA4430",
+      "name": "SM006 AI_4Ch - AI_4Ch",
+      "path": "SM0006_SA4430-def.json"
+    },
+    {
+      "id": "SM0001_SafeCPU_MainSN",
+      "name": "SM001 SafeCPU",
+      "path": "SM0001_SafeCPU_MainSN-def.json"
+    },
+    {
+      "id": "SM1023",
+      "name": "Domain settings",
+      "path": "SM1023-def.json"
+    },
+    {
+      "id": "SM0007_8BVSV2SAFE11_110",
+      "name": "SM007 - SafeMotion-1",
+      "path": "SM0007_8BVSV2SAFE11_110-def.json"
+    }
+  ]
+}

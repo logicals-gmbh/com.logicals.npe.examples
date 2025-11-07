@@ -1,0 +1,255 @@
+PROGRAM DriveControl
+  USING safety.plcopen;
+  VAR
+    local_EstopOK : SAFEBOOL;
+    SafetyScanner : LaserScannerFB;
+    Local_ScannerOK : SAFEBOOL;
+    TON_AutoAck : TON;
+    local_AutoRestart : SAFEBOOL;
+    safety_plcopen_SF_Equivalent1 : safety.plcopen.SF_Equivalent;
+    safety_plcopen_SF_EmergencyStop1 : safety.plcopen.SF_EmergencyStop;
+    safety_plcopen_SF_OutControl1 : safety.plcopen.SF_OutControl;
+    safety_plcopen_SF_OutControl2 : safety.plcopen.SF_OutControl;
+  END_VAR
+  VAR_EXTERNAL
+    Estop_Ch1 : SAFEBOOL;
+    Estop_Ch2 : SAFEBOOL;
+    ScannerFieldDetection_A_Ch1 : SAFEBOOL;
+    ScannerFieldDetection_A_Ch2 : SAFEBOOL;
+    ScannerFieldDetection_B_Ch1 : SAFEBOOL;
+    ScannerFieldDetection_B_Ch2 : SAFEBOOL;
+    DriveRequest : BOOL;
+    DriveEnable_Ch1 : SAFEBOOL;
+    DriveEnable_Ch2 : SAFEBOOL;
+    SafetyOverrideRequest : BOOL;
+    SLSEnable_Ch1 : SAFEBOOL;
+    SLSEnable_Ch2 : SAFEBOOL;
+    SAFETRUE : SAFEBOOL;
+    AUTORESTART_TIME_10s : SAFETIME;
+  END_VAR
+
+  (*
+
+    // Network 1:
+    safety_plcopen_SF_Equivalent1(Activate := TRUE, S_ChannelA := Estop_Ch1, S_ChannelB := Estop_Ch2, DiscrepancyTime := T#150ms);
+    safety_plcopen_SF_EmergencyStop1(Activate := safety_plcopen_SF_Equivalent1.Ready, S_EStopIn := safety_plcopen_SF_Equivalent1.S_EquivalentOut, S_AutoReset := SAFETRUE, S_EStopOut => local_EstopOK);
+
+    // Network 2:
+    SafetyScanner(Activate := TRUE, FieldA_Ch1 := ScannerFieldDetection_A_Ch1, FieldA_Ch2 := ScannerFieldDetection_A_Ch2, FieldB_Ch1 := ScannerFieldDetection_B_Ch1, FieldB_Ch2 := ScannerFieldDetection_B_Ch2, DiscrepancyTime := T#150ms);
+    AND(IN1 := SafetyScanner.LeftOK, IN2 := SafetyScanner.AheadOK, IN3 := SafetyScanner.RightOK, AND => Local_ScannerOK);
+
+    // Network 3:
+    AND(IN1 := Local_ScannerOK, IN2 := NOT SafetyOverrideRequest, AND => @C(56).AND);
+    safety_plcopen_SF_OutControl2(Activate := TRUE, S_SafeControl := @C(56).AND, ProcessControl := TRUE, StaticControl := FALSE, S_AutoReset := SAFETRUE, S_OutControl => SLSEnable_Ch1);
+    SLSEnable_Ch2 := SLSEnable_Ch1;
+
+    // Network 4:
+    TO_SAFEBOOL(IN := DriveRequest, TO_SAFEBOOL => @C(76).TO_SAFEBOOL);
+    AND(IN1 := Local_ScannerOK, IN2 := @C(76).TO_SAFEBOOL, IN3 := local_EstopOK, AND => @C(78).AND);
+    TON_AutoAck(IN := @C(78).AND, PT := AUTORESTART_TIME_10s, Q => local_AutoRestart);
+
+    // Network 5:
+    TO_SAFEBOOL(IN := SafetyOverrideRequest, TO_SAFEBOOL => @C(53).TO_SAFEBOOL);
+    OR(IN1 := Local_ScannerOK, IN2 := @C(53).TO_SAFEBOOL, OR => @C(39).OR);
+    AND(IN1 := local_EstopOK, IN2 := @C(39).OR, AND => @C(34).AND);
+    safety_plcopen_SF_OutControl1(Activate := TRUE, S_SafeControl := @C(34).AND, ProcessControl := DriveRequest, StaticControl := FALSE, Reset := local_AutoRestart, S_OutControl => DriveEnable_Ch1);
+    DriveEnable_Ch2 := DriveEnable_Ch1;
+
+  *)
+
+  @VF(3) : @E(T#150ms), @R(315.0, 390.0, 150.0, 19.0);
+  @VF(5) : @E(Estop_Ch1), @R(315.0, 330.0, 150.0, 19.0);
+  @VF(7) : @E(Estop_Ch2), @R(315.0, 360.0, 150.0, 19.0);
+  @VF(10) : @E(local_EstopOK), @R(1680.0, 330.0, 150.0, 19.0);
+  @VF(13) : @E(T#150ms), @R(360.0, 915.0, 150.0, 19.0);
+  @VF(15) : @E(ScannerFieldDetection_A_Ch1), @R(360.0, 795.0, 150.0, 19.0);
+  @VF(16) : @E(ScannerFieldDetection_A_Ch2), @R(360.0, 825.0, 150.0, 19.0);
+  @VF(17) : @E(ScannerFieldDetection_B_Ch1), @R(360.0, 855.0, 150.0, 19.0);
+  @VF(18) : @E(ScannerFieldDetection_B_Ch2), @R(360.0, 885.0, 150.0, 19.0);
+  @C(23) : @F(AND), @R(945.0, 720.0, 180.0, 119.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @I(@N(IN3), @L(114.5)), @O(@N(AND), @R(54.5));
+  @VF(27) : @E(Local_ScannerOK), @R(1200.0, 765.0, 150.0, 19.0);
+  @VF(30) : @E(DriveRequest), @R(960.0, 1515.0, 150.0, 19.0);
+  @VF(32) : @E(FALSE), @R(960.0, 1545.0, 150.0, 19.0);
+  @C(34) : @F(AND), @R(750.0, 1440.0, 180.0, 104.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @O(@N(AND), @R(54.5));
+  @VF(36) : @E(local_EstopOK), @R(450.0, 1485.0, 150.0, 19.0);
+  @VF(37) : @E(Local_ScannerOK), @R(240.0, 1620.0, 150.0, 19.0);
+  @VF(40) : @E(DriveEnable_Ch1), @R(1560.0, 1485.0, 150.0, 19.0);
+  @VF(41) : @E(DriveEnable_Ch2), @R(1770.0, 1485.0, 150.0, 19.0);
+  @VF(45) : @E(Local_ScannerOK), @R(390.0, 1965.0, 150.0, 19.0);
+  @CF(47) : @R(1230.0, 1350.0, 210.0, 29.0), @T("Drive enable output"), @POU;
+  @CF(48) : @R(1065.0, 1830.0, 210.0, 44.0), @T("Drive SLS enable"), @POU;
+  @VF(49) : @E(SafetyOverrideRequest), @R(390.0, 2025.0, 150.0, 19.0);
+  @C(39) : @F(OR), @R(465.0, 1575.0, 180.0, 104.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @O(@N(OR), @R(54.5));
+  @VF(52) : @E(SafetyOverrideRequest), @R(30.0, 1725.0, 150.0, 19.0);
+  @C(53) : @F(TO_SAFEBOOL), @R(240.0, 1680.0, 180.0, 74.0), @I(@N(IN), @L(54.5)), @O(@N(TO_SAFEBOOL), @R(54.5));
+  @C(56) : @F(AND), @R(615.0, 1920.0, 180.0, 104.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5), @NEG), @O(@N(AND), @R(54.5));
+  @VF(59) : @E(SLSEnable_Ch1), @R(1455.0, 1965.0, 150.0, 19.0);
+  @VF(61) : @E(SLSEnable_Ch2), @R(1650.0, 1965.0, 150.0, 19.0);
+  @VF(63) : @E(TRUE), @R(825.0, 1995.0, 150.0, 19.0);
+  @VF(65) : @E(FALSE), @R(825.0, 2025.0, 150.0, 19.0);
+  @CF(71) : @R(510.0, 2310.0, 210.0, 29.0), @T("Autorestart after 10 seconds"), @POU;
+  @C(72) : @FB(TON_AutoAck), @R(1260.0, 2400.0, 180.0, 104.0), @I(@N(IN), @L(54.5)), @I(@N(PT), @L(84.5)), @O(@N(Q), @R(54.5)), @O(@N(ET), @R(84.5));
+  @VF(73) : @E(Local_ScannerOK), @R(480.0, 2385.0, 150.0, 19.0);
+  @VF(74) : @E(DriveRequest), @R(240.0, 2475.0, 150.0, 19.0);
+  @VF(75) : @E(local_EstopOK), @R(465.0, 2550.0, 150.0, 19.0);
+  @C(76) : @F(TO_SAFEBOOL), @R(435.0, 2430.0, 180.0, 74.0), @I(@N(IN), @L(54.5)), @O(@N(TO_SAFEBOOL), @R(54.5));
+  @C(78) : @F(AND), @R(825.0, 2400.0, 180.0, 134.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @I(@N(IN3), @L(114.5)), @O(@N(AND), @R(54.5));
+  @VF(87) : @E(local_AutoRestart), @R(1545.0, 2445.0, 150.0, 19.0);
+  @VF(89) : @E(local_AutoRestart), @R(900.0, 1635.0, 150.0, 19.0);
+  @VF(91) : @E(TRUE), @R(825.0, 1935.0, 150.0, 19.0);
+  @VF(93) : @E(TRUE), @R(960.0, 1455.0, 150.0, 19.0);
+  @C(12) : @FB(SafetyScanner), @R(600.0, 720.0, 180.0, 224.0), @I(@N(Activate), @L(54.5)), @I(@N(FieldA_Ch1), @L(84.5)), @I(@N(FieldA_Ch2), @L(114.5)), @I(@N(FieldB_Ch1), @L(144.5)), @I(@N(FieldB_Ch2), @L(174.5)), @I(@N(DiscrepancyTime), @L(204.5)), @O(@N(LeftOK), @R(54.5)), @O(@N(AheadOK), @R(84.5)), @O(@N(RightOK), @R(114.5));
+  @VF(95) : @E(TRUE), @R(360.0, 765.0, 150.0, 19.0);
+  @VF(97) : @E(TRUE), @R(315.0, 300.0, 150.0, 19.0);
+  @CF(104) : @R(720.0, 180.0, 210.0, 59.0), @T("Evaluation of local Emegergency stop button"), @POU;
+  @CF(105) : @R(615.0, 660.0, 210.0, 29.0), @T("Laser scanner field evaluation"), @POU;
+  @CF(107) : @R(30.0, 1350.0, 210.0, 74.0), @T("***************************$NOutput handling$N***************************"), @POU;
+  @CF(108) : @R(90.0, 2220.0, 210.0, 74.0), @T("***************************$NAuto restart handling$N***************************"), @POU;
+  @CF(106) : @R(75.0, 90.0, 210.0, 74.0), @T("***************************$NInput handling$N***************************"), @POU;
+  @C(83) : @FB(safety_plcopen_SF_Equivalent1), @R(540.0, 255.0, 330.0, 194.0), @I(@N(Activate), @L(54.5)), @I(@N(S_ChannelA), @L(84.5)), @I(@N(S_ChannelB), @L(114.5)), @I(@N(DiscrepancyTime), @L(144.5)), @O(@N(Ready), @R(54.5)), @O(@N(S_EquivalentOut), @R(84.5)), @O(@N(SafetyDemand), @R(114.5)), @O(@N(Error), @R(144.5)), @O(@N(DiagCode), @R(174.5));
+  @C(85) : @FB(safety_plcopen_SF_EmergencyStop1), @R(1290.0, 255.0, 330.0, 224.0), @I(@N(Activate), @L(54.5)), @I(@N(S_EStopIn), @L(84.5)), @I(@N(S_StartReset), @L(114.5)), @I(@N(S_AutoReset), @L(144.5)), @I(@N(Reset), @L(174.5)), @O(@N(Ready), @R(54.5)), @O(@N(S_EStopOut), @R(84.5)), @O(@N(SafetyDemand), @R(114.5)), @O(@N(ResetRequest), @R(144.5)), @O(@N(Error), @R(174.5)), @O(@N(DiagCode), @R(204.5));
+  @C(86) : @FB(safety_plcopen_SF_OutControl1), @R(1170.0, 1410.0, 330.0, 254.0), @I(@N(Activate), @L(54.5)), @I(@N(S_SafeControl), @L(84.5)), @I(@N(ProcessControl), @L(114.5)), @I(@N(StaticControl), @L(144.5)), @I(@N(S_StartReset), @L(174.5)), @I(@N(S_AutoReset), @L(204.5)), @I(@N(Reset), @L(234.5)), @O(@N(Ready), @R(54.5)), @O(@N(S_OutControl), @R(84.5)), @O(@N(SafetyDemand), @R(114.5)), @O(@N(ResetRequest), @R(144.5)), @O(@N(Error), @R(174.5)), @O(@N(DiagCode), @R(204.5));
+  @C(98) : @FB(safety_plcopen_SF_OutControl2), @R(1035.0, 1890.0, 330.0, 254.0), @I(@N(Activate), @L(54.5)), @I(@N(S_SafeControl), @L(84.5)), @I(@N(ProcessControl), @L(114.5)), @I(@N(StaticControl), @L(144.5)), @I(@N(S_StartReset), @L(174.5)), @I(@N(S_AutoReset), @L(204.5)), @I(@N(Reset), @L(234.5)), @O(@N(Ready), @R(54.5)), @O(@N(S_OutControl), @R(84.5)), @O(@N(SafetyDemand), @R(114.5)), @O(@N(ResetRequest), @R(144.5)), @O(@N(Error), @R(174.5)), @O(@N(DiagCode), @R(204.5));
+  @VF(92) : @E(SAFETRUE), @R(1005.0, 390.0, 150.0, 19.0);
+  @VF(94) : @E(SAFETRUE), @R(795.0, 2080.0, 150.0, 19.0);
+  @VF(67) : @E(AUTORESTART_TIME_10s), @R(1080.0, 2550.0, 150.0, 19.0);
+
+  @G(14) :
+     @L(@VF(13).o, @C(12).DiscrepancyTime)
+    ;
+  @G(19) :
+     @L(@VF(18).o, @C(12).FieldB_Ch2)
+    ;
+  @G(20) :
+     @L(@VF(17).o, @C(12).FieldB_Ch1)
+    ;
+  @G(21) :
+     @L(@VF(16).o, @C(12).FieldA_Ch2)
+    ;
+  @G(22) :
+     @L(@VF(15).o, @C(12).FieldA_Ch1)
+    ;
+  @G(24) :
+     @L(@C(12).LeftOK, @C(23).IN1)
+    ;
+  @G(25) :
+     @L(@C(12).AheadOK, @C(23).IN2)
+    ;
+  @G(26) :
+     @L(@C(12).RightOK, @C(23).IN3)
+    ;
+  @G(28) :
+     @L(@C(23).AND, @VF(27).i)
+    ;
+  @G(38) :
+     @L(@VF(36).o, @C(34).IN1)
+    ;
+  @G(43) :
+     @L(@VF(40).o, @VF(41).i)
+    ;
+  @G(50) :
+     @L(@C(39).OR, @C(34).IN2)
+    ;
+  @G(51) :
+     @L(@VF(37).o, @C(39).IN1)
+    ;
+  @G(54) :
+     @L(@C(53).TO_SAFEBOOL, @C(39).IN2)
+    ;
+  @G(55) :
+     @L(@VF(52).o, @C(53).IN)
+    ;
+  @G(57) :
+     @L(@VF(45).o, @C(56).IN1)
+    ;
+  @G(58) :
+     @L(@VF(49).o, @C(56).IN2)
+    ;
+  @G(62) :
+     @L(@VF(59).o, @VF(61).i)
+    ;
+  @G(77) :
+     @L(@VF(74).o, @C(76).IN)
+    ;
+  @G(79) :
+     @L(@VF(73).o, @C(78).IN1)
+    ;
+  @G(80) :
+     @L(@C(76).TO_SAFEBOOL, @C(78).IN2)
+    ;
+  @G(81) :
+     @L(@VF(75).o, @C(78).IN3)
+    ;
+  @G(82) :
+     @L(@C(78).AND, @C(72).IN)
+    ;
+  @G(88) :
+     @L(@C(72).Q, @VF(87).i)
+    ;
+  @G(96) :
+     @L(@VF(95).o, @C(12).Activate)
+    ;
+  @G(2) :
+     @L(@VF(97).o, @C(83).Activate)
+    ;
+  @G(4) :
+     @L(@VF(5).o, @C(83).S_ChannelA)
+    ;
+  @G(6) :
+     @L(@VF(7).o, @C(83).S_ChannelB)
+    ;
+  @G(8) :
+     @L(@VF(3).o, @C(83).DiscrepancyTime)
+    ;
+  @G(9) :
+     @L(@C(83).S_EquivalentOut, @C(85).S_EStopIn)
+    ;
+  @G(11) :
+     @L(@C(83).Ready, @C(85).Activate)
+    ;
+  @G(84) :
+     @L(@C(85).S_EStopOut, @VF(10).i)
+    ;
+  @G(29) :
+     @L(@VF(93).o, @C(86).Activate)
+    ;
+  @G(31) :
+     @L(@C(34).AND, @C(86).S_SafeControl)
+    ;
+  @G(33) :
+     @L(@VF(30).o, @C(86).ProcessControl)
+    ;
+  @G(35) :
+     @L(@VF(32).o, @C(86).StaticControl)
+    ;
+  @G(42) :
+     @L(@VF(89).o, @C(86).Reset)
+    ;
+  @G(90) :
+     @L(@C(86).S_OutControl, @VF(40).i)
+    ;
+  @G(44) :
+     @L(@VF(91).o, @C(98).Activate)
+    ;
+  @G(46) :
+     @L(@C(56).AND, @C(98).S_SafeControl)
+    ;
+  @G(60) :
+     @L(@VF(63).o, @C(98).ProcessControl)
+    ;
+  @G(64) :
+     @L(@VF(65).o, @C(98).StaticControl)
+    ;
+  @G(68) :
+     @L(@C(98).S_OutControl, @VF(59).i)
+    ;
+  @G(1) :
+     @L(@VF(92).o, @C(85).S_AutoReset)
+    ;
+  @G(66) :
+     @L(@VF(94).o, @C(98).S_AutoReset)
+    ;
+  @G(69) :
+     @L(@VF(67).o, @C(72).PT)
+    ;
+END_PROGRAM

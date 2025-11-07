@@ -1,0 +1,28 @@
+h1. EstopDemo
+
+h2. Short Summary
+
+###. Do NOT change the following table. It is auto-generated.
+###. For creating the graphic of the interface, open the interface editor and press Ctrl+Shift+P.
+
+table(#tableborders){border:1px solid grey; border-spacing: 0px;}.
+|<(tableHeaderCell). Name|@EstopDemo@|
+|<(tableHeaderCell). POU type|Program|
+|<(tableHeaderCell). Interface|!EstopDemo.png!|
+
+h2. Functionality
+
+h2. Inputs, Outputs, Return Value
+
+###. ONLY change the description in the following table. The other pieces of data are auto-generated (identifiers, data types).
+
+###. IO_BEGIN
+
+table(#tableborders){border:1px solid grey; border-spacing: 0px;}.
+|(tableHeaderCell). Section|(tableHeaderCell). Identifier|(tableHeaderCell). Data type|(tableHeaderCell). Description|
+
+###. IO_END
+
+h2. Example
+
+###. This section can be used for an example illustrating the functionality of the block.

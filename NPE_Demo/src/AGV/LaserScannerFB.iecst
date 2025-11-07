@@ -1,0 +1,51 @@
+{safeSimplified}
+FUNCTION_BLOCK LaserScannerFB  {
+    safeStyle;
+    instanceName;
+  }
+	
+	VAR_INPUT
+		Activate : BOOL;
+		FieldA_Ch1 : SAFEBOOL;
+		FieldA_Ch2 : SAFEBOOL;
+		FieldB_Ch1 : SAFEBOOL;
+		FieldB_Ch2 : SAFEBOOL;
+		DiscrepancyTime : TIME;
+	END_VAR
+	
+	VAR_OUTPUT
+		LeftOK : SAFEBOOL;
+		AheadOK : SAFEBOOL;
+		RightOK : SAFEBOOL;
+	END_VAR
+	
+	VAR
+		SF_Equivalent_Left : safety.plcopen.SF_Equivalent;
+		SF_Equivalent_Right : safety.plcopen.SF_Equivalent;
+	END_VAR
+	
+	
+	SF_Equivalent_Left.Activate := Activate;
+	SF_Equivalent_Left.DiscrepancyTime := DiscrepancyTime;
+	SF_Equivalent_Left.S_ChannelA := FieldA_Ch1;
+	SF_Equivalent_Left.S_ChannelB := FieldA_Ch2;
+	SF_Equivalent_Left();
+	
+	SF_Equivalent_Right.Activate := Activate;
+	SF_Equivalent_Right.DiscrepancyTime := DiscrepancyTime;
+	SF_Equivalent_Right.S_ChannelA := FieldB_Ch1;
+	SF_Equivalent_Right.S_ChannelB := FieldB_Ch2;
+	SF_Equivalent_Right();
+	
+	(* 	A	B	Result
+		1	1	Free
+		1	0	Blocked right
+		0	1	Blocked left
+		0	0	Blocked ahead *)
+		
+		
+		LeftOK := SF_Equivalent_Left.S_EquivalentOut and not SF_Equivalent_Right.S_EquivalentOut;
+		RightOK := SF_Equivalent_Right.S_EquivalentOut and not SF_Equivalent_Left.S_EquivalentOut;
+		AheadOK := SF_Equivalent_Left.S_EquivalentOut and SF_Equivalent_Right.S_EquivalentOut;
+
+END_FUNCTION_BLOCK

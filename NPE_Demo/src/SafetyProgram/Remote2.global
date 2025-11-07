@@ -1,0 +1,6 @@
+GLOBALS Remote2
+	VAR_GLOBAL
+
+		Module2Channel1 : BOOL;
+	END_VAR
+END_GLOBALS

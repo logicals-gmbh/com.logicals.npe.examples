@@ -1,0 +1,4 @@
+LIBRARY com.logicals.lc3.library.standard VERSION := "3.10.0" SOURCE := ".libraries" PROVIDER := Project MD5 := 16#909d74a4144e7df1ff515e0d54604c8a ;
+LIBRARY safety.plcopen VERSION := "1.5.0" SOURCE := ".libraries" PROVIDER := Project MD5 := 16#b9d2c471159f3f39bfd2d7dee7f39109 ;
+LIBRARY com.logicals.lc3.library.standard.nonsafe VERSION := "3.9.0" ;
+LIBRARY com.logicals.lc3.library.system VERSION := "2.2.0" ;

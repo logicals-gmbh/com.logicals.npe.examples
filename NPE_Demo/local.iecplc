@@ -1,0 +1,25 @@
+/*
+ * This is a template for the local PLC object
+ */
+
+{
+	CHANNEL LocalChannel
+		TCP
+			ADDRESS := 127.0.0.1;
+			PORT := 1534;
+		END_TCP
+	END_CHANNEL
+}
+
+CONFIGURATION LocalConfiguration
+	RESOURCE local ON BuiltInPlc { ON_CHANNEL := LocalChannel }
+		TASK DefaultTask(INTERVAL := TIME#500ms, PRIORITY := 38229);
+
+		PROGRAM DriveControl WITH DefaultTask :
+			DriveControl;
+		PROGRAM MyStProgram WITH DefaultTask :
+			MyStProgram;
+		PROGRAM EstopDemo WITH DefaultTask :
+			EstopDemo;
+	END_RESOURCE
+END_CONFIGURATION

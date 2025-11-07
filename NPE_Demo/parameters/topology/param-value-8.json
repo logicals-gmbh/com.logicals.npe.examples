@@ -1,0 +1,134 @@
+{
+  "id": "SM1023",
+  "groups": [
+    {
+      "id": "SM1023_Safety_Response_Time_Defaults",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM1023_DefaultSafeDataDuration",
+          "value": "150000",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_NodeGuardingTimeout",
+          "value": "60",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_DefaultNodeGuardingPackets",
+          "value": "5",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_Default_TPL",
+          "value": "2",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_OptionalActiveStackFeatures",
+          "value": "2",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_OptionalStackFeaturesMSB",
+          "value": "23",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM1023_Basic_Node",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM1023_MinFwRev",
+          "value": "256",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_SAdr-ToSCM",
+          "value": "1023",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM1023_HiddenGroup",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM1023_DeactivateStackFeatures",
+          "value": "2",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_ConsecutiveTimeBase_us",
+          "value": "100",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_Module_Cycle_Time_min_us",
+          "value": "400",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_NoCosecTReq",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_SCM_Config_Mode",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_SSDO_Timeout_CT",
+          "value": "20000",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_SSDO_Retries",
+          "value": "3",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_SNMT_Timeout_CT",
+          "value": "20000",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_SNMT_Retries",
+          "value": "3",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_AdditionalSADRs",
+          "value": "255",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_openSafetySodToFile",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_openSafetyScmStaticDviToFile",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_openSafetyScmDviToFile",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM1023_openSafetyScmAddParToFile",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    }
+  ],
+  "values": []
+}

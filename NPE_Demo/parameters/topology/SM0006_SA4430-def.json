@@ -1,0 +1,1331 @@
+{
+  "id": "SM0006_SA4430",
+  "name": "SM006 AI_4Ch - AI_4Ch",
+  "visibility": "true",
+  "customData": {
+    "HiddenChannels": "[{\"groupName\":\"General\",\"ioChannels\":[]},{\"groupName\":\"Current0104\",\"ioChannels\":[{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"Reserve1\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"NotVisible,true\",\"Mappable,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x40\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6000\\\",\\\"subIndex\\\":\\\"0x01\\\"},\\\"vendorInfo\\\":[\\\"NotVisible,true\\\",\\\"Mappable,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":0}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0006\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"Reserve2\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"NotVisible,true\",\"Mappable,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x80\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6000\\\",\\\"subIndex\\\":\\\"0x01\\\"},\\\"vendorInfo\\\":[\\\"NotVisible,true\\\",\\\"Mappable,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":1}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0006\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"Reserve3\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"NotVisible,true\",\"Mappable,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeIN\\\",\\\"indexStr\\\":\\\"0x05\\\",\\\"bitMask\\\":\\\"0x40\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6000\\\",\\\"subIndex\\\":\\\"0x03\\\"},\\\"vendorInfo\\\":[\\\"NotVisible,true\\\",\\\"Mappable,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":8}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0006\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"Reserve5\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"NotVisible,true\",\"Mappable,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x10\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6200\\\",\\\"subIndex\\\":\\\"0x01\\\"},\\\"vendorInfo\\\":[\\\"NotVisible,true\\\",\\\"Mappable,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":16}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0006\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"Reserve6\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"NotVisible,true\",\"Mappable,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x20\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6200\\\",\\\"subIndex\\\":\\\"0x01\\\"},\\\"vendorInfo\\\":[\\\"NotVisible,true\\\",\\\"Mappable,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":17}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0006\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"Reserve7\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"NotVisible,true\",\"Mappable,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x40\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6200\\\",\\\"subIndex\\\":\\\"0x01\\\"},\\\"vendorInfo\\\":[\\\"NotVisible,true\\\",\\\"Mappable,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":18}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0006\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"},{\"type\":\"K_OSDD_TYPE_BOOLEAN\",\"id\":\"Reserve8\",\"value\":\"\",\"isSafe\":true,\"vendorInfo\":[\"NotVisible,true\",\"Mappable,true\"],\"notVisible\":true,\"customData\":\"{\\\"dataValueType\\\":\\\"K_OSDD_DATA_VALUE_TYPE_TRANSPORT\\\",\\\"transport\\\":{\\\"name\\\":\\\"SafeOUT\\\",\\\"indexStr\\\":\\\"0x04\\\",\\\"bitMask\\\":\\\"0x80\\\"},\\\"sodPosition\\\":{\\\"index\\\":\\\"0x6200\\\",\\\"subIndex\\\":\\\"0x01\\\"},\\\"vendorInfo\\\":[\\\"NotVisible,true\\\",\\\"Mappable,true\\\"],\\\"originSource\\\":\\\"OSDD\\\",\\\"channelOriginOrder\\\":19}\",\"moduleName\":\"X20SA4430\",\"prefixID\":\"SM0006\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\"}]},{\"groupName\":\"Current 0104\",\"ioChannels\":[]}]",
+    "cData": "{\"goesOperational\":true,\"enabled\":true,\"deviceInformation\":{\"vendorId\":\"00:60:65\",\"productCode\":\"0xB8B5\",\"revisionDate\":\"2014-11-14T09:04:32\",\"revisionNumber\":\"1.0.0\",\"hWTypeCode\":275},\"timeConfiguration\":{\"quartzTolerance\":\"50ppm\",\"minReactionTime\":500},\"dataTransport\":{\"acyclicTransport\":[{\"name\":\"SSDO_IN\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\",\"dataAlignment\":{\"type\":\"K_OSDD_DATA_ALIGN_BYTE_SIZE\",\"value\":27},\"octetSize\":27,\"useForScm\":true},{\"name\":\"SSDO_OUT\",\"direction\":\"K_OSDD_DATA_DIRECTION_OUTPUT\",\"dataAlignment\":{\"type\":\"K_OSDD_DATA_ALIGN_BYTE_SIZE\",\"value\":27},\"octetSize\":27,\"useForScm\":true}],\"crossMapping\":[]},\"dataTransportOSTD\":{\"genericTransports\":[{\"name\":\"PDOi\",\"direction\":\"K_OSDD_DATA_DIRECTION_INPUT\",\"octetSize\":5,\"isSafe\":false}]},\"channelConfiguration\":{\"dataTransport\":{\"spdoTransport\":[{\"name\":\"SafeIN\",\"channelDirection\":\"K_OSDD_DATA_DIRECTION_INPUT\",\"octetSize\":23,\"dataAlignment\":{\"type\":\"K_OSDD_DATA_ALIGN_BYTE_SIZE\",\"value\":25},\"maxReactionTime\":100,\"maxNrMappings\":5},{\"name\":\"SafeOUT\",\"channelDirection\":\"K_OSDD_DATA_DIRECTION_OUTPUT\",\"octetSize\":15,\"dataAlignment\":{\"type\":\"K_OSDD_DATA_ALIGN_BYTE_SIZE\",\"value\":15},\"maxReactionTime\":100,\"maxNrMappings\":5}]}},\"info\":[{\"infoName\":\"Interface\",\"type\":\"\",\"value\":\"IF6.ST6\"},{\"infoName\":\"HWC_Revision\",\"type\":\"\",\"value\":\"2.5.0.0\"},{\"infoName\":\"HWC_LastEdit\",\"type\":\"\",\"value\":\"08/03/2022 17:31:28\"},{\"infoName\":\"AS_Name\",\"type\":\"\",\"value\":\"X20SA4430\"},{\"infoName\":\"FirstPublishedSafetyRelease\",\"type\":\"\",\"value\":\"5.4\"},{\"infoName\":\"Description-de\",\"type\":\"\",\"value\":\"X20 Safe Analog In, 4 bis 20 mA\"},{\"infoName\":\"Description-en\",\"type\":\"\",\"value\":\"X20 Safe Analog In, 4 to 20 mA\"}],\"mSpecificObjectDictionary\":[{\"index\":\"0x6000\",\"subIndex\":\"0x01\",\"data\":\"1\"},{\"index\":\"0x6000\",\"subIndex\":\"0x03\",\"data\":\"2\"},{\"index\":\"0x6000\",\"subIndex\":\"0x06\",\"data\":\"3\"},{\"index\":\"0x6000\",\"subIndex\":\"0x07\",\"data\":\"4\"},{\"index\":\"0x6200\",\"subIndex\":\"0x01\",\"data\":\"5\"},{\"index\":\"0x6200\",\"subIndex\":\"0x02\",\"data\":\"6\"}]}"
+  },
+  "groups": [
+    {
+      "id": "SM0006_Basic_Node",
+      "name": "Basic_Node",
+      "visibility": "true",
+      "customData": {
+        "cData": "{}"
+      },
+      "parameters": [
+        {
+          "id": "SM0006_MinFwRev",
+          "name": "Min. required firmware revision",
+          "type": "UInt32",
+          "unit": "",
+          "default": "256",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"vendorInfo\":[\"ExtVisibility,DesignerSpecific\"],\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "Test version",
+              "value": "1"
+            },
+            {
+              "name": "Basic release",
+              "value": "256"
+            }
+          ]
+        },
+        {
+          "id": "SM0006_SAdr-ToSCM",
+          "name": "SAdr-ToSCM",
+          "type": "UInt16",
+          "default": "1023",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"SoD\",\"sodPosition\":{\"index\":\"0x1200\",\"subIndex\":\"0x02\"},\"vendorInfo\":[\"CopyToDomainCRC,false\"],\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0006_Safety_Response_Time",
+      "name": "Safety_Response_Time",
+      "visibility": "true",
+      "customData": {
+        "cData": "{\"vendorInfo\":[\"CopyLimitation,ToIOs\"]}"
+      },
+      "parameters": [
+        {
+          "id": "SM0006_ManualResponseTimeConfiguration",
+          "name": "Manual configuration",
+          "type": "UInt8",
+          "unit": "",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"vendorInfo\":[\"ExtVisibility,DesignerSpecific\"],\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "No",
+              "value": "0"
+            },
+            {
+              "name": "Yes",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "id": "SM0006_SafeDataDuration",
+          "name": "Safe data duration",
+          "type": "UInt32",
+          "unit": "us",
+          "default": "20000",
+          "step": "1",
+          "min": "2000",
+          "max": "10000000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"vendorInfo\":[\"ExtVisibility,DesignerSpecific\"],\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_TPL",
+          "name": "Additional tolerated packet loss",
+          "type": "UInt32",
+          "unit": "Packets",
+          "default": "1",
+          "step": "1",
+          "min": "0",
+          "max": "10",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"vendorInfo\":[\"ExtVisibility,DesignerSpecific\"],\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_NodeGuardingPackets",
+          "name": "Node guarding packets",
+          "type": "UInt8",
+          "unit": "Packets",
+          "default": "5",
+          "step": "1",
+          "min": "1",
+          "max": "255",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"vendorInfo\":[\"ExtVisibility,DesignerSpecific\"],\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        }
+      ]
+    },
+    {
+      "id": "SM0006_ModuleConfiguration",
+      "name": "ModuleConfiguration",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0006_0_5",
+          "name": "Input filter",
+          "type": "UInt8",
+          "unit": "ms",
+          "default": "1",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":5},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "1",
+              "value": "1"
+            },
+            {
+              "name": "2",
+              "value": "2"
+            },
+            {
+              "name": "10",
+              "value": "10"
+            },
+            {
+              "name": "16.7",
+              "value": "16"
+            },
+            {
+              "name": "20",
+              "value": "20"
+            },
+            {
+              "name": "33.3",
+              "value": "33"
+            },
+            {
+              "name": "40",
+              "value": "40"
+            },
+            {
+              "name": "66.7",
+              "value": "66"
+            }
+          ]
+        },
+        {
+          "id": "SM0006_0_6",
+          "name": "Disable shunt test",
+          "type": "UInt8",
+          "unit": "",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":46},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "No",
+              "value": "0"
+            },
+            {
+              "name": "Yes - Warning",
+              "value": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SM0006_SafeCurrent0102",
+      "name": "SafeCurrent0102",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0006_8_0",
+          "name": "Limit threshold high 1",
+          "type": "Int32",
+          "default": "25000",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":14},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_8_1",
+          "name": "Limit threshold high 2",
+          "type": "Int32",
+          "default": "25000",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":15},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_8_2",
+          "name": "Limit threshold high 3",
+          "type": "Int32",
+          "default": "25000",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":16},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_8_3",
+          "name": "Limit threshold high 4",
+          "type": "Int32",
+          "default": "25000",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":17},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_8_4",
+          "name": "Limit threshold low 1",
+          "type": "Int32",
+          "default": "500",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":18},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_8_5",
+          "name": "Limit threshold low 2",
+          "type": "Int32",
+          "default": "500",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":19},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_8_6",
+          "name": "Limit threshold low 3",
+          "type": "Int32",
+          "default": "500",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":20},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_8_7",
+          "name": "Limit threshold low 4",
+          "type": "Int32",
+          "default": "500",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":21},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_8_8",
+          "name": "Limit threshold equivalent 1",
+          "type": "Int32",
+          "unit": "uA",
+          "default": "100",
+          "step": "1",
+          "min": "0",
+          "max": "25000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":22},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_8_9",
+          "name": "Limit threshold equivalent 2",
+          "type": "Int32",
+          "unit": "uA",
+          "default": "100",
+          "step": "1",
+          "min": "0",
+          "max": "25000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":23},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_8_10",
+          "name": "Limit threshold equivalent 3",
+          "type": "Int32",
+          "unit": "uA",
+          "default": "100",
+          "step": "1",
+          "min": "0",
+          "max": "25000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":24},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_8_11",
+          "name": "Limit threshold equivalent 4",
+          "type": "Int32",
+          "unit": "uA",
+          "default": "100",
+          "step": "1",
+          "min": "0",
+          "max": "25000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":25},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_8_12",
+          "name": "Discrepancy time 1",
+          "type": "UInt16",
+          "unit": "ms",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":26},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "0",
+              "value": "0"
+            },
+            {
+              "name": "2",
+              "value": "2"
+            },
+            {
+              "name": "5",
+              "value": "5"
+            },
+            {
+              "name": "10",
+              "value": "10"
+            },
+            {
+              "name": "20",
+              "value": "20"
+            },
+            {
+              "name": "50",
+              "value": "50"
+            },
+            {
+              "name": "100",
+              "value": "100"
+            },
+            {
+              "name": "200",
+              "value": "200"
+            },
+            {
+              "name": "500",
+              "value": "500"
+            },
+            {
+              "name": "1000",
+              "value": "1000"
+            },
+            {
+              "name": "2000",
+              "value": "2000"
+            },
+            {
+              "name": "5000",
+              "value": "5000"
+            },
+            {
+              "name": "10000",
+              "value": "10000"
+            }
+          ]
+        },
+        {
+          "id": "SM0006_8_13",
+          "name": "Discrepancy time 2",
+          "type": "UInt16",
+          "unit": "ms",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":27},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "0",
+              "value": "0"
+            },
+            {
+              "name": "2",
+              "value": "2"
+            },
+            {
+              "name": "5",
+              "value": "5"
+            },
+            {
+              "name": "10",
+              "value": "10"
+            },
+            {
+              "name": "20",
+              "value": "20"
+            },
+            {
+              "name": "50",
+              "value": "50"
+            },
+            {
+              "name": "100",
+              "value": "100"
+            },
+            {
+              "name": "200",
+              "value": "200"
+            },
+            {
+              "name": "500",
+              "value": "500"
+            },
+            {
+              "name": "1000",
+              "value": "1000"
+            },
+            {
+              "name": "2000",
+              "value": "2000"
+            },
+            {
+              "name": "5000",
+              "value": "5000"
+            },
+            {
+              "name": "10000",
+              "value": "10000"
+            }
+          ]
+        },
+        {
+          "id": "SM0006_8_14",
+          "name": "Discrepancy time 3",
+          "type": "UInt16",
+          "unit": "ms",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":28},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "0",
+              "value": "0"
+            },
+            {
+              "name": "2",
+              "value": "2"
+            },
+            {
+              "name": "5",
+              "value": "5"
+            },
+            {
+              "name": "10",
+              "value": "10"
+            },
+            {
+              "name": "20",
+              "value": "20"
+            },
+            {
+              "name": "50",
+              "value": "50"
+            },
+            {
+              "name": "100",
+              "value": "100"
+            },
+            {
+              "name": "200",
+              "value": "200"
+            },
+            {
+              "name": "500",
+              "value": "500"
+            },
+            {
+              "name": "1000",
+              "value": "1000"
+            },
+            {
+              "name": "2000",
+              "value": "2000"
+            },
+            {
+              "name": "5000",
+              "value": "5000"
+            },
+            {
+              "name": "10000",
+              "value": "10000"
+            }
+          ]
+        },
+        {
+          "id": "SM0006_8_15",
+          "name": "Discrepancy time 4",
+          "type": "UInt16",
+          "unit": "ms",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":29},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "0",
+              "value": "0"
+            },
+            {
+              "name": "2",
+              "value": "2"
+            },
+            {
+              "name": "5",
+              "value": "5"
+            },
+            {
+              "name": "10",
+              "value": "10"
+            },
+            {
+              "name": "20",
+              "value": "20"
+            },
+            {
+              "name": "50",
+              "value": "50"
+            },
+            {
+              "name": "100",
+              "value": "100"
+            },
+            {
+              "name": "200",
+              "value": "200"
+            },
+            {
+              "name": "500",
+              "value": "500"
+            },
+            {
+              "name": "1000",
+              "value": "1000"
+            },
+            {
+              "name": "2000",
+              "value": "2000"
+            },
+            {
+              "name": "5000",
+              "value": "5000"
+            },
+            {
+              "name": "10000",
+              "value": "10000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SM0006_SafeCurrent0304",
+      "name": "SafeCurrent0304",
+      "visibility": "true",
+      "parameters": [
+        {
+          "id": "SM0006_9_0",
+          "name": "Limit threshold high 1",
+          "type": "Int32",
+          "default": "25000",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":30},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_9_1",
+          "name": "Limit threshold high 2",
+          "type": "Int32",
+          "default": "25000",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":31},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_9_2",
+          "name": "Limit threshold high 3",
+          "type": "Int32",
+          "default": "25000",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":32},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_9_3",
+          "name": "Limit threshold high 4",
+          "type": "Int32",
+          "default": "25000",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":33},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_9_4",
+          "name": "Limit threshold low 1",
+          "type": "Int32",
+          "default": "500",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":34},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_9_5",
+          "name": "Limit threshold low 2",
+          "type": "Int32",
+          "default": "500",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":35},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_9_6",
+          "name": "Limit threshold low 3",
+          "type": "Int32",
+          "default": "500",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":36},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_9_7",
+          "name": "Limit threshold low 4",
+          "type": "Int32",
+          "default": "500",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":37},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_9_8",
+          "name": "Limit threshold equivalent 1",
+          "type": "Int32",
+          "unit": "uA",
+          "default": "100",
+          "step": "1",
+          "min": "0",
+          "max": "25000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":38},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_9_9",
+          "name": "Limit threshold equivalent 2",
+          "type": "Int32",
+          "unit": "uA",
+          "default": "100",
+          "step": "1",
+          "min": "0",
+          "max": "25000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":39},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_9_10",
+          "name": "Limit threshold equivalent 3",
+          "type": "Int32",
+          "unit": "uA",
+          "default": "100",
+          "step": "1",
+          "min": "0",
+          "max": "25000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":40},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_9_11",
+          "name": "Limit threshold equivalent 4",
+          "type": "Int32",
+          "unit": "uA",
+          "default": "100",
+          "step": "1",
+          "min": "0",
+          "max": "25000",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":41},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_9_12",
+          "name": "Discrepancy time 1",
+          "type": "UInt16",
+          "unit": "ms",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":42},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "0",
+              "value": "0"
+            },
+            {
+              "name": "2",
+              "value": "2"
+            },
+            {
+              "name": "5",
+              "value": "5"
+            },
+            {
+              "name": "10",
+              "value": "10"
+            },
+            {
+              "name": "20",
+              "value": "20"
+            },
+            {
+              "name": "50",
+              "value": "50"
+            },
+            {
+              "name": "100",
+              "value": "100"
+            },
+            {
+              "name": "200",
+              "value": "200"
+            },
+            {
+              "name": "500",
+              "value": "500"
+            },
+            {
+              "name": "1000",
+              "value": "1000"
+            },
+            {
+              "name": "2000",
+              "value": "2000"
+            },
+            {
+              "name": "5000",
+              "value": "5000"
+            },
+            {
+              "name": "10000",
+              "value": "10000"
+            }
+          ]
+        },
+        {
+          "id": "SM0006_9_13",
+          "name": "Discrepancy time 2",
+          "type": "UInt16",
+          "unit": "ms",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":43},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "0",
+              "value": "0"
+            },
+            {
+              "name": "2",
+              "value": "2"
+            },
+            {
+              "name": "5",
+              "value": "5"
+            },
+            {
+              "name": "10",
+              "value": "10"
+            },
+            {
+              "name": "20",
+              "value": "20"
+            },
+            {
+              "name": "50",
+              "value": "50"
+            },
+            {
+              "name": "100",
+              "value": "100"
+            },
+            {
+              "name": "200",
+              "value": "200"
+            },
+            {
+              "name": "500",
+              "value": "500"
+            },
+            {
+              "name": "1000",
+              "value": "1000"
+            },
+            {
+              "name": "2000",
+              "value": "2000"
+            },
+            {
+              "name": "5000",
+              "value": "5000"
+            },
+            {
+              "name": "10000",
+              "value": "10000"
+            }
+          ]
+        },
+        {
+          "id": "SM0006_9_14",
+          "name": "Discrepancy time 3",
+          "type": "UInt16",
+          "unit": "ms",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":44},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "0",
+              "value": "0"
+            },
+            {
+              "name": "2",
+              "value": "2"
+            },
+            {
+              "name": "5",
+              "value": "5"
+            },
+            {
+              "name": "10",
+              "value": "10"
+            },
+            {
+              "name": "20",
+              "value": "20"
+            },
+            {
+              "name": "50",
+              "value": "50"
+            },
+            {
+              "name": "100",
+              "value": "100"
+            },
+            {
+              "name": "200",
+              "value": "200"
+            },
+            {
+              "name": "500",
+              "value": "500"
+            },
+            {
+              "name": "1000",
+              "value": "1000"
+            },
+            {
+              "name": "2000",
+              "value": "2000"
+            },
+            {
+              "name": "5000",
+              "value": "5000"
+            },
+            {
+              "name": "10000",
+              "value": "10000"
+            }
+          ]
+        },
+        {
+          "id": "SM0006_9_15",
+          "name": "Discrepancy time 4",
+          "type": "UInt16",
+          "unit": "ms",
+          "default": "0",
+          "commissionable": true,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":45},\"osddVisibility\":\"kOsddVisibOverall\",\"transport\":{}}"
+          },
+          "visibility": "true",
+          "readonly": false,
+          "enum": [
+            {
+              "name": "0",
+              "value": "0"
+            },
+            {
+              "name": "2",
+              "value": "2"
+            },
+            {
+              "name": "5",
+              "value": "5"
+            },
+            {
+              "name": "10",
+              "value": "10"
+            },
+            {
+              "name": "20",
+              "value": "20"
+            },
+            {
+              "name": "50",
+              "value": "50"
+            },
+            {
+              "name": "100",
+              "value": "100"
+            },
+            {
+              "name": "200",
+              "value": "200"
+            },
+            {
+              "name": "500",
+              "value": "500"
+            },
+            {
+              "name": "1000",
+              "value": "1000"
+            },
+            {
+              "name": "2000",
+              "value": "2000"
+            },
+            {
+              "name": "5000",
+              "value": "5000"
+            },
+            {
+              "name": "10000",
+              "value": "10000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SM0006_HiddenGroup",
+      "name": "HiddenGroup",
+      "visibility": "false",
+      "parameters": [
+        {
+          "id": "SM0006_CRC_Number_of_RxSpdos",
+          "name": "CRC_Number_of_RxSpdos",
+          "type": "UInt32",
+          "default": "1",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_CRC_Number_of_TxSpdos",
+          "name": "CRC_Number_of_TxSpdos",
+          "type": "UInt32",
+          "default": "1",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_CRC_Number_of_Maps_per_Spdo",
+          "name": "CRC_Number_of_Maps_per_Spdo",
+          "type": "UInt32",
+          "default": "5",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_CRC_Number_of_Machine_Options",
+          "name": "CRC_Number_of_Machine_Options",
+          "type": "UInt32",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_Module_Cycle_Time_min_us",
+          "name": "Module_Cycle_Time_min_us",
+          "type": "UInt32",
+          "default": "1000",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_Module_Cycle_Time_max_us",
+          "name": "Module_Cycle_Time_max_us",
+          "type": "UInt32",
+          "default": "1999",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_SODautoDefault",
+          "name": "SODautoDefault",
+          "type": "UInt32",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"NoTransfer\",\"osddVisibility\":\"kOsddVisibNone\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_ParameterVersion",
+          "name": "ParameterVersion",
+          "type": "UInt16",
+          "default": "3",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":1},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_ParameterLength",
+          "name": "ParameterLength",
+          "type": "UInt16",
+          "default": "129",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":2},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_Disable Tests",
+          "name": "Disable Tests",
+          "type": "UInt8",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":3},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_TwoChannelMode",
+          "name": "TwoChannelMode",
+          "type": "UInt8",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":4},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_Sensor_Type_01",
+          "name": "Sensor_Type_01",
+          "type": "UInt8",
+          "default": "10",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":6},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_Ref_Chnl_01",
+          "name": "Ref_Chnl_01",
+          "type": "UInt8",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":7},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_Sensor_Type_02",
+          "name": "Sensor_Type_02",
+          "type": "UInt8",
+          "default": "10",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":8},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_Ref_Chnl_02",
+          "name": "Ref_Chnl_02",
+          "type": "UInt8",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":9},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_Sensor_Type_03",
+          "name": "Sensor_Type_03",
+          "type": "UInt8",
+          "default": "10",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":10},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_Ref_Chnl_03",
+          "name": "Ref_Chnl_03",
+          "type": "UInt8",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":11},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_Sensor_Type_04",
+          "name": "Sensor_Type_04",
+          "type": "UInt8",
+          "default": "10",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":12},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_Ref_Chnl_04",
+          "name": "Ref_Chnl_04",
+          "type": "UInt8",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":13},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        },
+        {
+          "id": "SM0006_AverageWhileTest",
+          "name": "AverageWhileTest",
+          "type": "UInt8",
+          "default": "0",
+          "commissionable": false,
+          "customData": {
+            "cData": "{\"transportOrderType\":\"ParameterStream\",\"paramStream\":{\"position\":47},\"osddVisibility\":\"kOsddVisibSafetyOnly\",\"transport\":{}}"
+          },
+          "visibility": "false",
+          "readonly": false
+        }
+      ]
+    }
+  ]
+}

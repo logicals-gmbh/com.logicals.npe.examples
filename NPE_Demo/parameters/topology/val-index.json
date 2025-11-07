@@ -1,0 +1,53 @@
+{
+  "checksum": "d374766231b3016c51845d10596f2d59cc417d8de214307cef419cf77652d1d1",
+  "groups": [
+    {
+      "id": "SM0001_SafeCPU_MainSN",
+      "path": "param-value-1.json",
+      "defPath": "SM0001_SafeCPU_MainSN-def.json",
+      "isValid": true
+    },
+    {
+      "id": "SM0002_SI4_110",
+      "path": "param-value-2.json",
+      "defPath": "SM0002_SI4_110-def.json",
+      "isValid": true
+    },
+    {
+      "id": "SM0003_SI4_110",
+      "path": "param-value-3.json",
+      "defPath": "SM0003_SI4_110-def.json",
+      "isValid": true
+    },
+    {
+      "id": "SM0004_SO4110",
+      "path": "param-value-4.json",
+      "defPath": "SM0004_SO4110-def.json",
+      "isValid": true
+    },
+    {
+      "id": "SM0005_SO4110",
+      "path": "param-value-5.json",
+      "defPath": "SM0005_SO4110-def.json",
+      "isValid": true
+    },
+    {
+      "id": "SM0006_SA4430",
+      "path": "param-value-6.json",
+      "defPath": "SM0006_SA4430-def.json",
+      "isValid": true
+    },
+    {
+      "id": "SM0007_8BVSV2SAFE11_110",
+      "path": "param-value-7.json",
+      "defPath": "SM0007_8BVSV2SAFE11_110-def.json",
+      "isValid": true
+    },
+    {
+      "id": "SM1023",
+      "path": "param-value-8.json",
+      "defPath": "SM1023-def.json",
+      "isValid": true
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+PROGRAM EstopDemo
+  USING safety.plcopen;
+  VAR
+    logicals_safety_plcopen_SF_EmergencyStop1 : SF_EmergencyStop;
+    Enable : BOOL;
+    EstopInput : SAFEBOOL;
+    logicals_safety_plcopen_SF_ESPE1 : SF_ESPE;
+    LightCurtainInput : SAFEBOOL;
+    SAFETRUE : SAFEBOOL := 1;
+    Reset : BOOL;
+    logicals_safety_plcopen_SF_OutControl1 : SF_OutControl;
+    MotorLogic : BOOL;
+    MotorOutput : SAFEBOOL;
+  END_VAR
+
+  (*
+
+    // Network 1:
+    logicals_safety_plcopen_SF_EmergencyStop1(Activate := Enable, S_EStopIn := EstopInput, S_StartReset := SAFETRUE, S_AutoReset := SAFETRUE, Reset := Reset);
+    logicals_safety_plcopen_SF_ESPE1(Activate := Enable, S_ESPE_In := LightCurtainInput, S_StartReset := SAFETRUE, S_AutoReset := SAFETRUE, Reset := Reset);
+    AND(IN1 := logicals_safety_plcopen_SF_EmergencyStop1.S_EStopOut, IN2 := logicals_safety_plcopen_SF_ESPE1.S_ESPE_Out, AND => @C(19).AND);
+    logicals_safety_plcopen_SF_OutControl1(Activate := logicals_safety_plcopen_SF_EmergencyStop1.Ready, S_SafeControl := @C(19).AND, ProcessControl := MotorLogic, S_StartReset := SAFETRUE, S_AutoReset := SAFETRUE, Reset := Enable, S_OutControl => MotorOutput);
+
+  *)
+
+  @C(1) : @FB(logicals_safety_plcopen_SF_EmergencyStop1), @R(435.0, 150.0, 330.0, 224.0), @I(@N(Activate), @L(54.5)), @I(@N(S_EStopIn), @L(84.5)), @I(@N(S_StartReset), @L(114.5)), @I(@N(S_AutoReset), @L(144.5)), @I(@N(Reset), @L(174.5)), @O(@N(Ready), @R(54.5)), @O(@N(S_EStopOut), @R(84.5)), @O(@N(SafetyDemand), @R(114.5)), @O(@N(ResetRequest), @R(144.5)), @O(@N(Error), @R(174.5)), @O(@N(DiagCode), @R(204.5));
+  @VF(2) : @E(Enable), @R(120.0, 195.0, 150.0, 19.0);
+  @VF(4) : @E(EstopInput), @R(120.0, 225.0, 150.0, 19.0);
+  @C(6) : @FB(logicals_safety_plcopen_SF_ESPE1), @R(435.0, 435.0, 330.0, 224.0), @I(@N(Activate), @L(54.5)), @I(@N(S_ESPE_In), @L(84.5)), @I(@N(S_StartReset), @L(114.5)), @I(@N(S_AutoReset), @L(144.5)), @I(@N(Reset), @L(174.5)), @O(@N(Ready), @R(54.5)), @O(@N(S_ESPE_Out), @R(84.5)), @O(@N(SafetyDemand), @R(114.5)), @O(@N(ResetRequest), @R(144.5)), @O(@N(Error), @R(174.5)), @O(@N(DiagCode), @R(204.5));
+  @VF(8) : @E(LightCurtainInput), @R(135.0, 510.0, 150.0, 19.0);
+  @VF(10) : @E(SAFETRUE), @R(135.0, 540.0, 150.0, 19.0);
+  @VF(14) : @E(Reset), @R(135.0, 600.0, 150.0, 19.0);
+  @C(17) : @FB(logicals_safety_plcopen_SF_OutControl1), @R(1275.0, 150.0, 330.0, 254.0), @I(@N(Activate), @L(54.5)), @I(@N(S_SafeControl), @L(84.5)), @I(@N(ProcessControl), @L(114.5)), @I(@N(StaticControl), @L(144.5)), @I(@N(S_StartReset), @L(174.5)), @I(@N(S_AutoReset), @L(204.5)), @I(@N(Reset), @L(234.5)), @O(@N(Ready), @R(54.5)), @O(@N(S_OutControl), @R(84.5)), @O(@N(SafetyDemand), @R(114.5)), @O(@N(ResetRequest), @R(144.5)), @O(@N(Error), @R(174.5)), @O(@N(DiagCode), @R(204.5));
+  @C(19) : @F(AND), @R(915.0, 225.0, 180.0, 104.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @O(@N(AND), @R(54.5));
+  @VF(23) : @E(MotorLogic), @R(135.0, 675.0, 150.0, 19.0);
+  @VF(28) : @E(MotorOutput), @R(1695.0, 225.0, 150.0, 19.0);
+  @CP(7) : 299.5, 204.5;
+  @CP(12) : 404.5, 549.5;
+  @CP(13) : 404.5, 294.5;
+  @CP(16) : 374.5, 609.5;
+  @CP(25) : 404.5, 399.5;
+  @CP(26) : 1199.5, 354.5;
+  @CP(27) : 299.5, 414.5;
+
+  @G(3) :
+     @L(@VF(2).o, @CP(7)),
+     @L(@CP(7), @C(1).Activate),
+     @L(@CP(7), @CP(27)),
+     @L(@CP(27), @C(6).Activate),
+     @L(@CP(27), @C(17).Reset)
+    ;
+  @G(5) :
+     @L(@VF(4).o, @C(1).S_EStopIn)
+    ;
+  @G(9) :
+     @L(@VF(8).o, @C(6).S_ESPE_In)
+    ;
+  @G(11) :
+     @L(@VF(10).o, @CP(12)),
+     @L(@CP(12), @C(6).S_StartReset),
+     @L(@CP(12), @C(6).S_AutoReset),
+     @L(@CP(12), @CP(25)),
+     @L(@CP(13), @C(1).S_AutoReset),
+     @L(@CP(13), @C(1).S_StartReset),
+     @L(@CP(25), @CP(13)),
+     @L(@CP(25), @CP(26)),
+     @L(@CP(26), @C(17).S_AutoReset),
+     @L(@CP(26), @C(17).S_StartReset)
+    ;
+  @G(15) :
+     @L(@VF(14).o, @CP(16)),
+     @L(@CP(16), @C(6).Reset),
+     @L(@CP(16), @C(1).Reset)
+    ;
+  @G(18) :
+     @L(@C(1).Ready, @C(17).Activate)
+    ;
+  @G(20) :
+     @L(@C(1).S_EStopOut, @C(19).IN1)
+    ;
+  @G(21) :
+     @L(@C(6).S_ESPE_Out, @C(19).IN2)
+    ;
+  @G(22) :
+     @L(@C(19).AND, @C(17).S_SafeControl)
+    ;
+  @G(24) :
+     @L(@VF(23).o, @C(17).ProcessControl)
+    ;
+  @G(29) :
+     @L(@C(17).S_OutControl, @VF(28).i)
+    ;
+END_PROGRAM

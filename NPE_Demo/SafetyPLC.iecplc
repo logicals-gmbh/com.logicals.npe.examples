@@ -1,0 +1,20 @@
+/*
+ * This is a template for the remote PLC object
+ */
+
+{
+	CHANNEL RemoteChannel
+		TCP
+			ADDRESS := 0.1.1.1;
+			PORT    := 1534;
+		END_TCP
+	END_CHANNEL
+}
+
+CONFIGURATION RemoteConfiguration
+	RESOURCE remote ON BuiltInPlc { ON_CHANNEL := RemoteChannel }
+		TASK DefaultTask(INTERVAL := TIME#10ms, PRIORITY := 38229);
+		PROGRAM EstopDemo WITH DefaultTask :
+			EstopDemo;
+	END_RESOURCE
+END_CONFIGURATION

@@ -1,0 +1,653 @@
+{
+  "id": "SM0007_8BVSV2SAFE11_110",
+  "groups": [
+    {
+      "id": "SM0007_Basic_Node",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_MinFwRev",
+          "value": "256",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_SAdr-ToSCM",
+          "value": "1023",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Safety_Response_Time",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_ManualResponseTimeConfiguration",
+          "value": "1",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_SafeDataDuration",
+          "value": "20000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_TPL",
+          "value": "1",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_NodeGuardingPackets",
+          "value": "5",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Safe machine options",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_ucActivateAddPar",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_General settings  Automatic reset on start",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_48",
+          "value": "true",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_General settings  Behavior of Functional Fail Safe (FFS)",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_56",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_DUMMYbit2",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_DUMMYbit3",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_DUMMYbit4",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_DUMMYbit5",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_DUMMYbit6",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_DUMMYbit7",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_57",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_62",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_bFFSEncErrOnlySFEnabled",
+          "value": "false",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_General settings  Blackout Mode",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_ucBMMode",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_lBMDELAYFFS",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_ulBMConfiguredSF",
+          "value": "4294967295",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_General settings  Encoder Unit System (EUS)",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_84",
+          "value": "1",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_DUMMYbyte3",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_DUMMYbyte4",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_DUMMYbyte5",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_36",
+          "value": "1",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_37",
+          "value": "1000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_38",
+          "value": "1",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_39",
+          "value": "1000000000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_DUMMYbyteMaximumSpeed",
+          "value": "32767",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_77",
+          "value": "1000000",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_General settings  Encoder monitoring",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_ucEncMonitoringModeSEM",
+          "value": "true",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_59",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_60",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_61",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_DUMMYbit12",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_DUMMYbit13",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_DUMMYbit14",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_DUMMYbit15",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_35",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_34",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_General settings  Standstill monitoring",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_19",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_18",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_General settings  Early limit monitoring",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_33",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_21",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_General settings  Ramp monitoring",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_12",
+          "value": "1073676289",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_20",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Basic functions  STO1",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_29",
+          "value": "false",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Basic functions  SS1",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_30",
+          "value": "true",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_41",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Basic functions  SBC",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_51",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Speed functions  SS2",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_31",
+          "value": "true",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_42",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Speed functions  SLA",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_78",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_82",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_81",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_83",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_80",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Speed functions  SMSSLS",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_25",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_13",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_14",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_15",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_16",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_17",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_32",
+          "value": "true",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_43",
+          "value": "10000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_44",
+          "value": "10000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_45",
+          "value": "10000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_46",
+          "value": "10000",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Advanced functions  SDI",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_49",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Advanced functions  SLI",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_24",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_55",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Absolute position functions  Homing",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_66",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_63",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_85",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_67",
+          "value": "true",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_68",
+          "value": "true",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_69",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_DUMMYbit21",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_DUMMYbit22",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_DUMMYbit23",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_DUMMYbit24",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_70",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_64",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_65",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_Absolute position functions  SMP  SLP",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_71",
+          "value": "false",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_72",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_73",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_74",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_75",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_76",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0007_hiddenGroup",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0007_CRC_Number_of_RxSpdos",
+          "value": "1",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_CRC_Number_of_TxSpdos",
+          "value": "1",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_CRC_Number_of_Maps_per_Spdo",
+          "value": "3",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_CRC_Number_of_Machine_Options",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_CRC_Number_of_SODCRCs",
+          "value": "2",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_Module_Cycle_Time_min_us",
+          "value": "784",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_Module_Cycle_Time_max_us",
+          "value": "816",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_Module_Off_Delay_max_us",
+          "value": "5000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_AxisTypeID",
+          "value": "2",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_FILLER",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_ParameterVersion",
+          "value": "13",
+          "commissionable": false
+        },
+        {
+          "id": "SM0007_ParameterLength",
+          "value": "204",
+          "commissionable": false
+        }
+      ]
+    }
+  ],
+  "values": []
+}

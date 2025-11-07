@@ -1,0 +1,9 @@
+GLOBALS Remote1
+	VAR_GLOBAL
+
+		InputModule1Channel1 AT %IX1.2.1 : BOOL { description := "My desc 龦";
+		comment := "My comment 龦";
+		};
+		OutputModule1Channel2 : BOOL;
+	END_VAR
+END_GLOBALS

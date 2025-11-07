@@ -1,0 +1,342 @@
+{
+  "id": "SM0006_SA4430",
+  "groups": [
+    {
+      "id": "SM0006_Basic_Node",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0006_MinFwRev",
+          "value": "256",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_SAdr-ToSCM",
+          "value": "1023",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0006_Safety_Response_Time",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0006_ManualResponseTimeConfiguration",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_SafeDataDuration",
+          "value": "20000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_TPL",
+          "value": "1",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_NodeGuardingPackets",
+          "value": "5",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0006_ModuleConfiguration",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0006_0_5",
+          "value": "1",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_0_6",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0006_SafeCurrent0102",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0006_8_0",
+          "value": "25000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_8_1",
+          "value": "25000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_8_2",
+          "value": "2500",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_8_3",
+          "value": "25000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_8_4",
+          "value": "500",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_8_5",
+          "value": "500",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_8_6",
+          "value": "500",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_8_7",
+          "value": "500",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_8_8",
+          "value": "100",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_8_9",
+          "value": "100",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_8_10",
+          "value": "100",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_8_11",
+          "value": "100",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_8_12",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_8_13",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_8_14",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_8_15",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0006_SafeCurrent0304",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0006_9_0",
+          "value": "25000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_9_1",
+          "value": "25000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_9_2",
+          "value": "25000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_9_3",
+          "value": "25000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_9_4",
+          "value": "500",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_9_5",
+          "value": "500",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_9_6",
+          "value": "500",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_9_7",
+          "value": "500",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_9_8",
+          "value": "100",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_9_9",
+          "value": "100",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_9_10",
+          "value": "100",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_9_11",
+          "value": "100",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_9_12",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_9_13",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_9_14",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_9_15",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0006_HiddenGroup",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0006_CRC_Number_of_RxSpdos",
+          "value": "1",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_CRC_Number_of_TxSpdos",
+          "value": "1",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_CRC_Number_of_Maps_per_Spdo",
+          "value": "5",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_CRC_Number_of_Machine_Options",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_Module_Cycle_Time_min_us",
+          "value": "1000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_Module_Cycle_Time_max_us",
+          "value": "1999",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_SODautoDefault",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_ParameterVersion",
+          "value": "3",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_ParameterLength",
+          "value": "129",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_Disable Tests",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_TwoChannelMode",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_Sensor_Type_01",
+          "value": "10",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_Ref_Chnl_01",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_Sensor_Type_02",
+          "value": "10",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_Ref_Chnl_02",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_Sensor_Type_03",
+          "value": "10",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_Ref_Chnl_03",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_Sensor_Type_04",
+          "value": "10",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_Ref_Chnl_04",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0006_AverageWhileTest",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    }
+  ],
+  "values": []
+}

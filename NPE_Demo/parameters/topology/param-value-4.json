@@ -1,0 +1,125 @@
+{
+  "id": "SM0004_SO4110",
+  "groups": [
+    {
+      "id": "SM0004_Basic_Node",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0004_MinFwRev",
+          "value": "256",
+          "commissionable": false
+        },
+        {
+          "id": "SM0004_SAdr-ToSCM",
+          "value": "1023",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0004_Safety_Response_Time",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0004_ManualResponseTimeConfiguration",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0004_SafeDataDuration",
+          "value": "20000",
+          "commissionable": false
+        },
+        {
+          "id": "SM0004_TPL",
+          "value": "1",
+          "commissionable": false
+        },
+        {
+          "id": "SM0004_NodeGuardingPackets",
+          "value": "5",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0004_ModuleConfiguration",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0004_0_2",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    },
+    {
+      "id": "SM0004_HiddenGroup",
+      "groups": [],
+      "values": [
+        {
+          "id": "SM0004_ParameterVersion",
+          "value": "3",
+          "commissionable": false
+        },
+        {
+          "id": "SM0004_ParameterLength",
+          "value": "8",
+          "commissionable": false
+        },
+        {
+          "id": "SM0004_Reserve1",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0004_Reserve2",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0004_Reserve3",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0004_CRC_Number_of_RxSpdos",
+          "value": "1",
+          "commissionable": false
+        },
+        {
+          "id": "SM0004_CRC_Number_of_TxSpdos",
+          "value": "1",
+          "commissionable": false
+        },
+        {
+          "id": "SM0004_CRC_Number_of_Maps_per_Spdo",
+          "value": "4",
+          "commissionable": false
+        },
+        {
+          "id": "SM0004_CRC_Number_of_Machine_Options",
+          "value": "0",
+          "commissionable": false
+        },
+        {
+          "id": "SM0004_Module_Cycle_Time_min_us",
+          "value": "400",
+          "commissionable": false
+        },
+        {
+          "id": "SM0004_Module_Cycle_Time_max_us",
+          "value": "799",
+          "commissionable": false
+        },
+        {
+          "id": "SM0004_SODautoDefault",
+          "value": "0",
+          "commissionable": false
+        }
+      ]
+    }
+  ],
+  "values": []
+}
