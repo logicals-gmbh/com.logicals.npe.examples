@@ -1,0 +1,165 @@
+(* HIS Packaging Line / SPS 2026
+ *    Non-safety simulation. Never use these outputs as a safety function.
+ *    Call once per cyclic task. No physical I/O addresses are assigned.
+ *)
+FUNCTION_BLOCK FB_PackagingLine
+	VAR_INPUT
+		Enable : BOOL;
+		Permit : BOOL; (* Read-only status copy from the safety POU. *)
+		Start : BOOL;
+		Stop : BOOL;
+		FastCycle : BOOL;
+		Jam : BOOL; (* Simulated carton jam, NOT a safety fault. *)
+		AckJam : BOOL;
+	END_VAR
+	VAR_OUTPUT
+		State : UINT;
+		(* 0 blocked, 10 ready, 20 infeed, 30 sealing,
+		 40 outfeed, 50 complete, 90 carton jam *)
+		Ready : BOOL;
+		Infeed : BOOL;
+		Sealing : BOOL;
+		Outfeed : BOOL;
+		Complete : BOOL;
+		Blocked : BOOL;
+		Fault : BOOL;
+		Running : BOOL;
+		Heartbeat : BOOL;
+		CycleDone : BOOL; (* One scan pulse after carton leaves station. *)
+		CartonsPacked : UDINT;
+		FastCycleActive : BOOL;
+	END_VAR
+	VAR
+		PrevStart : BOOL;
+		PrevAck : BOOL;
+		FirstScan : BOOL := TRUE;
+		StartEdge : BOOL;
+		AckEdge : BOOL;
+		StartArmed : BOOL;
+		FaultLatched : BOOL;
+		InfeedTime : TIME := T#3s;
+		SealTime : TIME := T#2s;
+		OutfeedTime : TIME := T#2s;
+		tInfeed : TON;
+		tSeal : TON;
+		tOutfeed : TON;
+		tSuccess : TON;
+		tBlink : TON;
+	END_VAR
+
+	(* Suppress edges on startup; held Start never causes a restart. *)
+	StartEdge := Start AND NOT PrevStart AND NOT FirstScan;
+	AckEdge := AckJam AND NOT PrevAck AND NOT FirstScan;
+	PrevStart := Start;
+	PrevAck := AckJam;
+	FirstScan := FALSE;
+	CycleDone := FALSE;
+
+	(* Timers are executed on every scan, also when disabled. *)
+	tBlink(IN := NOT tBlink.Q, PT := T#250ms);
+	IF tBlink.Q THEN
+		Heartbeat := NOT Heartbeat;
+	END_IF;
+	tInfeed(IN := (State = 20) AND Enable AND Permit AND NOT Stop
+            AND NOT Jam, PT := InfeedTime);
+	tSeal(IN := (State = 30) AND Enable AND Permit AND NOT Stop
+             AND NOT Jam, PT := SealTime);
+	tOutfeed(IN := (State = 40) AND Enable AND Permit AND NOT Stop
+              AND NOT Jam, PT := OutfeedTime);
+	tSuccess(IN := (State = 50) AND Enable AND Permit AND NOT Stop
+               AND NOT Jam, PT := T#1s);
+
+	(* Keep process faults latched even across a safety interruption. *)
+	IF Jam AND Enable AND Permit
+   AND ((State = 20) OR (State = 30) OR (State = 40)) THEN
+		FaultLatched := TRUE;
+	END_IF;
+	IF AckEdge AND NOT Jam AND Enable AND Permit THEN
+		FaultLatched := FALSE;
+	END_IF;
+
+	(* Priority: no permit / disabled > process fault > stop > sequence. *)
+	IF NOT Enable OR NOT Permit THEN
+		State := 0;
+
+		FastCycleActive := FALSE;
+		StartArmed := FALSE;
+	ELSIF FaultLatched THEN
+		State := 90;
+
+		FastCycleActive := FALSE;
+		StartArmed := FALSE;
+	ELSIF Stop THEN
+		State := 10;
+
+		FastCycleActive := FALSE;
+		StartArmed := FALSE;
+	ELSE
+		CASE State OF
+			0, 90:
+			State := 10;
+
+			FastCycleActive := FALSE;
+			StartArmed := FALSE;
+			10:
+            IF NOT Start THEN
+				StartArmed := TRUE;
+			END_IF;
+			IF StartEdge AND StartArmed AND NOT Jam
+               AND NOT AckJam THEN
+				FastCycleActive := FastCycle; (* Latch throughput mode for this carton. *)
+				IF FastCycleActive THEN
+					InfeedTime := T#1500ms;
+					SealTime := T#1s;
+					OutfeedTime := T#1s;
+				ELSE
+					InfeedTime := T#3s;
+					SealTime := T#2s;
+					OutfeedTime := T#2s;
+				END_IF;
+				StartArmed := FALSE;
+
+				State := 20;
+			END_IF;
+			20:
+            IF tInfeed.Q THEN
+				State := 30;
+			END_IF;
+			30:
+            IF tSeal.Q THEN
+
+				State := 40;
+			END_IF;
+			40:
+            IF tOutfeed.Q THEN
+				IF CartonsPacked < UDINT#4294967295 THEN
+					CartonsPacked := CartonsPacked + 1;
+				END_IF;
+				CycleDone := TRUE;
+				State := 50;
+			END_IF;
+			50:
+            IF tSuccess.Q THEN
+				State := 10;
+				FastCycleActive := FALSE;
+				StartArmed := FALSE;
+			END_IF;
+		ELSE
+			FaultLatched := TRUE;
+			State := 90;
+
+			FastCycleActive := FALSE;
+			StartArmed := FALSE;
+		END_CASE;
+	END_IF;
+
+	Blocked := NOT Enable OR NOT Permit;
+	Fault := FaultLatched;
+	Ready := (State = 10) AND Enable AND Permit AND NOT FaultLatched
+         AND NOT Stop AND NOT Jam AND NOT AckJam;
+	Infeed := State = 20;
+	Sealing := State = 30;
+	Outfeed := State = 40;
+	Complete := State = 50;
+	Running := Infeed OR Sealing OR Outfeed;
+END_FUNCTION_BLOCK

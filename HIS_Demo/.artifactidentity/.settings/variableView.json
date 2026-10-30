@@ -1,0 +1,16 @@
+{
+  "artifactMetadata": {
+    "additionalMetadata": {},
+    "artifactName": "variableView",
+    "projectName": "HIS_Demo",
+    "projectRelativePath": ".settings"
+  },
+  "md5ChecksumAsHexString": "4b66a78363eb6fae6acb91a2a904601f",
+  "crc32ChecksumAsHexString": "FC2D0323",
+  "members": [
+    {
+      "fileName": "testVariables.xml",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"testVariables.xml\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings/variableView\"\n  },\n  \"md5ChecksumAsHexString\": \"04e63f029eeccaed4c53c3c21f2e1f0f\",\n  \"crc32ChecksumAsHexString\": \"F1703B2\"\n}"
+    }
+  ]
+}

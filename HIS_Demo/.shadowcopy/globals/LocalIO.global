@@ -1,0 +1,6 @@
+GLOBALS LocalIO
+	VAR_GLOBAL
+		localDigitalInput     AT %IX2.0 : ARRAY [1..32] OF BOOL { comment := "Local Digital Inputs"; };
+		localDigitalOutput    AT %QX2.0 : ARRAY [1..32] OF BOOL { comment := "Local Digital Outputs"; };
+	END_VAR
+END_GLOBALS

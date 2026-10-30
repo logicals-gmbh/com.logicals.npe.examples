@@ -1,0 +1,301 @@
+{
+  "report": {
+    "object": "../../../../../SRC/com.logicals.npe.examples/HIS_Demo/local.iecplc",
+    "date": "2026-10-30",
+    "time": "12:04:44",
+    "startedBy": "user",
+    "userName": "DEMO",
+    "nrOfErrors": 0,
+    "nrOfWarnings": 0,
+    "nrOfInfos": 0,
+    "rules": {
+      "com.logicals.mrc.rules.ModelRuleNoNegatedIOs": {
+        "groupId": "Iec61131_Design",
+        "name": "Eingänge und Ausgänge dürfen nicht negiert werden.",
+        "description": "Diese Modellregel prüft, ob negierte Ein-/Ausgänge vorhanden sind. Solche Ein-/Ausgänge werden gemeldet.",
+        "severity": "WARNING",
+        "activeState": false,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleForbiddenDatatypes": {
+        "groupId": "Iec61131_Design",
+        "name": "Verbotene elementare Datentypen dürfen nicht verwendet werden.",
+        "description": "Diese Modellregel prüft, ob verbotene Datentypen verwendet werden. Die Verwendungen solcher Datentypen werden als verboten gemeldet.",
+        "severity": "ERROR",
+        "activeState": false,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleMultipleBlockInstanceCalls": {
+        "groupId": "Iec61131_Design",
+        "name": "Instanzen von Funktionsbausteinen dürfen nicht mehrfach aufgerufen werden.",
+        "description": "Diese Modellregel prüft, ob Instanzen von Funktionsbausteinen mehrfach aufgerufen werden.",
+        "severity": "ERROR",
+        "activeState": false,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleSingleResource": {
+        "groupId": "Iec61131_Usage",
+        "name": "Anzahl der Ressourcen pro Plattform ist begrenzt.",
+        "description": "Diese Modellregel prüft, ob die maximale Anzahl an Ressourcen für eine Plattform überschritten ist.",
+        "severity": "ERROR",
+        "activeState": false,
+        "occurrences": []
+      },
+      "com.logicals.iec.fbd.validation.ModelRuleDirectLinesAcrossPages": {
+        "groupId": "Iec61131_Design",
+        "name": "Direkte Linien über Seiten hinweg dürfen nicht verwendet werden.",
+        "description": "Diese Modellregel prüft, ob direkte Linien über Seiten hinweg vorhanden sind. Solche Linien werden gemeldet.",
+        "severity": "WARNING",
+        "activeState": true,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleSTSafeSimplifiedGlobalVariables": {
+        "groupId": "Iec61131_Design",
+        "name": "Globale Funktionsbaustein-Instanzen dürfen nur in einem Task verwendet werden.",
+        "description": "Diese Modellregel prüft, ob Funktionsbaustein-Instanzen, die als globale Variable deklariert sind, in mehr als einem Task verwendet werden.",
+        "severity": "ERROR",
+        "activeState": true,
+        "occurrences": []
+      },
+      "com.logicals.iec.st.validation.namespace.PouNamespaceValidator": {
+        "groupId": "Iec61131_Design",
+        "name": "Namespaces der Sprachelemente müssen mit dem Bezeichner des übergeordneten Namespace-Ordners übereinstimmen.",
+        "description": "Diese Modellregel prüft, ob die Namespaces von allen Sprachelementen mit dem Bezeichner des übergeordneten Namespace-Ordners übereinstimmt. Abweichungen werden gemeldet. Falls kein Namespace-Ordner für die Sprachelemente vorhanden ist, werden keine Abweichungen gemeldet.",
+        "severity": "WARNING",
+        "activeState": true,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleConnectorsOrContinuations": {
+        "groupId": "Iec61131_Design",
+        "name": "Es dürfen keine Konnektoren oder Fortsetzungen verwendet werden.",
+        "description": "Diese Modellregel prüft, ob Konnektoren oder Fortsetzungen verwendet werden.",
+        "severity": "ERROR",
+        "activeState": false,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleNonLvlLanguages": {
+        "groupId": "Iec61131_Design",
+        "name": "Nur die Spracheigenschaften \"SafeSimplified\" und \"Safe\" dürfen verwendet werden.",
+        "description": "Diese Regel prüft, ob die Anwendung Elemente verwendet, die nicht den Richtlinien der Spracheigenschaften \"SafeSimplified\" und \"Safe\" entsprechen. Diese Elemente werden gemeldet.",
+        "severity": "WARNING",
+        "activeState": true,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleOverlappingElementsInInterface": {
+        "groupId": "Iec61131_Design",
+        "name": "Elemente in einer Schnittstelle für einen Funktionsbaustein oder einer Funktion dürfen sich nicht überlappen.",
+        "description": "Diese Modellregel prüft, ob sich Elemente in einer Schnittstelle für einen Funktionsbaustein oder einer Funktion überlappen.",
+        "severity": "WARNING",
+        "activeState": false,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleStObjWithResNameOnly": {
+        "groupId": "Iec61131_Design",
+        "name": "ST-Objekte dürfen auf oberster Ebene nur Elemente mit dem Namen des ST-Objekts enthalten",
+        "description": "Diese Modellregel prüft, ob der Name von Elementen, die auf oberster Ebene in einem ST-Objekt deklariert sind, mit dem Namen dieses ST-Objekts übereinstimmt. Elemente mit anderen Namen werden gemeldet.",
+        "severity": "WARNING",
+        "activeState": false,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleForbiddenModuleType": {
+        "groupId": "Iec61131_Design",
+        "name": "Die Verwendung von Bausteinen wird vollständig oder auf vorgegebene Typen eingeschränkt.",
+        "description": "Diese Modellregel ist konfigurierbar, um die Verwendung von Bausteinen oder deren erlaubten Typen einzuschränken.",
+        "severity": "ERROR",
+        "activeState": false,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.UnconnectedInvertedConnectionPointsValidation": {
+        "groupId": "Iec61131_Design",
+        "name": "Negierungen von nicht-verbundenen Baustein-Eingängen sind nicht erlaubt.",
+        "description": "Diese Modellregel prüft, ob Negierungen von Baustein-Eingängen vorhanden sind, wenn diese Eingänge nicht verbunden sind. Solche Baustein-Eingänge werden gemeldet.",
+        "severity": "WARNING",
+        "activeState": true,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleForbiddenCBlocks": {
+        "groupId": "Iec61131_Portability",
+        "name": "C-Bausteine dürfen nur in Bibliotheken enthalten sein.",
+        "description": "Diese Modellregel prüft, ob die verwendeten C-Bausteine in Bibliotheken enthalten sind. Andere C-Bausteine werden gemeldet.",
+        "severity": "ERROR",
+        "activeState": false,
+        "occurrences": []
+      },
+      "com.logicals.iec.st.validation.namespace.UniqueFolderNameWithNamespaceValidator": {
+        "groupId": "Iec61131_Design",
+        "name": "Namespace-Ordner müssen einen eindeutigen Bezeichner besitzen.",
+        "description": "Diese Modellregel prüft, ob mehrere Namespace-Ordner mit demselben Bezeichner vorhanden sind. Abweichungen werden gemeldet.",
+        "severity": "WARNING",
+        "activeState": true,
+        "occurrences": []
+      },
+      "com.logicals.iec.fbd.validation.ModelRuleDirectLines": {
+        "groupId": "Iec61131_Design",
+        "name": "Direkte Linien auf derselben Seite dürfen nicht verwendet werden.",
+        "description": "Diese Modellregel prüft, ob direkte Linien auf derselben Seite vorhanden sind.",
+        "severity": "WARNING",
+        "activeState": true,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleBlockInputOutputOrientation": {
+        "groupId": "Iec61131_Design",
+        "name": "Eingänge müssen auf der linken Bausteinkante positioniert werden, Ausgänge auf der rechten.",
+        "description": "Diese Modellregel prüft, auf welcher Bausteinkante die Eingänge/Ausgänge positioniert sind. Gemeldet werden Eingänge, die nicht auf der linken Bausteinkante positioniert sind. Ebenso werden Ausgänge gemeldet, die nicht auf der rechten Bausteinkante positioniert sind.",
+        "severity": "WARNING",
+        "activeState": false,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleEachProgramAssignedToTask": {
+        "groupId": "Iec61131_Design",
+        "name": "Jedes Programm muss einem Task zugewiesen werden.",
+        "description": "Diese Modellregel prüft, ob jeder Programmtyp einem Task zugewiesen ist. Andere Programmtypen werden gemeldet.",
+        "severity": "WARNING",
+        "activeState": false,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleHardwareAddressResolution": {
+        "groupId": "Iec61131_Design",
+        "name": "Nur tatsächliche Ressource-globale Variablen dürfen in VAR_CONFIG-Abschnitten verwendet werden.",
+        "description": "Die VAR_CONFIG-Abschnitte dürfen nur Ressource-globale Variablen enthalten.",
+        "severity": "ERROR",
+        "activeState": true,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleForbiddenOutputAssignment": {
+        "groupId": "Iec61131_Usage",
+        "name": "Zuweisungen auf Ausgangsvariablen eines Funktionsbausteins außerhalb von Funktionsbausteinen sind nicht erlaubt.",
+        "description": "Diese Modellregel prüft, ob Zuweisungen auf Ausgangsvariablen eines Funktionsbausteins außerhalb von Funktionsbausteinen vorhanden sind. Solche Zuweisungen werden gemeldet.\n",
+        "severity": "ERROR",
+        "activeState": true,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleRefVarsInFunctions": {
+        "groupId": "Iec61131_Usage",
+        "name": "Referenzen auf lokale Variablen dürfen in Funktionen/Methoden nicht verwendet werden.",
+        "description": "Diese Modellregel prüft, ob Referenzen auf lokale Variablen in Funktionen/Methoden verwendet werden Solche Referenzen auf lokale Variablen werden gemeldet.",
+        "severity": "ERROR",
+        "activeState": true,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleSinglePouPerResource": {
+        "groupId": "Iec61131_Design",
+        "name": "ST-Objekte dürfen auf oberster Ebene nur ein Element enthalten.",
+        "description": "Diese Modellregel prüft, ob ST-Objekte auf oberster Ebene mehrere Elemente enthalten. Solche ST-Objekte werden gemeldet.",
+        "severity": "WARNING",
+        "activeState": false,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleGlobalAssignment": {
+        "groupId": "Iec61131_Design",
+        "name": "Das mehrfache Beschreiben von Hardware-Ausgängen innerhalb einer Ressource ist nicht erlaubt.",
+        "description": "Diese Modell-Regel prüft, ob Hardware-Ausgänge in mehr als einer Programminstanz einer Ressource geschrieben werden. Globale Variablen mit zugeordneter IEC-Hardware-Adresse werden als Hardware-Ausgänge betrachtet. Das Schreiben solcher Variablen ist nur in exakt einer Programminstanz einer Ressource erlaubt.",
+        "severity": "ERROR",
+        "activeState": true,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleObjectNameConformity": {
+        "groupId": "Iec61131_Design",
+        "name": "Für Projekte/Ordner/Objekte dürfen nur Bezeichner laut Vorgaben verwendet werden.",
+        "description": "Diese Modellregel prüft, ob die Namen von Projekten/Ordnern/Objekte den Vorgaben entsprechen. Informieren Sie sich in der Benutzerdokumention über diese Vorgaben.",
+        "severity": "WARNING",
+        "activeState": false,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleExpressionInValueField": {
+        "groupId": "Iec61131_Design",
+        "name": "Die Verwendung von Ausdrücken in Wertfeldern wird auf Literale, Konstanten oder Variablen eingeschränkt.",
+        "description": "Diese Modellregel prüft die Verwendung von Ausdrücken in Wertfeldern. Nur Literale, Konstanten und Variablen dürfen verwendet werden, andere Ausdrücke werden gemeldet.",
+        "severity": "ERROR",
+        "activeState": false,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleForbiddenInputAssignment": {
+        "groupId": "Iec61131_Usage",
+        "name": "Zuweisungen auf Eingangsvariablen innerhalb der POE sind nicht erlaubt.",
+        "description": "Diese Modellregel prüft, ob Zuweisungen auf Eingangsvariablen innerhalb von Funktionsbausteinen vorhanden sind. Solche Zuweisungen werden gemeldet. Ausgenommen davon sind Zuweisungen auf Referenz-Variablen innerhalb von Funktionsbausteinen, da diese immer erlaubt sind.\nZuweisungen auf Eingangsvariablen innerhalb von Funktionen sind grundsätzlich nie erlaubt. Ausgenommen sind wieder Zuweisungen auf Referenz-Variablen, da diese auch innerhalb von Funktionen immer erlaubt sind.",
+        "severity": "ERROR",
+        "activeState": true,
+        "occurrences": []
+      },
+      "com.logicals.iec.fbd.validation.ModelRuleLeftToRightSignalflow": {
+        "groupId": "Iec61131_Design",
+        "name": "Linien, die von rechts nach links führen, dürfen nicht verwendet werden.",
+        "description": "Diese Modellregel prüft, ob Linien verwendet werden, die von rechts nach links führen. Solche Linien werden gemeldet.\nHinweis: Verbindungen mit Hilfe von Konnektoren und Fortsetzungen werden von dieser Regel nicht geprüft.",
+        "severity": "WARNING",
+        "activeState": false,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleFunctionBlockOutputToVarInOut": {
+        "groupId": "Iec61131_Usage",
+        "name": "Der Ausgang eines Funktionsbausteins darf nicht auf eine VAR_IN_OUT-Variable zugewiesen werden.",
+        "description": "Diese Modellregel prüft, ob der Ausgang eines Funktionsbausteins auf eine VAR_IN_OUT-Variable zugewiesen wird. Solche Zuweisungen werden gemeldet.",
+        "severity": "ERROR",
+        "activeState": true,
+        "occurrences": []
+      },
+      "com.logicals.mrc.rules.ModelRuleConnectorMustHaveSource": {
+        "groupId": "Iec61131_Design",
+        "name": "Ein Konnektor muss mit einem Ursprung verbunden sein.",
+        "description": "Diese Modellregel prüft, ob ein Konnektor mit einem Ursprung verbunden ist. Falls nicht, wird der Konnektor gemeldet.",
+        "severity": "ERROR",
+        "activeState": true,
+        "occurrences": []
+      }
+    },
+    "validatedObjects": [
+      {
+        "qualifiedName": "AND",
+        "fingerprint": "835FBBAA"
+      },
+      {
+        "qualifiedName": "FB_HISSafety",
+        "fingerprint": "94C63C39"
+      },
+      {
+        "qualifiedName": "FB_PackagingIndicators",
+        "fingerprint": "93EC3547"
+      },
+      {
+        "qualifiedName": "FB_PackagingLine",
+        "fingerprint": "3D019EDA"
+      },
+      {
+        "qualifiedName": "OR",
+        "fingerprint": "7CBCD812"
+      },
+      {
+        "qualifiedName": "PRG_HISDemo",
+        "fingerprint": "BBBB6DC5"
+      },
+      {
+        "qualifiedName": "R_TRIG",
+        "fingerprint": "C13D52F6"
+      },
+      {
+        "qualifiedName": "safety.plcopen.SFB_GenericSafetyDemand",
+        "fingerprint": "888FA390"
+      },
+      {
+        "qualifiedName": "safety.plcopen.SF_EmergencyStop",
+        "fingerprint": "579B2100"
+      },
+      {
+        "qualifiedName": "safety.plcopen.SF_Equivalent",
+        "fingerprint": "375ACEBA"
+      },
+      {
+        "qualifiedName": "TON",
+        "fingerprint": "098BC6BD"
+      },
+      {
+        "qualifiedName": "TO_UINT",
+        "fingerprint": "3D745203"
+      },
+      {
+        "qualifiedName": "TO_WORD",
+        "fingerprint": "3D745203"
+      }
+    ]
+  },
+  "signature": "8d207ee6"
+}

@@ -1,0 +1,2 @@
+LIBRARY com.logicals.lc3.library.standard VERSION := "4.0.0-SNAPSHOT" SOURCE := ".libraries" PROVIDER := Project ;
+LIBRARY safety.plcopen VERSION := "1.7.0-SNAPSHOT" SOURCE := ".libraries" PROVIDER := Project ;

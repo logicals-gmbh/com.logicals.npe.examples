@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- <DeviceData xmlns="x-schema:IshSafetyDeviceDataSchema.xsd"> -->
+<DeviceData>
+	<Hash value="6eb11b8213ff757bd14e97e95c49bed357d735b91f7027c8c8b31cb031c1b6f1d308535d691bb1836c76da6a47419ee5" />
+	<FileVersion major="1" minor="0" />
+	<Manufacturer name="IP CAMP Limited Liability Company" identNumber="0x0000106F">
+		<!-- SAFE PDO SECTION -->
+		<Device name="SIC99" identNumber="0x49500002" enableBusAddress="no" busAddress="0" minAddress="0" maxAddress="0" busSpeed="0" offsetModuleParamStream="0" dataFormat="Motorola">
+			<!-- List of modules -->
+			<!-- Safety FSoE Module Example -->
+			<!-- <Module name="ISH ECat-Slave" identNumber="0x54490001" type="Safe/CPU" major="1" minor="0" paramGrouping="no" modulPlcAddress="0" minAddr="0" maxAddr="0" lenModuleParam="0" lenUserParam="0"> -->
+			<!-- </Module> -->
+		</Device>
+	</Manufacturer>
+</DeviceData>

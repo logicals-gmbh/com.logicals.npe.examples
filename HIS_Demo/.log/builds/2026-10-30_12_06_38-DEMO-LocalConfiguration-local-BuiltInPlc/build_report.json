@@ -1,0 +1,159 @@
+{
+  "lc3ProductVersion": "3.32.0-202610280833",
+  "platformToolkit": "BuiltInPlc",
+  "safePtk": false,
+  "resourceInstancePath": "HIS_Demo/LocalConfiguration.local",
+  "startedAt": 1793358357013,
+  "startedBy": "DEMO",
+  "appFingerprint": "AC3A3109",
+  "finishedAt": 1793358398851,
+  "resultCode": 0,
+  "metaDataBuildFailed": false,
+  "appName": "RTSCode.dll",
+  "appSize": 349610,
+  "htmlOutputPath": "C:\\SRC\\com.logicals.npe.examples\\HIS_Demo\\.log\\builds\\2026-10-30_12_06_38-DEMO-LocalConfiguration-local-BuiltInPlc\\build_report.html",
+  "compileResultPath": "C:\\SRC\\com.logicals.npe.examples\\HIS_Demo\\.log\\builds\\2026-10-30_12_06_38-DEMO-LocalConfiguration-local-BuiltInPlc\\compile_result.txt",
+  "programInstances": [
+    {
+      "programInstanceName": "PRG_HISDemo",
+      "programTypeName": "PRG_HISDEMO",
+      "fingerprint": "BBBB6DC5",
+      "taskName": "DefaultTask",
+      "interval": 10000,
+      "priority": 38229,
+      "ioTask": false
+    }
+  ],
+  "usedBlocks": [
+    {
+      "name": "FB_HISSafety",
+      "fingerprint": "94C63C39",
+      "namespace": "",
+      "includeFileName": "",
+      "extraIncludes": [],
+      "libraryName": ""
+    },
+    {
+      "name": "FB_PackagingIndicators",
+      "fingerprint": "93EC3547",
+      "namespace": "",
+      "includeFileName": "",
+      "extraIncludes": [],
+      "libraryName": ""
+    },
+    {
+      "name": "FB_PackagingLine",
+      "fingerprint": "3D019EDA",
+      "namespace": "",
+      "includeFileName": "",
+      "extraIncludes": [],
+      "libraryName": ""
+    }
+  ],
+  "usedTypes": [],
+  "usedLibraryTypes": [
+    {
+      "name": "SAFEBOOL",
+      "fingerprint": "2155940A",
+      "namespace": "",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "SFB_GenericSafetyDemand_State",
+      "fingerprint": "84932827",
+      "namespace": "safety.plcopen",
+      "extraIncludes": [],
+      "libraryName": "safety.plcopen__1.7.0-SNAPSHOT"
+    }
+  ],
+  "usedLibraryBlocks": [
+    {
+      "name": "AND",
+      "fingerprint": "835FBBAA",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__AND",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "OR",
+      "fingerprint": "7CBCD812",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__OR",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "R_TRIG",
+      "fingerprint": "C13D52F6",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__R_TRIG",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "SF_EmergencyStop",
+      "fingerprint": "579B2100",
+      "namespace": "safety.plcopen",
+      "includeFileName": "lcfu___safety.plcopen.sf_emergencystop",
+      "extraIncludes": [],
+      "libraryName": "safety.plcopen__1.7.0-SNAPSHOT"
+    },
+    {
+      "name": "SF_Equivalent",
+      "fingerprint": "375ACEBA",
+      "namespace": "safety.plcopen",
+      "includeFileName": "lcfu___safety.plcopen.sf_equivalent",
+      "extraIncludes": [],
+      "libraryName": "safety.plcopen__1.7.0-SNAPSHOT"
+    },
+    {
+      "name": "SFB_GenericSafetyDemand",
+      "fingerprint": "888FA390",
+      "namespace": "safety.plcopen",
+      "extraIncludes": [],
+      "libraryName": "safety.plcopen__1.7.0-SNAPSHOT"
+    },
+    {
+      "name": "TO_UINT",
+      "fingerprint": "3D745203",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__CONVERT",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "TO_WORD",
+      "fingerprint": "3D745203",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__CONVERT",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "TON",
+      "fingerprint": "098BC6BD",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__TON",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    }
+  ],
+  "usedLibraries": [
+    {
+      "name": "com.logicals.lc3.library.standard",
+      "version": "4.0.0-SNAPSHOT",
+      "corruptionDetectionModeArtifactIdentity": false
+    },
+    {
+      "name": "safety.plcopen",
+      "version": "1.7.0-SNAPSHOT",
+      "corruptionDetectionModeArtifactIdentity": false
+    }
+  ],
+  "messages": {
+    "errorMessages": [],
+    "infoMessages": []
+  }
+}

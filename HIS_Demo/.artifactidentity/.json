@@ -1,0 +1,68 @@
+{
+  "artifactMetadata": {
+    "additionalMetadata": {},
+    "artifactName": "",
+    "projectName": "HIS_Demo",
+    "projectRelativePath": ""
+  },
+  "md5ChecksumAsHexString": "61b90f47daad8028b63d890224b4e889",
+  "crc32ChecksumAsHexString": "8C04C5C9",
+  "members": [
+    {
+      "fileName": ".device.fsoe",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \".device.fsoe\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"d41d8cd98f00b204e9800998ecf8427e\",\n  \"crc32ChecksumAsHexString\": \"0\"\n}"
+    },
+    {
+      "fileName": ".gui",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \".gui\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"f1524dc700c11a090255843499dfd80e\",\n  \"crc32ChecksumAsHexString\": \"A839F81\"\n}"
+    },
+    {
+      "fileName": ".libraries",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \".libraries\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"d6da5b8abf7c1502ca665ab82336e9d1\",\n  \"crc32ChecksumAsHexString\": \"5D2B61A8\"\n}"
+    },
+    {
+      "fileName": ".project",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \".project\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"c389e8d5a0a323fe0434c7e513e11675\",\n  \"crc32ChecksumAsHexString\": \"4D0BEBCD\"\n}"
+    },
+    {
+      "fileName": ".rbac",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \".rbac\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"c502dbcad10bb64ed54ad7b67acf313c\",\n  \"crc32ChecksumAsHexString\": \"BD27BF41\"\n}"
+    },
+    {
+      "fileName": ".settings",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \".settings\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"26f93c9ca7389fd5a3dd603a0d337015\",\n  \"crc32ChecksumAsHexString\": \"4CB83942\"\n}"
+    },
+    {
+      "fileName": "globals",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"globals\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"58aea1257319f43b15291e0144d4bf58\",\n  \"crc32ChecksumAsHexString\": \"1F08CC23\"\n}"
+    },
+    {
+      "fileName": "io-project",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"io-project\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"329d36e338017b728e542fa759777477\",\n  \"crc32ChecksumAsHexString\": \"D879911B\"\n}"
+    },
+    {
+      "fileName": "libraries.libref",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"libraries.libref\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"5d12d471add715ab975804bd079c3bdd\",\n  \"crc32ChecksumAsHexString\": \"180A8463\"\n}"
+    },
+    {
+      "fileName": "local.iecplc",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"local.iecplc\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"7e9bf54efdbf1b55b0e84d3e6b966a64\",\n  \"crc32ChecksumAsHexString\": \"700063C5\"\n}"
+    },
+    {
+      "fileName": "local.iecplc.res.LocalConfiguration.local.mrclog",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"local.iecplc.res.LocalConfiguration.local.mrclog\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"5ee67fa4bc255249bf0134f465f05da0\",\n  \"crc32ChecksumAsHexString\": \"751655F0\"\n}"
+    },
+    {
+      "fileName": "SIC99_FSoE_Configuration.iecplc",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"SIC99_FSoE_Configuration.iecplc\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"81715cee2c09b0bcd848d628303ebf96\",\n  \"crc32ChecksumAsHexString\": \"9133D712\"\n}"
+    },
+    {
+      "fileName": "src",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"src\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"3625906eec3b46ffeea663e31e1dcd5f\",\n  \"crc32ChecksumAsHexString\": \"5CBA0DE0\"\n}"
+    },
+    {
+      "fileName": "src-gen",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"src-gen\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"530a61d60b0dd997d47f742939f262ce\",\n  \"crc32ChecksumAsHexString\": \"D1D79407\"\n}"
+    }
+  ]
+}

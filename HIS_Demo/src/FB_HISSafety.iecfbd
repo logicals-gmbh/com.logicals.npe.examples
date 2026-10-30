@@ -1,0 +1,75 @@
+(* Safety FBD template. Two equivalent NC contacts assumed.
+   Requires the matching PLCopen Safety library and qualified HIS target setup.
+   T#100ms is a DEMO PLACEHOLDER, not a validated discrepancy time.
+   Safe communication loss must substitute FALSE at BOTH safe inputs.
+   Never replace missing safe input data with standard BOOL simulation values.
+   No auto reset or start reset. Reset does not start the process.
+*)
+FUNCTION_BLOCK FB_HISSafety
+  USING safety.plcopen;
+VAR_INPUT
+    S_EStopA : SAFEBOOL;
+    S_EStopB : SAFEBOOL;
+    Reset : BOOL;
+END_VAR
+VAR_OUTPUT
+    S_Permit : SAFEBOOL;
+    SafetyDemand : BOOL;
+    ResetRequest : BOOL;
+    Error : BOOL;
+    EquivalentDiag : WORD;
+    EStopDiag : WORD;
+END_VAR
+VAR CONSTANT
+    S_ResetDisabled : SAFEBOOL := FALSE;
+END_VAR
+VAR
+    fbEquivalent : SF_Equivalent;
+    fbEmergencyStop : SF_EmergencyStop;
+END_VAR
+
+  (*
+    // Network 1: equivalent contacts, emergency stop, diagnostics
+    fbEquivalent(Activate := TRUE, S_ChannelA := S_EStopA, S_ChannelB := S_EStopB, DiscrepancyTime := T#100ms);
+    fbEmergencyStop(Activate := TRUE, S_EStopIn := fbEquivalent.S_EquivalentOut, S_StartReset := S_ResetDisabled, S_AutoReset := S_ResetDisabled, Reset := Reset, S_EStopOut => S_Permit, SafetyDemand => SafetyDemand, ResetRequest => ResetRequest, DiagCode => EStopDiag);
+    EquivalentDiag := fbEquivalent.DiagCode;
+    OR(IN1 := fbEquivalent.Error, IN2 := fbEmergencyStop.Error, OR => Error);
+  *)
+
+  @C(1) : @FB(fbEquivalent), @R(450.0, 90.0, 360.0, 194.0), @I(@N(Activate), @L(54.5)), @I(@N(S_ChannelA), @L(84.5)), @I(@N(S_ChannelB), @L(114.5)), @I(@N(DiscrepancyTime), @L(144.5)), @O(@N(Ready), @R(54.5)), @O(@N(S_EquivalentOut), @R(84.5)), @O(@N(SafetyDemand), @R(114.5)), @O(@N(Error), @R(144.5)), @O(@N(DiagCode), @R(174.5));
+  @C(2) : @FB(fbEmergencyStop), @R(1260.0, 90.0, 360.0, 224.0), @I(@N(Activate), @L(54.5)), @I(@N(S_EStopIn), @L(84.5)), @I(@N(S_StartReset), @L(114.5)), @I(@N(S_AutoReset), @L(144.5)), @I(@N(Reset), @L(174.5)), @O(@N(Ready), @R(54.5)), @O(@N(S_EStopOut), @R(84.5)), @O(@N(SafetyDemand), @R(114.5)), @O(@N(ResetRequest), @R(144.5)), @O(@N(Error), @R(174.5)), @O(@N(DiagCode), @R(204.5));
+  @VF(3) : @E(S_EStopA), @R(45.0, 165.0, 300.0, 19.0);
+  @VF(4) : @E(S_EStopB), @R(45.0, 195.0, 300.0, 19.0);
+  @VF(5) : @E(Reset), @R(870.0, 255.0, 300.0, 19.0);
+  @VF(6) : @E(S_Permit), @R(1710.0, 165.0, 300.0, 19.0);
+  @VF(7) : @E(SafetyDemand), @R(1710.0, 195.0, 300.0, 19.0);
+  @VF(8) : @E(ResetRequest), @R(1710.0, 225.0, 300.0, 19.0);
+  @VF(9) : @E(EStopDiag), @R(1710.0, 285.0, 300.0, 19.0);
+  @VF(10) : @E(EquivalentDiag), @R(870.0, 375.0, 300.0, 19.0);
+  @C(11) : @F(OR), @R(1260.0, 510.0, 180.0, 104.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @O(@N(OR), @R(54.5));
+  @VF(12) : @E(Error), @R(1530.0, 555.0, 300.0, 19.0);
+
+  @VF(25) : @E(TRUE), @R(45.0, 135.0, 300.0, 19.0);
+  @VF(26) : @E(T#100ms), @R(45.0, 225.0, 300.0, 19.0);
+  @VF(27) : @E(TRUE), @R(870.0, 135.0, 300.0, 19.0);
+  @VF(28) : @E(S_ResetDisabled), @R(870.0, 195.0, 300.0, 19.0);
+  @VF(29) : @E(S_ResetDisabled), @R(870.0, 225.0, 300.0, 19.0);
+
+  @G(13) : @L(@VF(3).o, @C(1).S_ChannelA);
+  @G(14) : @L(@VF(4).o, @C(1).S_ChannelB);
+  @G(15) : @L(@C(1).S_EquivalentOut, @C(2).S_EStopIn);
+  @G(16) : @L(@VF(5).o, @C(2).Reset);
+  @G(17) : @L(@C(2).S_EStopOut, @VF(6).i);
+  @G(18) : @L(@C(2).SafetyDemand, @VF(7).i);
+  @G(19) : @L(@C(2).ResetRequest, @VF(8).i);
+  @G(20) : @L(@C(2).DiagCode, @VF(9).i);
+  @G(21) : @L(@C(1).DiagCode, @VF(10).i);
+  @G(22) : @L(@C(1).Error, @C(11).IN1);
+  @G(23) : @L(@C(2).Error, @C(11).IN2);
+  @G(24) : @L(@C(11).OR, @VF(12).i);
+  @G(30) : @L(@VF(25).o, @C(1).Activate);
+  @G(31) : @L(@VF(26).o, @C(1).DiscrepancyTime);
+  @G(32) : @L(@VF(27).o, @C(2).Activate);
+  @G(33) : @L(@VF(28).o, @C(2).S_StartReset);
+  @G(34) : @L(@VF(29).o, @C(2).S_AutoReset);
+END_FUNCTION_BLOCK

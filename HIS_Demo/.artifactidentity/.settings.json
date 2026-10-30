@@ -1,0 +1,40 @@
+{
+  "artifactMetadata": {
+    "additionalMetadata": {},
+    "artifactName": ".settings",
+    "projectName": "HIS_Demo",
+    "projectRelativePath": ""
+  },
+  "md5ChecksumAsHexString": "26f93c9ca7389fd5a3dd603a0d337015",
+  "crc32ChecksumAsHexString": "4CB83942",
+  "members": [
+    {
+      "fileName": "com.logicals.debugging.prefs",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"com.logicals.debugging.prefs\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings\"\n  },\n  \"md5ChecksumAsHexString\": \"c8e15bd6a02880c9c05c8f49c8f06803\",\n  \"crc32ChecksumAsHexString\": \"5FA516F3\"\n}"
+    },
+    {
+      "fileName": "com.logicals.iec.editor.prefs.prefs",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"com.logicals.iec.editor.prefs.prefs\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings\"\n  },\n  \"md5ChecksumAsHexString\": \"32bed2561c9dee69f161b02045ede480\",\n  \"crc32ChecksumAsHexString\": \"6F029003\"\n}"
+    },
+    {
+      "fileName": "LocalConfiguration",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"LocalConfiguration\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings\"\n  },\n  \"md5ChecksumAsHexString\": \"f8a3b8ff82b95526145b1ea2e15356ef\",\n  \"crc32ChecksumAsHexString\": \"B1F56D9A\"\n}"
+    },
+    {
+      "fileName": "org.eclipse.core.resources.prefs",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"org.eclipse.core.resources.prefs\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings\"\n  },\n  \"md5ChecksumAsHexString\": \"868bad1fe7a7fdaebc3109c15f45be31\",\n  \"crc32ChecksumAsHexString\": \"4DDEE80D\"\n}"
+    },
+    {
+      "fileName": "project.rule",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"project.rule\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings\"\n  },\n  \"md5ChecksumAsHexString\": \"4f0f39415a6d3890996fe78abc48bd5e\",\n  \"crc32ChecksumAsHexString\": \"AF3E3718\"\n}"
+    },
+    {
+      "fileName": "RemoteConfiguration",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"RemoteConfiguration\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings\"\n  },\n  \"md5ChecksumAsHexString\": \"867df36a64ad77f9658b26f433813d02\",\n  \"crc32ChecksumAsHexString\": \"C2FC6EC7\"\n}"
+    },
+    {
+      "fileName": "variableView",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"variableView\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings\"\n  },\n  \"md5ChecksumAsHexString\": \"4b66a78363eb6fae6acb91a2a904601f\",\n  \"crc32ChecksumAsHexString\": \"FC2D0323\"\n}"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "artifactMetadata": {
+    "additionalMetadata": {},
+    "artifactName": ".libraries",
+    "projectName": "HIS_Demo",
+    "projectRelativePath": ""
+  },
+  "md5ChecksumAsHexString": "d6da5b8abf7c1502ca665ab82336e9d1",
+  "crc32ChecksumAsHexString": "5D2B61A8",
+  "members": [
+    {
+      "fileName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT.ZIP",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"com.logicals.lc3.library.standard__4.0.0-SNAPSHOT.ZIP\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".libraries\"\n  },\n  \"md5ChecksumAsHexString\": \"ecbbc0e67dacc04c69eb4722a802a1f3\",\n  \"crc32ChecksumAsHexString\": \"31498AD9\"\n}"
+    },
+    {
+      "fileName": "safety.plcopen__1.7.0-SNAPSHOT.ZIP",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"safety.plcopen__1.7.0-SNAPSHOT.ZIP\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".libraries\"\n  },\n  \"md5ChecksumAsHexString\": \"257a10c1bd7cd081cb1112281eb23527\",\n  \"crc32ChecksumAsHexString\": \"FE5D84E1\"\n}"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "name": "DEMO",
+    "roles": [
+      "ADMINISTRATOR"
+    ],
+    "cryptedPassword": "$2a$10$/A57fMHqS3zbXfkd7qCVkuz9NNWmAgzE266QlGmNy5k2D9mo4QOgO",
+    "passwordValidityPeriod": 0,
+    "fixedUserAccount": false,
+    "fixedName": false
+  }
+]

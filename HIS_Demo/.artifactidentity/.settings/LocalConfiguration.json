@@ -1,0 +1,16 @@
+{
+  "artifactMetadata": {
+    "additionalMetadata": {},
+    "artifactName": "LocalConfiguration",
+    "projectName": "HIS_Demo",
+    "projectRelativePath": ".settings"
+  },
+  "md5ChecksumAsHexString": "f8a3b8ff82b95526145b1ea2e15356ef",
+  "crc32ChecksumAsHexString": "B1F56D9A",
+  "members": [
+    {
+      "fileName": "local.rule",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"local.rule\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings/LocalConfiguration\"\n  },\n  \"md5ChecksumAsHexString\": \"4f0f39415a6d3890996fe78abc48bd5e\",\n  \"crc32ChecksumAsHexString\": \"AF3E3718\"\n}"
+    }
+  ]
+}

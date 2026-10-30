@@ -1,0 +1,16 @@
+{
+  "artifactMetadata": {
+    "additionalMetadata": {},
+    "artifactName": "Unused",
+    "projectName": "HIS_Demo",
+    "projectRelativePath": "src"
+  },
+  "md5ChecksumAsHexString": "0400294ba1139de5bf90f93f063d624f",
+  "crc32ChecksumAsHexString": "DF039EBA",
+  "members": [
+    {
+      "fileName": "EstopDemo.iecfbd",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"EstopDemo.iecfbd\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"src/Unused\"\n  },\n  \"md5ChecksumAsHexString\": \"e91fc0aa87171ce6b1c52814499276cf\",\n  \"crc32ChecksumAsHexString\": \"8A02C78A\"\n}"
+    }
+  ]
+}

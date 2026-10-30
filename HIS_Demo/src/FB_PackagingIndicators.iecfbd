@@ -1,0 +1,73 @@
+(* Non-safety FBD. Suggested four standard LED functions.
+   All physical output assignments remain open.
+*)
+FUNCTION_BLOCK FB_PackagingIndicators
+VAR_INPUT
+    Permit : BOOL;
+    Ready : BOOL;
+    Infeed : BOOL;
+    Sealing : BOOL;
+    Outfeed : BOOL;
+    Complete : BOOL;
+    Blocked : BOOL;
+    ProcessFault : BOOL;
+    SafetyError : BOOL;
+    ResetRequest : BOOL;
+    Heartbeat : BOOL;
+END_VAR
+VAR_OUTPUT
+    LedReady : BOOL;
+    LedConveyor : BOOL;
+    LedSealing : BOOL;
+    LedAttention : BOOL;
+END_VAR
+
+  (*
+    // Network 1:
+    AND(IN1 := Permit, IN2 := (Ready OR Complete), AND => LedReady);
+    // Network 2:
+    AND(IN1 := Permit, IN2 := (Infeed OR Outfeed), IN3 := Heartbeat, AND => LedConveyor);
+    // Network 3:
+    AND(IN1 := Permit, IN2 := Sealing, IN3 := Heartbeat, AND => LedSealing);
+    // Network 4:
+    OR(IN1 := (Blocked AND NOT ResetRequest), IN2 := ProcessFault, IN3 := SafetyError, IN4 := (ResetRequest AND Heartbeat), OR => LedAttention);
+  *)
+
+  @C(1) : @F(AND), @R(540.0, 90.0, 210.0, 104.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @O(@N(AND), @R(54.5));
+  @VF(2) : @E(Permit), @R(45.0, 135.0, 390.0, 19.0);
+  @VF(3) : @E((Ready OR Complete)), @R(45.0, 165.0, 390.0, 19.0);
+  @VF(4) : @E(LedReady), @R(870.0, 135.0, 300.0, 19.0);
+  @C(5) : @F(AND), @R(540.0, 330.0, 210.0, 134.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @I(@N(IN3), @L(114.5)), @O(@N(AND), @R(54.5));
+  @VF(6) : @E(Permit), @R(45.0, 375.0, 390.0, 19.0);
+  @VF(7) : @E((Infeed OR Outfeed)), @R(45.0, 405.0, 390.0, 19.0);
+  @VF(8) : @E(Heartbeat), @R(45.0, 435.0, 390.0, 19.0);
+  @VF(9) : @E(LedConveyor), @R(870.0, 375.0, 300.0, 19.0);
+  @C(10) : @F(AND), @R(540.0, 570.0, 210.0, 134.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @I(@N(IN3), @L(114.5)), @O(@N(AND), @R(54.5));
+  @VF(11) : @E(Permit), @R(45.0, 615.0, 390.0, 19.0);
+  @VF(12) : @E(Sealing), @R(45.0, 645.0, 390.0, 19.0);
+  @VF(13) : @E(Heartbeat), @R(45.0, 675.0, 390.0, 19.0);
+  @VF(14) : @E(LedSealing), @R(870.0, 615.0, 300.0, 19.0);
+  @C(15) : @F(OR), @R(540.0, 810.0, 210.0, 164.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @I(@N(IN3), @L(114.5)), @I(@N(IN4), @L(144.5)), @O(@N(OR), @R(54.5));
+  @VF(16) : @E((Blocked AND NOT ResetRequest)), @R(45.0, 855.0, 390.0, 19.0);
+  @VF(17) : @E(ProcessFault), @R(45.0, 885.0, 390.0, 19.0);
+  @VF(18) : @E(SafetyError), @R(45.0, 915.0, 390.0, 19.0);
+  @VF(19) : @E((ResetRequest AND Heartbeat)), @R(45.0, 945.0, 390.0, 19.0);
+  @VF(20) : @E(LedAttention), @R(870.0, 855.0, 300.0, 19.0);
+
+  @G(21) : @L(@VF(2).o, @C(1).IN1);
+  @G(22) : @L(@VF(3).o, @C(1).IN2);
+  @G(23) : @L(@C(1).AND, @VF(4).i);
+  @G(24) : @L(@VF(6).o, @C(5).IN1);
+  @G(25) : @L(@VF(7).o, @C(5).IN2);
+  @G(26) : @L(@VF(8).o, @C(5).IN3);
+  @G(27) : @L(@C(5).AND, @VF(9).i);
+  @G(28) : @L(@VF(11).o, @C(10).IN1);
+  @G(29) : @L(@VF(12).o, @C(10).IN2);
+  @G(30) : @L(@VF(13).o, @C(10).IN3);
+  @G(31) : @L(@C(10).AND, @VF(14).i);
+  @G(32) : @L(@VF(16).o, @C(15).IN1);
+  @G(33) : @L(@VF(17).o, @C(15).IN2);
+  @G(34) : @L(@VF(18).o, @C(15).IN3);
+  @G(35) : @L(@VF(19).o, @C(15).IN4);
+  @G(36) : @L(@C(15).OR, @VF(20).i);
+END_FUNCTION_BLOCK
