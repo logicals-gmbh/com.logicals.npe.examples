@@ -23,51 +23,71 @@ VAR_OUTPUT
 END_VAR
 
   (*
-    // Network 1:
-    AND(IN1 := Permit, IN2 := (Ready OR Complete), AND => LedReady);
-    // Network 2:
-    AND(IN1 := Permit, IN2 := (Infeed OR Outfeed), IN3 := Heartbeat, AND => LedConveyor);
-    // Network 3:
-    AND(IN1 := Permit, IN2 := Sealing, IN3 := Heartbeat, AND => LedSealing);
-    // Network 4:
-    OR(IN1 := (Blocked AND NOT ResetRequest), IN2 := ProcessFault, IN3 := SafetyError, IN4 := (ResetRequest AND Heartbeat), OR => LedAttention);
+    Explicit Boolean gates; value fields contain single variables only.
+    OR(IN1 := Ready, IN2 := Complete);
+    AND(IN1 := Permit, IN2 := @C(1).OR);
+    OR(IN1 := Infeed, IN2 := Outfeed);
+    AND(IN1 := Permit, IN2 := @C(7).OR, IN3 := Heartbeat);
+    AND(IN1 := Permit, IN2 := Sealing, IN3 := Heartbeat);
+    NOT(IN := ResetRequest);
+    AND(IN1 := Blocked, IN2 := @C(19).NOT);
+    AND(IN1 := ResetRequest, IN2 := Heartbeat);
+    OR(IN1 := @C(21).AND, IN2 := ProcessFault, IN3 := SafetyError, IN4 := @C(23).AND);
   *)
 
-  @C(1) : @F(AND), @R(540.0, 90.0, 210.0, 104.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @O(@N(AND), @R(54.5));
-  @VF(2) : @E(Permit), @R(45.0, 135.0, 390.0, 19.0);
-  @VF(3) : @E((Ready OR Complete)), @R(45.0, 165.0, 390.0, 19.0);
-  @VF(4) : @E(LedReady), @R(870.0, 135.0, 300.0, 19.0);
-  @C(5) : @F(AND), @R(540.0, 330.0, 210.0, 134.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @I(@N(IN3), @L(114.5)), @O(@N(AND), @R(54.5));
-  @VF(6) : @E(Permit), @R(45.0, 375.0, 390.0, 19.0);
-  @VF(7) : @E((Infeed OR Outfeed)), @R(45.0, 405.0, 390.0, 19.0);
-  @VF(8) : @E(Heartbeat), @R(45.0, 435.0, 390.0, 19.0);
-  @VF(9) : @E(LedConveyor), @R(870.0, 375.0, 300.0, 19.0);
-  @C(10) : @F(AND), @R(540.0, 570.0, 210.0, 134.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @I(@N(IN3), @L(114.5)), @O(@N(AND), @R(54.5));
-  @VF(11) : @E(Permit), @R(45.0, 615.0, 390.0, 19.0);
-  @VF(12) : @E(Sealing), @R(45.0, 645.0, 390.0, 19.0);
-  @VF(13) : @E(Heartbeat), @R(45.0, 675.0, 390.0, 19.0);
-  @VF(14) : @E(LedSealing), @R(870.0, 615.0, 300.0, 19.0);
-  @C(15) : @F(OR), @R(540.0, 810.0, 210.0, 164.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @I(@N(IN3), @L(114.5)), @I(@N(IN4), @L(144.5)), @O(@N(OR), @R(54.5));
-  @VF(16) : @E((Blocked AND NOT ResetRequest)), @R(45.0, 855.0, 390.0, 19.0);
-  @VF(17) : @E(ProcessFault), @R(45.0, 885.0, 390.0, 19.0);
-  @VF(18) : @E(SafetyError), @R(45.0, 915.0, 390.0, 19.0);
-  @VF(19) : @E((ResetRequest AND Heartbeat)), @R(45.0, 945.0, 390.0, 19.0);
-  @VF(20) : @E(LedAttention), @R(870.0, 855.0, 300.0, 19.0);
+  @C(1) : @F(OR), @R(390.0, 90.0, 180.0, 104.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @O(@N(OR), @R(54.5));
+  @VF(2) : @E(Ready), @R(45.0, 135.0, 180.0, 19.0);
+  @VF(3) : @E(Complete), @R(45.0, 165.0, 180.0, 19.0);
+  @C(4) : @F(AND), @R(900.0, 60.0, 180.0, 104.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @O(@N(AND), @R(54.5));
+  @VF(5) : @E(Permit), @R(645.0, 105.0, 180.0, 19.0);
+  @VF(6) : @E(LedReady), @R(1230.0, 105.0, 180.0, 19.0);
+  @C(7) : @F(OR), @R(390.0, 390.0, 180.0, 104.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @O(@N(OR), @R(54.5));
+  @VF(8) : @E(Infeed), @R(45.0, 435.0, 180.0, 19.0);
+  @VF(9) : @E(Outfeed), @R(45.0, 465.0, 180.0, 19.0);
+  @C(10) : @F(AND), @R(900.0, 360.0, 180.0, 134.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @I(@N(IN3), @L(114.5)), @O(@N(AND), @R(54.5));
+  @VF(11) : @E(Permit), @R(645.0, 405.0, 180.0, 19.0);
+  @VF(12) : @E(Heartbeat), @R(645.0, 465.0, 180.0, 19.0);
+  @VF(13) : @E(LedConveyor), @R(1230.0, 405.0, 180.0, 19.0);
+  @C(14) : @F(AND), @R(900.0, 660.0, 180.0, 134.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @I(@N(IN3), @L(114.5)), @O(@N(AND), @R(54.5));
+  @VF(15) : @E(Permit), @R(645.0, 705.0, 180.0, 19.0);
+  @VF(16) : @E(Sealing), @R(645.0, 735.0, 180.0, 19.0);
+  @VF(17) : @E(Heartbeat), @R(645.0, 765.0, 180.0, 19.0);
+  @VF(18) : @E(LedSealing), @R(1230.0, 705.0, 180.0, 19.0);
+  @C(19) : @F(NOT), @R(375.0, 1080.0, 180.0, 74.0), BOOL, @I(@N(IN), @L(54.5)), @O(@N(NOT), @R(54.5));
+  @VF(20) : @E(ResetRequest), @R(45.0, 1125.0, 180.0, 19.0);
+  @C(21) : @F(AND), @R(660.0, 1050.0, 180.0, 104.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @O(@N(AND), @R(54.5));
+  @VF(22) : @E(Blocked), @R(375.0, 1035.0, 180.0, 19.0);
+  @C(23) : @F(AND), @R(660.0, 1230.0, 180.0, 104.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @O(@N(AND), @R(54.5));
+  @VF(24) : @E(ResetRequest), @R(375.0, 1275.0, 180.0, 19.0);
+  @VF(25) : @E(Heartbeat), @R(375.0, 1305.0, 180.0, 19.0);
+  @C(26) : @F(OR), @R(1200.0, 1050.0, 180.0, 164.0), BOOL, @I(@N(IN1), @L(54.5)), @I(@N(IN2), @L(84.5)), @I(@N(IN3), @L(114.5)), @I(@N(IN4), @L(144.5)), @O(@N(OR), @R(54.5));
+  @VF(27) : @E(ProcessFault), @R(930.0, 1125.0, 180.0, 19.0);
+  @VF(28) : @E(SafetyError), @R(930.0, 1155.0, 180.0, 19.0);
+  @VF(29) : @E(LedAttention), @R(1500.0, 1095.0, 180.0, 19.0);
 
-  @G(21) : @L(@VF(2).o, @C(1).IN1);
-  @G(22) : @L(@VF(3).o, @C(1).IN2);
-  @G(23) : @L(@C(1).AND, @VF(4).i);
-  @G(24) : @L(@VF(6).o, @C(5).IN1);
-  @G(25) : @L(@VF(7).o, @C(5).IN2);
-  @G(26) : @L(@VF(8).o, @C(5).IN3);
-  @G(27) : @L(@C(5).AND, @VF(9).i);
-  @G(28) : @L(@VF(11).o, @C(10).IN1);
-  @G(29) : @L(@VF(12).o, @C(10).IN2);
-  @G(30) : @L(@VF(13).o, @C(10).IN3);
-  @G(31) : @L(@C(10).AND, @VF(14).i);
-  @G(32) : @L(@VF(16).o, @C(15).IN1);
-  @G(33) : @L(@VF(17).o, @C(15).IN2);
-  @G(34) : @L(@VF(18).o, @C(15).IN3);
-  @G(35) : @L(@VF(19).o, @C(15).IN4);
-  @G(36) : @L(@C(15).OR, @VF(20).i);
+  @G(30) : @L(@VF(2).o, @C(1).IN1);
+  @G(31) : @L(@VF(3).o, @C(1).IN2);
+  @G(32) : @L(@VF(5).o, @C(4).IN1);
+  @G(33) : @L(@C(1).OR, @C(4).IN2);
+  @G(34) : @L(@C(4).AND, @VF(6).i);
+  @G(35) : @L(@VF(8).o, @C(7).IN1);
+  @G(36) : @L(@VF(9).o, @C(7).IN2);
+  @G(37) : @L(@VF(11).o, @C(10).IN1);
+  @G(38) : @L(@C(7).OR, @C(10).IN2);
+  @G(39) : @L(@VF(12).o, @C(10).IN3);
+  @G(40) : @L(@C(10).AND, @VF(13).i);
+  @G(41) : @L(@VF(15).o, @C(14).IN1);
+  @G(42) : @L(@VF(16).o, @C(14).IN2);
+  @G(43) : @L(@VF(17).o, @C(14).IN3);
+  @G(44) : @L(@C(14).AND, @VF(18).i);
+  @G(45) : @L(@VF(20).o, @C(19).IN);
+  @G(46) : @L(@VF(22).o, @C(21).IN1);
+  @G(47) : @L(@C(19).NOT, @C(21).IN2);
+  @G(48) : @L(@VF(24).o, @C(23).IN1);
+  @G(49) : @L(@VF(25).o, @C(23).IN2);
+  @G(50) : @L(@C(21).AND, @C(26).IN1);
+  @G(51) : @L(@VF(27).o, @C(26).IN2);
+  @G(52) : @L(@VF(28).o, @C(26).IN3);
+  @G(53) : @L(@C(23).AND, @C(26).IN4);
+  @G(54) : @L(@C(26).OR, @VF(29).i);
 END_FUNCTION_BLOCK

@@ -2,7 +2,7 @@
   "report": {
     "object": "../../../../../SRC/com.logicals.npe.examples/HIS_Demo/local.iecplc",
     "date": "2026-10-30",
-    "time": "12:04:44",
+    "time": "13:57:11",
     "startedBy": "user",
     "userName": "DEMO",
     "nrOfErrors": 0,
@@ -253,11 +253,15 @@
       },
       {
         "qualifiedName": "FB_PackagingIndicators",
-        "fingerprint": "93EC3547"
+        "fingerprint": "1C979B4E"
       },
       {
         "qualifiedName": "FB_PackagingLine",
         "fingerprint": "3D019EDA"
+      },
+      {
+        "qualifiedName": "NOT",
+        "fingerprint": "1936F6A9"
       },
       {
         "qualifiedName": "OR",
@@ -297,5 +301,5 @@
       }
     ]
   },
-  "signature": "8d207ee6"
+  "signature": "42188870"
 }

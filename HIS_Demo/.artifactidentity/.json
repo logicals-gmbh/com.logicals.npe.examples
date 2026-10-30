@@ -5,8 +5,8 @@
     "projectName": "HIS_Demo",
     "projectRelativePath": ""
   },
-  "md5ChecksumAsHexString": "61b90f47daad8028b63d890224b4e889",
-  "crc32ChecksumAsHexString": "8C04C5C9",
+  "md5ChecksumAsHexString": "fe148f938af3b6889b43817cdbaf92f7",
+  "crc32ChecksumAsHexString": "96D0679B",
   "members": [
     {
       "fileName": ".device.fsoe",
@@ -50,7 +50,7 @@
     },
     {
       "fileName": "local.iecplc.res.LocalConfiguration.local.mrclog",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"local.iecplc.res.LocalConfiguration.local.mrclog\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"5ee67fa4bc255249bf0134f465f05da0\",\n  \"crc32ChecksumAsHexString\": \"751655F0\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"local.iecplc.res.LocalConfiguration.local.mrclog\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"4645b5c7b96b7951010202f95bcac284\",\n  \"crc32ChecksumAsHexString\": \"9FEB8C10\"\n}"
     },
     {
       "fileName": "SIC99_FSoE_Configuration.iecplc",
@@ -58,11 +58,11 @@
     },
     {
       "fileName": "src",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"src\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"3625906eec3b46ffeea663e31e1dcd5f\",\n  \"crc32ChecksumAsHexString\": \"5CBA0DE0\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"src\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"1a8fc2c407241cc4e0b924f6865028e2\",\n  \"crc32ChecksumAsHexString\": \"D1A73363\"\n}"
     },
     {
       "fileName": "src-gen",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"src-gen\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"530a61d60b0dd997d47f742939f262ce\",\n  \"crc32ChecksumAsHexString\": \"D1D79407\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"src-gen\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"360d17e5fe650b34c77b36850b82f845\",\n  \"crc32ChecksumAsHexString\": \"5BC4A69\"\n}"
     }
   ]
 }
