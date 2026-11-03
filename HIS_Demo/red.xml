@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<projectConfiguration>
+    <configVersion>2</configVersion>
+    <relativeTo>WORKSPACE</relativeTo>
+    <referencedLibrary type="PYTHON" name="com.logicals.lc3.testframework.robot.keywords.Keywords" path="C:/Users/WolfgangZeller/Neuron/NeuronPowerEngineer/workspace/.metadata/.plugins/com.logicals.lc3.testframework.core.lc3/lib"/>
+    <pythonpath>
+        <path location="C:\Users\WolfgangZeller\Neuron\NeuronPowerEngineer\workspace\.metadata\.plugins\com.logicals.lc3.testframework.core.lc3\lib"/>
+    </pythonpath>
+    <excludedForValidation/>
+    <isValidatedFileSizeCheckingEnabled>true</isValidatedFileSizeCheckingEnabled>
+    <validatedFileMaxSize>1024</validatedFileMaxSize>
+    <isReferencedLibrariesAutoReloadEnabled>true</isReferencedLibrariesAutoReloadEnabled>
+    <isReferencedLibrariesAutoDiscoveringEnabled>true</isReferencedLibrariesAutoDiscoveringEnabled>
+    <isLibrariesAutoDiscoveringSummaryWindowEnabled>false</isLibrariesAutoDiscoveringSummaryWindowEnabled>
+</projectConfiguration>

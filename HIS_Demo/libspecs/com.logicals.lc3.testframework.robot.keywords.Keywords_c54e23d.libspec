@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec name="com.logicals.lc3.testframework.robot.keywords.Keywords" type="LIBRARY" format="ROBOT" scope="SUITE" namedargs="true" generated="2026-11-03T09:23:53Z" specversion="2" source="C:\Users\WolfgangZeller\Neuron\NeuronPowerEngineer\workspace\.metadata\.plugins\com.logicals.lc3.testframework.core.lc3\lib\com\logicals\lc3\testframework\robot\keywords.py" lineno="5">
+<version>1.0</version>
+<scope>test suite</scope>
+<namedargs>yes</namedargs>
+<doc>Keyword library for Neuron Power Engineer testframework
+    </doc>
+<kw name="Data" lineno="74">
+<arguments>
+<arg>*varargs</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc />
+</kw>
+<kw name="Disconnect" lineno="34">
+<arguments>
+</arguments>
+<doc />
+</kw>
+<kw name="Finish" lineno="82">
+<arguments>
+</arguments>
+<doc />
+</kw>
+<kw name="Head" lineno="42">
+<arguments>
+<arg>*varargs</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc />
+</kw>
+<kw name="Init" lineno="66">
+<arguments>
+<arg>*varargs</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc />
+</kw>
+<kw name="Prepare Test Bed" lineno="18">
+<arguments>
+<arg>qualified_pou_name</arg>
+<arg>**kwargs</arg>
+</arguments>
+<doc />
+</kw>
+<kw name="Set Defaults" lineno="26">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc />
+</kw>
+<kw name="Set Variable Testmodes" lineno="90">
+<arguments>
+<arg>**kwargs</arg>
+</arguments>
+<doc />
+</kw>
+<kw name="Shift" lineno="58">
+<arguments>
+<arg>*varargs</arg>
+</arguments>
+<doc />
+</kw>
+<kw name="Tol" lineno="50">
+<arguments>
+<arg>*varargs</arg>
+</arguments>
+<doc />
+</kw>
+</keywordspec>

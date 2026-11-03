@@ -23,4 +23,9 @@
             <variable instancePath="PRG_HISDemo.CmdFastCycle"/>
         </resource>
     </configuration>
+    <configuration name="RTSMicroSafeLocalCfg">
+        <resource name="RTSMicroSafeLocal">
+            <variable instancePath="PRG_HISDemo.Line.State"/>
+        </resource>
+    </configuration>
 </project>
