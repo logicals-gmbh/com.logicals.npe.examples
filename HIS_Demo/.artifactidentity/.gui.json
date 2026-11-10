@@ -1,0 +1,64 @@
+{
+  "artifactMetadata": {
+    "additionalMetadata": {},
+    "artifactName": ".gui",
+    "projectName": "HIS_Demo",
+    "projectRelativePath": ""
+  },
+  "md5ChecksumAsHexString": "7003c4f4a2271589750b2c20e2f99b36",
+  "crc32ChecksumAsHexString": "24CFCC11",
+  "members": [
+    {
+      "fileName": "Anleitung_DE.txt",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"Anleitung_DE.txt\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".gui\"\n  },\n  \"md5ChecksumAsHexString\": \"06a83bbfcb3dae7dac614aca57d14c02\",\n  \"crc32ChecksumAsHexString\": \"1BB5DB2A\"\n}"
+    },
+    {
+      "fileName": "config.gateway.json",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"config.gateway.json\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".gui\"\n  },\n  \"md5ChecksumAsHexString\": \"afa5847de5934595b6a28eccd83f2ee1\",\n  \"crc32ChecksumAsHexString\": \"CAEE8C63\"\n}"
+    },
+    {
+      "fileName": "config.json",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"config.json\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".gui\"\n  },\n  \"md5ChecksumAsHexString\": \"c885baaf6d1d5632d362fa4339f82457\",\n  \"crc32ChecksumAsHexString\": \"685C12AD\"\n}"
+    },
+    {
+      "fileName": "demo_model.py",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"demo_model.py\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".gui\"\n  },\n  \"md5ChecksumAsHexString\": \"20023026066f76e97b527b9911a4397c\",\n  \"crc32ChecksumAsHexString\": \"868175FB\"\n}"
+    },
+    {
+      "fileName": "Guide_EN.txt",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"Guide_EN.txt\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".gui\"\n  },\n  \"md5ChecksumAsHexString\": \"62016a74f8630b6827c38f0d41dbdedc\",\n  \"crc32ChecksumAsHexString\": \"5CD268FF\"\n}"
+    },
+    {
+      "fileName": "his_gui.py",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"his_gui.py\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".gui\"\n  },\n  \"md5ChecksumAsHexString\": \"df6b3ca66dad3c7ccc5f5ffc84b09c5a\",\n  \"crc32ChecksumAsHexString\": \"EF04E686\"\n}"
+    },
+    {
+      "fileName": "opc_link.py",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"opc_link.py\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".gui\"\n  },\n  \"md5ChecksumAsHexString\": \"e3815f4ba4dca8ba892778bc7d437ad6\",\n  \"crc32ChecksumAsHexString\": \"EA58D602\"\n}"
+    },
+    {
+      "fileName": "Pruefstatus.txt",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"Pruefstatus.txt\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".gui\"\n  },\n  \"md5ChecksumAsHexString\": \"d3cf89b591c7fa2dcb3b41732e6a8b2c\",\n  \"crc32ChecksumAsHexString\": \"F729A1C4\"\n}"
+    },
+    {
+      "fileName": "requirements.txt",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"requirements.txt\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".gui\"\n  },\n  \"md5ChecksumAsHexString\": \"4806892160a3ab01f3c2c8a22bd7e6f8\",\n  \"crc32ChecksumAsHexString\": \"2E627E47\"\n}"
+    },
+    {
+      "fileName": "START_GUI.cmd",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"START_GUI.cmd\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".gui\"\n  },\n  \"md5ChecksumAsHexString\": \"141a6ce32b56a5eff6d78e85b0542614\",\n  \"crc32ChecksumAsHexString\": \"48A757E2\"\n}"
+    },
+    {
+      "fileName": "test_gui.py",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"test_gui.py\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".gui\"\n  },\n  \"md5ChecksumAsHexString\": \"102874ccb86661f52cfed60bd637e2c4\",\n  \"crc32ChecksumAsHexString\": \"C52FD4FF\"\n}"
+    },
+    {
+      "fileName": "Vorschau.png",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"Vorschau.png\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".gui\"\n  },\n  \"md5ChecksumAsHexString\": \"bba2593ef9f89e0dbd351a0009cf5d6f\",\n  \"crc32ChecksumAsHexString\": \"AC091DDB\"\n}"
+    },
+    {
+      "fileName": "Vorschau.svg",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"Vorschau.svg\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".gui\"\n  },\n  \"md5ChecksumAsHexString\": \"1a58fb20b5c3afb72721fe8727fcfe5a\",\n  \"crc32ChecksumAsHexString\": \"7D39A4B7\"\n}"
+    }
+  ]
+}

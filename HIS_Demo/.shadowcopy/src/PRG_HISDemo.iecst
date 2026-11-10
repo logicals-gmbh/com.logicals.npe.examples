@@ -14,7 +14,9 @@ PROGRAM PRG_HISDemo
 		S_EStopA : SAFEBOOL;
 		S_EStopB : SAFEBOOL;
 
-		CmdEnable : BOOL;
+		CmdEnable : BOOL; (* Latched enable: physical button toggles on each rising edge. *)
+		EnableButtonPrev : BOOL := FALSE;
+		EnableButtonFirstScan : BOOL := TRUE;
 		CmdStart : BOOL;
 		CmdStop : BOOL;
 		CmdFastCycle : BOOL;
@@ -49,7 +51,12 @@ PROGRAM PRG_HISDemo
 
 	/* Assign IO signals */
 	Sim_EStopReleased := EStop;
-	CmdEnable := Button1Input;
+	(* A held button toggles only once. Ignore a button already held at startup. *)
+	IF Button1Input AND NOT EnableButtonPrev AND NOT EnableButtonFirstScan THEN
+		CmdEnable := NOT CmdEnable;
+	END_IF;
+	EnableButtonPrev := Button1Input;
+	EnableButtonFirstScan := FALSE;
 	CmdSafetyReset := Button2Input;
 	CmdStart := Button3Input;
 

@@ -1,0 +1,69 @@
+{
+  "project": "HIS_Demo",
+  "documentation_date": "2026-11-10",
+  "basis": "Current source files; not online runtime telemetry",
+  "active_program": "PRG_HISDemo",
+  "active_pous": 4,
+  "declared_global_objects": {
+    "IO": 9,
+    "CustomerDemo": 50
+  },
+  "customer_demo_types": {
+    "SAFEBOOL": 5,
+    "SAFEBYTE": 5,
+    "SAFEWORD": 5,
+    "SAFEDWORD": 5,
+    "SAFESINT": 5,
+    "SAFEINT": 5,
+    "SAFEDINT": 5,
+    "SAFEUSINT": 5,
+    "SAFEUINT": 5,
+    "SAFEUDINT": 5
+  },
+  "sources": [
+    {
+      "path": "src/PRG_HISDemo.iecst",
+      "sha256": "7762503e48a95053ed6d49caf7a7a8094d5195c9dda0c57e784358f142d99a33"
+    },
+    {
+      "path": "src/FB_HISSafety.iecfbd",
+      "sha256": "4ff565266f59c18a8aa2fb6f1c4d08e1df4a33f01a69ff2610d6f308c2f02ccd"
+    },
+    {
+      "path": "src/FB_PackagingLine.iecst",
+      "sha256": "6cf0322ae759f827aac8f3c9c9c570c11a3c50d61305c772973c3d57d60caca6"
+    },
+    {
+      "path": "src/FB_PackagingIndicators.iecfbd",
+      "sha256": "c99992d1b63585c4c439ef87dc71302235f8b5e360c670fbb3c303b8635b1c7c"
+    },
+    {
+      "path": "src/GV_CustomerDemo.global",
+      "sha256": "ea4fa350347046270d614c1a8baa86a63f0bed513602476e75cca348d754687d"
+    },
+    {
+      "path": "IO/GVs.global",
+      "sha256": "253a2aec170d85f1cb59b5def32d960132c4f8202600be3db7950026978fcbbb"
+    },
+    {
+      "path": "RevPi.iecplc",
+      "sha256": "9c4d051514af624a1fb5fbbea43ba923cd4c0b68d344b9780a7e8689378ee961"
+    },
+    {
+      "path": "RTSMicroSafeLocal.iecplc",
+      "sha256": "7ab5949188e5f688ab951d74fcd4beb844cc1ccd71cc9a6c94e79974e09aa0d3"
+    },
+    {
+      "path": "local.iecplc",
+      "sha256": "1ee043fae6f89b165cd31f822fbc6bfed72e8d37e90feefa72bb33427c7a3145"
+    },
+    {
+      "path": "src/Unused/EstopDemo.iecfbd",
+      "sha256": "0c0ae79b3fb5780654f0796e281d2ffc19ed189f193f1d14a106bfc1a1626607"
+    },
+    {
+      "path": "libraries.libref",
+      "sha256": "de40a1c8f3746c31cf1b3964dbd0836296bc287b95e38a4110a7f27f71ef9f8c"
+    }
+  ]
+}

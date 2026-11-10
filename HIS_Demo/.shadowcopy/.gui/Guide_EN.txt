@@ -1,0 +1,127 @@
+HIS PACKAGING LINE — PYTHON GUI v1.2
+30 October 2026
+
+START
+Double-click START_GUI.cmd. The application always starts in local demo mode.
+Alternatively, run python his_gui.py from this folder.
+Python 3.10+ with Tkinter is required. The launcher also recognizes the existing
+development installation at C:\LC3ENV\tools\python-3.11.4-win64\python.exe.
+
+LOCAL PREVIEW
+Press Start. A carton moves into the station, is sealed and moves out.
+Fast cycle, carton jam, enable, stop, reset and simulated emergency stop are
+available. This mode uses a local preview model, not a PLC. It starts enabled
+and ready for immediate demonstration. Normal/fast cycles take about 8/4.5 s.
+The PLC mode uses actual read values instead of this model.
+
+OPC UA DEPENDENCY
+Using the same Python installation, run:
+python -m pip install -r requirements.txt
+The required package is opcua==0.98.13 (python-opcua). It was already installed
+on the development machine. No additional graphics libraries are required.
+
+RTS MAX CONNECTION
+1. Expose the required program variables through RTS Max OPC UA. Obtain the
+   actual endpoint, user permissions and authentication requirements.
+2. Open Connection & Node IDs. localhost:4840 has now been confirmed
+   as the local RTS Max endpoint with anonymous access.
+3. Configure anonymous access or username/password. Passwords stay in memory
+   and are not saved in config.json. HIS_OPCUA_PASSWORD is also supported.
+4. If required, configure the matching Security string and absolute certificate
+   paths, for example Basic256Sha256,SignAndEncrypt,client.der,client-key.pem,server.der.
+   Configure mutual certificate trust as required by the server.
+   An empty string means SecurityPolicy None; no automatic downgrade is used.
+5. Save, then select Connect OPC UA in the main window.
+6. Reopen settings, choose Browse server and Load Objects. Expand the
+   hierarchy, select a Variable node, select its logical signal and assign it.
+   Exact Node-IDs can also be entered manually in the Node-IDs tab.
+7. Save and reconnect. Saving configuration disconnects an existing session.
+8. Map at least state, count and permit for the visualization, then add the
+   diagnostic and control signals. The initial connection is read-only.
+9. For control, ensure the nodes are writable on the server and switch
+   PLC controls to ENABLED. State and Permit must be mapped. Control is disabled
+   again on each new connection.
+
+No Node-ID is inferred from a variable name. Actual namespace indexes and
+identifiers are server-specific. The GUI does not configure the RTS Max server.
+
+MAPPING (VARIABLES WITHIN PRG_HISDemo)
+state           Line.State
+count           Line.CartonsPacked
+permit          Safety.S_Permit
+ready           Line.Ready
+fast_active     Line.FastCycleActive
+fault           Line.Fault
+reset_request   Safety.ResetRequest
+safety_error    Safety.Error
+equivalent_diag Safety.EquivalentDiag
+estop_diag      Safety.EStopDiag
+enable          CmdEnable
+start           CmdStart
+stop            CmdStop
+fast            CmdFastCycle
+jam             CmdJam
+reset           CmdSafetyReset
+ack             CmdAckJam
+sim_estop       Sim_EStopReleased (RTS Max simulation program only)
+
+Only the listed Boolean control variables can be written. State, counter,
+permission, diagnostics and safe outputs are never written.
+Start/Stop/Reset/Acknowledge use 250-ms pulses. The current 10-ms PLC task is
+appropriate for these pulses. The default 100-ms GUI polling interval is
+independent of the PLC task. Existing TRUE pulse signals are not retriggered.
+Each control requires a distinct Node-ID. Boolean server types are checked.
+
+For the Sim_EStopReleased program, explicitly enable RTS Max simulation program
+in settings and map sim_estop. FALSE simulates pressed; TRUE simulates released.
+Then apply Safety Reset and a new Start. Leave this option disabled for the
+physical demo box and operate its actual emergency-stop button.
+
+CONNECTION LOSS AND DISPLAY
+Errors stop live animation and disable controls. Last counter/diagnostic
+values may remain visible, but the display indicates OFFLINE instead of a
+current safety permission. There is no silent fallback to the local model.
+Reconnect is manual. Bad StatusCodes are not displayed as valid zero/FALSE.
+Freshness is based on successful reads; a server returning internally stale
+process data with Good quality cannot be detected by this mechanism.
+Carton position is interpolated from phase and time, not measured.
+
+The GUI Stop is an OPC UA process command, not a safety emergency stop.
+Neither this GUI nor OPC UA provides a safety function. A disconnection between
+the rising and falling edge of a pulse may prevent its reset. An error message
+then requests checking the PLC signal. PLC-side communication-loss handling
+remains the responsibility of the PLC application.
+
+TESTS
+python -m unittest -v test_gui
+Six tests passed: normal/fast local cycle, jam/reset behavior, GUI rendering,
+OPC UA read/write/pulse/browse, bad quality and invalid Node-ID.
+OPC UA tests used a local server on 127.0.0.1. In addition, all 18 mapped
+signals were read three times from the actual RTS Max using the GUI adapter.
+Authentication and encrypted connections have not yet been tested on target.
+The interface language is English. Vorschau.png is a static export of the
+actual canvas primitives, not a screenshot of a live PLC connection.
+
+REFERENCE
+https://github.com/FreeOpcUa/python-opcua
+https://python-opcua.readthedocs.io/en/latest/client.html
+
+CONFIRMED RTS MAX CONFIGURATION v1.2
+Endpoint: opc.tcp://localhost:4840; anonymous; SecurityPolicy None.
+All 18 actual Node-IDs are configured (ns=1, string IDs under PRG_HISDemo).
+All values read with Good quality. No writes were sent to RTS Max.
+The running program exposes Sim_EStopReleased; its control is preconfigured.
+Connect to OPC UA, enable PLC control, release simulated emergency stop,
+enable operation, apply Safety Reset, then Start. Startup remains local demo.
+
+ENGLISH UI v1.2
+All dashboard, connection, browser, control and application message text is now English.
+Operation ON/OFF controls CmdEnable. PLC controls ENABLED/READ ONLY controls write access.
+The existing OPC UA mapping is unchanged. Close and restart the GUI to apply.
+
+GATEWAY NAMESPACE FIX
+The HMI automatically recognizes urn:neuron:his:ncf-gateway and resolves its
+current namespace index. Older ns=1 mappings therefore also work with the
+gateway at ns=2. Direct RTS Max profiles retain their configured indexes
+when the gateway namespace is not present. Optional explicit gateway profile:
+config.gateway.json. Live gateway verification successfully read 18 signals.

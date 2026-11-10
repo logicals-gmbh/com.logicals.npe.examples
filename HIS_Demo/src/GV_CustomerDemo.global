@@ -1,0 +1,78 @@
+(* SPS 2026 customer demonstration: 50 separate SAFE global variables.
+ * Packaging-line sample data, initially FALSE / 0; no I/O assignment.
+ * The variables are not connected to the process or safety logic.
+ *)
+GLOBALS CustomerDemo
+	VAR_GLOBAL
+
+		(* Guard and supply feedback *)
+		S_InfeedGuardClosed : SAFEBOOL := FALSE;
+		S_SealingGuardClosed : SAFEBOOL := FALSE;
+		S_OutfeedGuardClosed : SAFEBOOL := FALSE;
+		S_ServiceDoorClosed : SAFEBOOL := FALSE;
+		S_AirSupplyReady : SAFEBOOL := FALSE;
+
+		(* Zone and device status bytes *)
+		S_InfeedZoneStatus : SAFEBYTE := 0;
+		S_SealingZoneStatus : SAFEBYTE := 0;
+		S_OutfeedZoneStatus : SAFEBYTE := 0;
+		S_GuardLockStatus : SAFEBYTE := 0;
+		S_SafeDriveStatus : SAFEBYTE := 0;
+
+		(* Diagnostic words *)
+		S_InfeedDiagnosticCode : SAFEWORD := 0;
+		S_SealingDiagnosticCode : SAFEWORD := 0;
+		S_OutfeedDiagnosticCode : SAFEWORD := 0;
+		S_SafetyBusDiagnosticCode : SAFEWORD := 0;
+		S_DriveDiagnosticCode : SAFEWORD := 0;
+
+		(* Permission and monitoring bit masks *)
+		S_ZonePermissionMask : SAFEDWORD := 0;
+		S_GuardMonitoringMask : SAFEDWORD := 0;
+		S_DriveEnableMask : SAFEDWORD := 0;
+		S_ActiveSafetyDemandMask : SAFEDWORD := 0;
+		S_ConfirmedSafetyDemandMask : SAFEDWORD := 0;
+
+		(* Motion direction: -1 reverse, 0 stopped, +1 forward *)
+		S_InfeedMotionDirection : SAFESINT := 0;
+		S_SealingMotionDirection : SAFESINT := 0;
+		S_OutfeedMotionDirection : SAFESINT := 0;
+		S_FilmFeedMotionDirection : SAFESINT := 0;
+		S_RejectGateMotionDirection : SAFESINT := 0;
+
+		(* Temperatures in tenths of a degree Celsius *)
+		S_SealingTemperatureLimit_dC : SAFEINT := 0;
+		S_SealingTemperatureActual_dC : SAFEINT := 0;
+		S_AmbientTemperatureActual_dC : SAFEINT := 0;
+		S_MinSealingTemperature_dC : SAFEINT := 0;
+		S_MaxSealingTemperature_dC : SAFEINT := 0;
+
+		(* Positions and stopping distances in millimetres *)
+		S_InfeedStopPosition_mm : SAFEDINT := 0;
+		S_SealingStopPosition_mm : SAFEDINT := 0;
+		S_OutfeedStopPosition_mm : SAFEDINT := 0;
+		S_CartonTrackingPosition_mm : SAFEDINT := 0;
+		S_MaxStoppingDistance_mm : SAFEDINT := 0;
+
+		(* Sensor and feedback channel counts *)
+		S_InfeedSensorCount : SAFEUSINT := 0;
+		S_SealingSensorCount : SAFEUSINT := 0;
+		S_OutfeedSensorCount : SAFEUSINT := 0;
+		S_GuardChannelCount : SAFEUSINT := 0;
+		S_DriveFeedbackChannelCount : SAFEUSINT := 0;
+
+		(* Speed, pressure and current values with units in the names *)
+		S_InfeedSpeedLimit_mm_s : SAFEUINT := 0;
+		S_OutfeedSpeedLimit_mm_s : SAFEUINT := 0;
+		S_MinAirPressure_mbar : SAFEUINT := 0;
+		S_MaxAirPressure_mbar : SAFEUINT := 0;
+		S_MotorCurrentLimit_mA : SAFEUINT := 0;
+
+		(* Production and maintenance counters *)
+		S_CompletedCartonCount : SAFEUDINT := 0;
+		S_RejectedCartonCount : SAFEUDINT := 0;
+		S_GuardOpeningCount : SAFEUDINT := 0;
+		S_EStopDemandCount : SAFEUDINT := 0;
+		S_OperatingTime_s : SAFEUDINT := 0;
+	END_VAR
+END_GLOBALS

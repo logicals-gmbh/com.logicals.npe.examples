@@ -1,0 +1,149 @@
+HIS PACKAGING LINE — PYTHON-GUI v1.2
+30.10.2026
+
+STARTEN
+START_GUI.cmd doppelklicken. Die GUI startet immer in der lokalen Demo.
+Alternativ in diesem Ordner: python his_gui.py
+Python 3.10 oder neuer mit Tkinter wird benötigt.
+Auf dem bei der Erstellung verwendeten Rechner war diese Installation vorhanden:
+C:\LC3ENV\tools\python-3.11.4-win64\python.exe
+Der Starter berücksichtigt sie, wenn py/python nicht im PATH stehen.
+
+LOKALE DEMO
+Start drücken. Der Karton fährt zur Station, wird verschlossen und fährt hinaus.
+Schneller Takt, Kartonstau, Betrieb, Stopp, Reset und simulierter Not-Aus sind
+bedienbar. Dieser Modus verwendet ein lokales Vorschaumodell, keine PLC.
+Ein Zyklus dauert normal ungefähr 8 s, schnell ungefähr 4,5 s.
+Die Demo startet freigegeben und betriebsbereit, damit sie sofort vorführbar ist.
+Der reale PLC-Modus übernimmt dagegen ausschließlich gelesene Werte.
+
+OPC-UA-PAKET
+Für OPC UA wird python-opcua benötigt (opcua==0.98.13).
+Mit derselben Python-Installation ausführen: python -m pip install -r requirements.txt
+Auf dem Erstellungsrechner war dieses Paket bereits installiert.
+Tkinter-Canvas zeichnet die GUI; weitere Grafikpakete sind nicht erforderlich.
+
+RTS MAX ANBINDEN
+1. In NPE/RTS Max die gewünschten Programmvariablen für OPC UA bereitstellen.
+   Der lokale RTS-Max-Endpunkt wurde inzwischen erfolgreich geprüft.
+2. Connection & Node IDs öffnen. Der voreingetragene Endpunkt localhost:4840
+   ist nur ein Platzhalter und wurde nicht als RTS-Max-Adresse bestätigt.
+3. Anonym oder Benutzername/Passwort konfigurieren. Das Passwort wird nur im
+   Arbeitsspeicher gehalten, nicht in config.json geschrieben. Alternativ
+   kann die Umgebungsvariable HIS_OPCUA_PASSWORD verwendet werden.
+4. Falls der Server Security erfordert, den passenden Security-String und
+   absolute Zertifikatspfade eintragen. Beispiel:
+   Basic256Sha256,SignAndEncrypt,C:\certs\client.der,C:\certs\client-key.pem,C:\certs\server.der
+   Zertifikate/Vertrauen auf Client und Server passend einrichten.
+   Leer bedeutet SecurityPolicy None. Bei Fehlern gibt es keinen automatischen
+   Rückfall auf eine schwächere Verbindung.
+5. Speichern, dann im Hauptfenster Connect OPC UA.
+6. Einstellungen erneut öffnen, Browse server, Load Objects.
+   Hierarchie aufklappen. Für jede Programmvariable den tatsächlichen
+   Variablenknoten auswählen, den logischen Signalnamen wählen und zuordnen.
+   Alternativ die exakten Node-IDs im Reiter Node-IDs eintragen.
+7. Speichern. Änderungen trennen die laufende Verbindung; erneut verbinden.
+8. Zunächst nur lesen. Für die Darstellung mindestens state, count und permit
+   zuordnen. Diagnose und Bedienwerte anschließend ergänzen.
+9. Falls Bedienung über OPC UA gewünscht und die Nodes serverseitig schreibbar
+   sind: PLC controls auf ENABLED schalten. State und Permit müssen zugeordnet
+   sein. Nach jedem Verbindungsaufbau ist die Bedienung wieder deaktiviert.
+
+Die Software enthält keinen OPC-UA-Server für RTS Max und ändert dessen
+Konfiguration nicht. Alle 18 Node-IDs der laufenden lokalen RTS-Max-Anwendung sind eingetragen.
+
+ZUORDNUNG
+Logisches Signal    Programmvariable innerhalb PRG_HISDemo
+state               Line.State
+count               Line.CartonsPacked
+permit              Safety.S_Permit
+ready               Line.Ready
+fast_active         Line.FastCycleActive
+fault               Line.Fault
+reset_request       Safety.ResetRequest
+safety_error        Safety.Error
+equivalent_diag     Safety.EquivalentDiag
+estop_diag          Safety.EStopDiag
+enable              CmdEnable
+start               CmdStart
+stop                CmdStop
+fast                CmdFastCycle
+jam                 CmdJam
+reset               CmdSafetyReset
+ack                 CmdAckJam
+sim_estop           Sim_EStopReleased (nur RTS Max simulation program)
+
+Diese Variablennamen sind keine Node-IDs. Namespace-Index und Node-Identifier
+hängen vom Server ab. Der Browser übernimmt sie aus dem tatsächlichen Server.
+Fehlende optionale Signale bleiben unzugeordnet.
+
+BEDIENUNG IM PLC-MODUS
+Die GUI schreibt nur die aufgelisteten BOOL-Bedienvariablen.
+State, Zähler, Permit, Diagnosen und sichere Ausgänge werden nicht geschrieben.
+Start, Stopp, Safety-Reset und Stauquittierung erzeugen einen 250-ms-Impuls.
+Die aktuelle Task-Zykluszeit von 10 ms ist dafür geeignet; die GUI-Abfrage
+von standardmäßig 100 ms ist unabhängig von der PLC-Task-Zykluszeit.
+Ist ein Impulssignal bereits TRUE, wird kein neuer Impuls ausgegeben.
+Für jede Bedienvariable muss eine eigene Node-ID hinterlegt sein.
+Boolesche Datentypen werden vor dem Schreiben am Server geprüft.
+
+Für die Fassung mit Sim_EStopReleased in den Einstellungen ausdrücklich
+RTS Max simulation program aktivieren und den entsprechenden Node zuordnen.
+Nur dann wird der simulierte Not-Aus im PLC-Modus bedienbar. FALSE simuliert
+gedrückt, TRUE entriegelt. Danach Safety-Reset und neuen Start geben.
+Bei realer Demo-Box deaktiviert lassen und den echten Not-Aus dort bedienen.
+
+VERBINDUNGSVERLUST UND DARSTELLUNG
+Bei Fehlern stoppt die Live-Animation und die Bedienung wird gesperrt.
+Letzte Zähler-/Diagnosewerte können sichtbar bleiben; der Bildschirm zeigt
+OFFLINE statt einer aktuellen Sicherheitsfreigabe. Es gibt keinen stillen
+Wechsel zum lokalen Modell. Erneut verbinden erfolgt manuell.
+Bad-StatusCodes werden nicht als FALSE oder Null dargestellt.
+Die Aktualität basiert auf erfolgreichen Leseantworten; ein Server, der
+intern alte Prozesswerte als Good liefert, wird dadurch nicht erkannt.
+Die Animation interpoliert aus Zustand und abgelaufener Zeit. Sie stellt
+keine tatsächlich gemessene Kartonposition und keine genaue Restzeit dar.
+
+Der GUI-Stopp ist ein OPC-UA-Prozessbefehl, kein sicherer Not-Aus.
+Die GUI und OPC UA bilden keine Sicherheitsfunktion. Bei einem Verbindungs-
+abbruch zwischen Beginn und Ende eines Tasterimpulses kann dessen Rücksetzen
+nicht garantiert werden. Eine entsprechende Meldung fordert die Prüfung des
+PLC-Signals. Prozessreaktion auf Kommunikationsverlust bleibt PLC-seitig.
+
+PRÜFUNG
+python -m unittest -v test_gui
+Sechs Tests wurden bestanden: lokaler Ablauf normal/schnell, Stau-/Reset-
+Verhalten, GUI-Zeichnen aller Zustände, OPC-UA-Lesen/Schreiben/Impuls/Browse,
+schlechte Datenqualität und ungültige Node-ID. OPC UA wurde gegen einen
+lokalen Testserver auf 127.0.0.1 geprüft. Zusätzlich wurden alle 18 Signale
+über den GUI-Adapter dreimal vom tatsächlichen lokalen RTS Max gelesen.
+Anmeldung und verschlüsselte Verbindung sind noch nicht am Ziel getestet.
+
+Vorschau.png wurde aus den tatsächlichen Canvas-Zeichenelementen exportiert.
+Es ist eine statische Vorschau, kein Screenshot einer Live-PLC-Verbindung.
+
+TECHNISCHE REFERENZ
+FreeOpcUa python-opcua: https://github.com/FreeOpcUa/python-opcua
+Client-API: https://python-opcua.readthedocs.io/en/latest/client.html
+
+BESTÄTIGTE RTS-MAX-KONFIGURATION v1.2
+Endpunkt: opc.tcp://localhost:4840, anonym, SecurityPolicy None.
+Namespace: ns=1; String-IDs unter PRG_HISDemo.
+Alle 18 Werte mit Good gelesen, keine Schreibbefehle an RTS Max gesendet.
+Sim_EStopReleased ist vorhanden; die Simulationsbedienung ist vorkonfiguriert.
+GUI starten, Connect OPC UA und anschließend PLC controls aktivieren.
+Dann Sim. Not-Aus entriegeln, Betrieb einschalten, Safety-Reset, Start.
+Die GUI startet weiterhin zunächst in der lokalen Vorschau.
+
+ENGLISCHE OBERFLÄCHE v1.2
+Dashboard, Dialoge, Bedienpult und Anwendungsmeldungen sind jetzt Englisch.
+Operation ON/OFF schaltet CmdEnable. PLC controls ENABLED/READ ONLY schaltet die Bedienfreigabe.
+Die vorhandene OPC-UA-Zuordnung ist unverändert. GUI schließen und neu starten.
+
+GATEWAY-NAMESPACE-KORREKTUR
+Das HMI erkennt den Namespace urn:neuron:his:ncf-gateway automatisch und
+verwendet dessen aktuellen Index. Alte ns=1-Zuordnungen funktionieren damit
+auch am Gateway mit ns=2. Bestehende Profile fuer direkte RTS-Max-Server
+bleiben ohne erkannten Gateway-Namespace unveraendert.
+Optionales Gateway-Profil: config.gateway.json (mit expliziter Namespace-URI).
+Echte Abfragen am laufenden Gateway: 18 Signale erfolgreich gelesen.
