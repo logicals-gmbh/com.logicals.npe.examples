@@ -1,0 +1,28 @@
+/*
+ * This is a template for a new PLC object
+ */
+
+{
+	TARGET usRTSTarget_Win_new_protocol
+		PARAMS := '{
+			"transport": {
+				"type": "TCP",
+				"parameters": {
+					"ip": "127.0.0.1",
+					"port": 2049
+				}
+			} ,
+			"infrastructure": {
+				"type": "CMDLINETOOL"
+				}
+		}' ;
+	END_TARGET
+}
+
+CONFIGURATION RTSMicroSafeLocalCfg
+	RESOURCE RTSMicroSafeLocal ON usRTS2WindowsX86 { ON_TARGET := usRTSTarget_Win_new_protocol, VIA_NCF }
+		TASK taskName(INTERVAL := TIME#10ms, PRIORITY := 38229);
+		PROGRAM PRG_HISDemo WITH taskName :
+			PRG_HISDemo;
+	END_RESOURCE
+END_CONFIGURATION

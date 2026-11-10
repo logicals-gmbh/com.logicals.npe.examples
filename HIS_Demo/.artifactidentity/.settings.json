@@ -5,8 +5,8 @@
     "projectName": "HIS_Demo",
     "projectRelativePath": ""
   },
-  "md5ChecksumAsHexString": "26f93c9ca7389fd5a3dd603a0d337015",
-  "crc32ChecksumAsHexString": "4CB83942",
+  "md5ChecksumAsHexString": "495eb2a932b0766caf1e7fac09134206",
+  "crc32ChecksumAsHexString": "1193C860",
   "members": [
     {
       "fileName": "com.logicals.debugging.prefs",
@@ -30,11 +30,19 @@
     },
     {
       "fileName": "RemoteConfiguration",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"RemoteConfiguration\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings\"\n  },\n  \"md5ChecksumAsHexString\": \"867df36a64ad77f9658b26f433813d02\",\n  \"crc32ChecksumAsHexString\": \"C2FC6EC7\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"RemoteConfiguration\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings\"\n  },\n  \"md5ChecksumAsHexString\": \"f1afd2d01fe8baca0d775df6cd5970ff\",\n  \"crc32ChecksumAsHexString\": \"D24A1E06\"\n}"
+    },
+    {
+      "fileName": "RevPi",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"RevPi\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings\"\n  },\n  \"md5ChecksumAsHexString\": \"4a21ea961d3168810892ededffdde721\",\n  \"crc32ChecksumAsHexString\": \"20248EEC\"\n}"
+    },
+    {
+      "fileName": "RTSMicroSafeLocalCfg",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"RTSMicroSafeLocalCfg\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings\"\n  },\n  \"md5ChecksumAsHexString\": \"9ca22defad34f0b4a16253f487dfbfc5\",\n  \"crc32ChecksumAsHexString\": \"E1B57EAF\"\n}"
     },
     {
       "fileName": "variableView",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"variableView\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings\"\n  },\n  \"md5ChecksumAsHexString\": \"4b66a78363eb6fae6acb91a2a904601f\",\n  \"crc32ChecksumAsHexString\": \"FC2D0323\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"variableView\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings\"\n  },\n  \"md5ChecksumAsHexString\": \"74699141a93e0d836b1596c36d6ae577\",\n  \"crc32ChecksumAsHexString\": \"10178FE2\"\n}"
     }
   ]
 }

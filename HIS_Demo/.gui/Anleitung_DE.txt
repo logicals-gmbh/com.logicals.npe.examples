@@ -139,3 +139,11 @@ ENGLISCHE OBERFLÄCHE v1.2
 Dashboard, Dialoge, Bedienpult und Anwendungsmeldungen sind jetzt Englisch.
 Operation ON/OFF schaltet CmdEnable. PLC controls ENABLED/READ ONLY schaltet die Bedienfreigabe.
 Die vorhandene OPC-UA-Zuordnung ist unverändert. GUI schließen und neu starten.
+
+GATEWAY-NAMESPACE-KORREKTUR
+Das HMI erkennt den Namespace urn:neuron:his:ncf-gateway automatisch und
+verwendet dessen aktuellen Index. Alte ns=1-Zuordnungen funktionieren damit
+auch am Gateway mit ns=2. Bestehende Profile fuer direkte RTS-Max-Server
+bleiben ohne erkannten Gateway-Namespace unveraendert.
+Optionales Gateway-Profil: config.gateway.json (mit expliziter Namespace-URI).
+Echte Abfragen am laufenden Gateway: 18 Signale erfolgreich gelesen.

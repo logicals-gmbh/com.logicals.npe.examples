@@ -1,0 +1,171 @@
+{
+  "lc3ProductVersion": "3.32.0-202611082237",
+  "lc3ApplicationMd5Checksum": "95adc364fa9656e7087dee88ab877eff",
+  "lc3ConfigurationMd5Checksum": "f77a1e031c76b19deba1a3d3458b0560",
+  "platformToolkit": "HisLinuxA64_Channel2",
+  "safePtk": true,
+  "resourceInstancePath": "HIS_Demo/RevPi.local",
+  "startedAt": 1794230496763,
+  "startedBy": "DEMO",
+  "appFingerprint": "41E14554",
+  "finishedAt": 1794230504489,
+  "resultCode": 1,
+  "metaDataBuildFailed": false,
+  "appName": "RTSCode.so",
+  "appSize": -1,
+  "htmlOutputPath": "C:\\SRC\\com.logicals.npe.examples\\HIS_Demo\\.log\\builds\\2026-11-09_14_21_44-DEMO-RevPi-local-HisLinuxA64_Channel2\\build_report.html",
+  "compileResultPath": "C:\\SRC\\com.logicals.npe.examples\\HIS_Demo\\.log\\builds\\2026-11-09_14_21_44-DEMO-RevPi-local-HisLinuxA64_Channel2\\compile_result.txt",
+  "programInstances": [
+    {
+      "programInstanceName": "PRG_HISDemo",
+      "programTypeName": "PRG_HISDEMO",
+      "fingerprint": "BBBB6DC5",
+      "taskName": "DefaultTask",
+      "interval": 55000,
+      "priority": 38229,
+      "ioTask": true
+    }
+  ],
+  "usedBlocks": [
+    {
+      "name": "FB_HISSafety",
+      "fingerprint": "94C63C39",
+      "namespace": "",
+      "includeFileName": "",
+      "extraIncludes": [],
+      "libraryName": ""
+    },
+    {
+      "name": "FB_PackagingIndicators",
+      "fingerprint": "1C979B4E",
+      "namespace": "",
+      "includeFileName": "",
+      "extraIncludes": [],
+      "libraryName": ""
+    },
+    {
+      "name": "FB_PackagingLine",
+      "fingerprint": "3D019EDA",
+      "namespace": "",
+      "includeFileName": "",
+      "extraIncludes": [],
+      "libraryName": ""
+    }
+  ],
+  "usedTypes": [],
+  "usedLibraryTypes": [
+    {
+      "name": "SAFEBOOL",
+      "fingerprint": "2155940A",
+      "namespace": "",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "SFB_GenericSafetyDemand_State",
+      "fingerprint": "84932827",
+      "namespace": "safety.plcopen",
+      "extraIncludes": [],
+      "libraryName": "safety.plcopen__1.7.0-SNAPSHOT"
+    }
+  ],
+  "usedLibraryBlocks": [
+    {
+      "name": "AND",
+      "fingerprint": "835FBBAA",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__AND",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "NOT",
+      "fingerprint": "1936F6A9",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__NOT",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "OR",
+      "fingerprint": "7CBCD812",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__OR",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "R_TRIG",
+      "fingerprint": "C13D52F6",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__R_TRIG",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "SF_EmergencyStop",
+      "fingerprint": "579B2100",
+      "namespace": "safety.plcopen",
+      "includeFileName": "lcfu___safety.plcopen.sf_emergencystop",
+      "extraIncludes": [],
+      "libraryName": "safety.plcopen__1.7.0-SNAPSHOT"
+    },
+    {
+      "name": "SF_Equivalent",
+      "fingerprint": "375ACEBA",
+      "namespace": "safety.plcopen",
+      "includeFileName": "lcfu___safety.plcopen.sf_equivalent",
+      "extraIncludes": [],
+      "libraryName": "safety.plcopen__1.7.0-SNAPSHOT"
+    },
+    {
+      "name": "SFB_GenericSafetyDemand",
+      "fingerprint": "888FA390",
+      "namespace": "safety.plcopen",
+      "extraIncludes": [],
+      "libraryName": "safety.plcopen__1.7.0-SNAPSHOT"
+    },
+    {
+      "name": "TO_UINT",
+      "fingerprint": "3D745203",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__CONVERT",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "TO_WORD",
+      "fingerprint": "3D745203",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__CONVERT",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "TON",
+      "fingerprint": "098BC6BD",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__TON",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    }
+  ],
+  "usedLibraries": [
+    {
+      "name": "com.logicals.lc3.library.standard",
+      "version": "4.0.0-SNAPSHOT",
+      "corruptionDetectionModeArtifactIdentity": false
+    },
+    {
+      "name": "safety.plcopen",
+      "version": "1.7.0-SNAPSHOT",
+      "corruptionDetectionModeArtifactIdentity": false
+    }
+  ],
+  "messages": {
+    "errorMessages": [
+      "Die Ninja-Dependencies-Datei existiert nicht."
+    ],
+    "infoMessages": []
+  }
+}

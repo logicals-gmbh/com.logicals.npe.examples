@@ -118,3 +118,10 @@ ENGLISH UI v1.2
 All dashboard, connection, browser, control and application message text is now English.
 Operation ON/OFF controls CmdEnable. PLC controls ENABLED/READ ONLY controls write access.
 The existing OPC UA mapping is unchanged. Close and restart the GUI to apply.
+
+GATEWAY NAMESPACE FIX
+The HMI automatically recognizes urn:neuron:his:ncf-gateway and resolves its
+current namespace index. Older ns=1 mappings therefore also work with the
+gateway at ns=2. Direct RTS Max profiles retain their configured indexes
+when the gateway namespace is not present. Optional explicit gateway profile:
+config.gateway.json. Live gateway verification successfully read 18 signals.

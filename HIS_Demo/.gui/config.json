@@ -1,5 +1,5 @@
 {
-  "endpoint": "opc.tcp://localhost:4840",
+  "endpoint": "opc.tcp://127.0.0.1:4841/his/",
   "username": "",
   "security": "",
   "poll_ms": 100,

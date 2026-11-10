@@ -5,8 +5,8 @@
     "projectName": "HIS_Demo",
     "projectRelativePath": ""
   },
-  "md5ChecksumAsHexString": "1a8fc2c407241cc4e0b924f6865028e2",
-  "crc32ChecksumAsHexString": "D1A73363",
+  "md5ChecksumAsHexString": "e60f2755ba6eb8d3092bfce15e7ed1c9",
+  "crc32ChecksumAsHexString": "4AA51B5B",
   "members": [
     {
       "fileName": "FB_HISSafety.iecfbd",
@@ -22,7 +22,7 @@
     },
     {
       "fileName": "PRG_HISDemo.iecst",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"PRG_HISDemo.iecst\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"src\"\n  },\n  \"md5ChecksumAsHexString\": \"b53512c26a482df10110e88d30d79cc8\",\n  \"crc32ChecksumAsHexString\": \"43613F0C\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"PRG_HISDemo.iecst\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"src\"\n  },\n  \"md5ChecksumAsHexString\": \"2890ea17c201ffba2315d4bbbf9f2425\",\n  \"crc32ChecksumAsHexString\": \"50C88477\"\n}"
     },
     {
       "fileName": "Unused",

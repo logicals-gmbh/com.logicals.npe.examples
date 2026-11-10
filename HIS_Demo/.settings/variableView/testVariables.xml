@@ -1,31 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <project>
-    <configuration name="LocalConfiguration">
+    <configuration name="RevPi">
         <resource name="local">
-            <variable instancePath="PRG_HISDemo.Line.State"/>
-            <variable instancePath="PRG_HISDemo.Line.CartonsPacked"/>
-            <variable instancePath="PRG_HISDemo.S_DemoEnable"/>
-            <variable instancePath="PRG_HISDemo.S_EStopA"/>
-            <variable instancePath="PRG_HISDemo.S_EStopB"/>
+            <variable instancePath="VAR_GLOBAL.Button1Indicator"/>
+            <variable instancePath="VAR_GLOBAL.Button1Input"/>
+            <variable instancePath="VAR_GLOBAL.Button2Indicator"/>
+            <variable instancePath="VAR_GLOBAL.Button2Input"/>
+            <variable instancePath="VAR_GLOBAL.Button3Indicator"/>
+            <variable instancePath="VAR_GLOBAL.Button3Input"/>
+            <variable instancePath="VAR_GLOBAL.EStop"/>
             <variable instancePath="PRG_HISDemo.CmdEnable"/>
-            <variable instancePath="PRG_HISDemo.CmdSafetyReset"/>
-            <variable instancePath="PRG_HISDemo.Safety.fbEquivalent.S_EquivalentOut"/>
-            <variable instancePath="PRG_HISDemo.Safety.ResetRequest"/>
-            <variable instancePath="PRG_HISDemo.Safety.Error"/>
-            <variable instancePath="PRG_HISDemo.Safety.EquivalentDiag"/>
-            <variable instancePath="PRG_HISDemo.Safety.EStopDiag"/>
-            <variable instancePath="PRG_HISDemo.Sim_EStopReleased"/>
-            <variable instancePath="PRG_HISDemo.LedAttention"/>
-            <variable instancePath="PRG_HISDemo.LedConveyor"/>
-            <variable instancePath="PRG_HISDemo.LedReady"/>
-            <variable instancePath="PRG_HISDemo.LedSealing"/>
-            <variable instancePath="PRG_HISDemo.CmdStart"/>
-            <variable instancePath="PRG_HISDemo.CmdFastCycle"/>
-        </resource>
-    </configuration>
-    <configuration name="RTSMicroSafeLocalCfg">
-        <resource name="RTSMicroSafeLocal">
-            <variable instancePath="PRG_HISDemo.Line.State"/>
         </resource>
     </configuration>
 </project>

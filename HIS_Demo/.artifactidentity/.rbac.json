@@ -5,12 +5,12 @@
     "projectName": "HIS_Demo",
     "projectRelativePath": ""
   },
-  "md5ChecksumAsHexString": "c502dbcad10bb64ed54ad7b67acf313c",
-  "crc32ChecksumAsHexString": "BD27BF41",
+  "md5ChecksumAsHexString": "ed3ebfe8b01ecfdbbfbbd5180de425f5",
+  "crc32ChecksumAsHexString": "242264D2",
   "members": [
     {
       "fileName": "rbac.json",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"rbac.json\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".rbac\"\n  },\n  \"md5ChecksumAsHexString\": \"436d5457a96bc84d23f2284a062f5faa\",\n  \"crc32ChecksumAsHexString\": \"8D377762\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"rbac.json\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".rbac\"\n  },\n  \"md5ChecksumAsHexString\": \"78933e8d0f18605ca607626b3d374447\",\n  \"crc32ChecksumAsHexString\": \"57FB108A\"\n}"
     },
     {
       "fileName": "roles.json",
@@ -18,7 +18,7 @@
     },
     {
       "fileName": "users.json",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"users.json\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".rbac\"\n  },\n  \"md5ChecksumAsHexString\": \"a69ceb05f6b0d9a835fdc641690e87b5\",\n  \"crc32ChecksumAsHexString\": \"6F9B1382\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"users.json\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".rbac\"\n  },\n  \"md5ChecksumAsHexString\": \"853637bed06f0d5f0e89382e18666321\",\n  \"crc32ChecksumAsHexString\": \"4B67969A\"\n}"
     }
   ]
 }

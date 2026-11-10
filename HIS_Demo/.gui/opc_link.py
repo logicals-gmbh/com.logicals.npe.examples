@@ -62,7 +62,23 @@ class OpcLink:
                 client.set_user(config['username'])
                 client.set_password(password)
             client.connect()
-            nodes = {k: client.get_node(v) for k, v in config['nodes'].items() if v and k in SIGNALS}
+            namespaces = client.get_namespace_array()
+            namespace_uri = config.get('namespace_uri')
+            # Older HMI profiles use ns=1. Recognize the standalone gateway
+            # by its stable application namespace URI, not an index.
+            gateway_uri = 'urn:neuron:his:ncf-gateway'
+            if not namespace_uri and gateway_uri in namespaces:
+                namespace_uri = gateway_uri
+            if namespace_uri and namespace_uri not in namespaces:
+                raise ValueError('Configured OPC UA namespace URI is not present on this server: '+namespace_uri)
+            index = namespaces.index(namespace_uri) if namespace_uri else None
+            nodes = {}
+            for key, value in config['nodes'].items():
+                if not value or key not in SIGNALS:continue
+                nodeid = ua.NodeId.from_string(value)
+                if index is not None and nodeid.NamespaceIndex != 0:
+                    nodeid = ua.NodeId(nodeid.Identifier, index, nodeid.NodeIdType)
+                nodes[key] = client.get_node(nodeid)
             keys = list(nodes)
             self.connected = True
             self.events.put(('connected', config['endpoint']))

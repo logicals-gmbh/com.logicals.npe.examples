@@ -139,5 +139,20 @@ class OpcTests(unittest.TestCase):
         error=self.wait_event('error')
         self.assertIn('BadNodeIdUnknown',error)
 
+    def test_explicit_namespace_uri_resolves_changed_indexes(self):
+        self.config['namespace_uri']='urn:his:gui:test'
+        from opcua import ua
+        for key,value in list(self.config['nodes'].items()):
+            if value:
+                nodeid=ua.NodeId.from_string(value)
+                self.config['nodes'][key]=ua.NodeId(nodeid.Identifier,99,nodeid.NodeIdType).to_string()
+        self.link.connect(self.config)
+        self.assertEqual(self.wait_event('snapshot')['state'],10)
+
+    def test_unknown_namespace_uri_reports_configuration_error(self):
+        self.config['namespace_uri']='urn:missing:test'
+        self.link.connect(self.config)
+        self.assertIn('namespace URI',self.wait_event('error'))
+
 
 if __name__=='__main__':unittest.main()

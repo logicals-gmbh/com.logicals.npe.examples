@@ -6,14 +6,14 @@
 	CHANNEL LocalChannel
 		TCP
 			ADDRESS := 127.0.0.1;
-			PORT := 1536;
+			PORT := 1534;
 		END_TCP
 	END_CHANNEL
 }
 
 CONFIGURATION LocalConfiguration
 	RESOURCE local ON BuiltInPlc { ON_CHANNEL := LocalChannel }
-		TASK DefaultTask(INTERVAL := TIME#10ms, PRIORITY := 38229);
+		TASK DefaultTask(INTERVAL := TIME#500ms, PRIORITY := 38229);
 
 		PROGRAM PRG_HISDemo WITH DefaultTask :
 			PRG_HISDemo;

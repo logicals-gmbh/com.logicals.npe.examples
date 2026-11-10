@@ -2,9 +2,9 @@
 <projectConfiguration>
     <configVersion>2</configVersion>
     <relativeTo>WORKSPACE</relativeTo>
-    <referencedLibrary type="PYTHON" name="com.logicals.lc3.testframework.robot.keywords.Keywords" path="C:/Users/WolfgangZeller/Neuron/NeuronPowerEngineer/workspace/.metadata/.plugins/com.logicals.lc3.testframework.core.lc3/lib"/>
+    <referencedLibrary type="PYTHON" name="com.logicals.lc3.testframework.robot.keywords.Keywords" path="C:/Users/WolfgangZeller/Neuron/NPE_SE/his_bur/.metadata/.plugins/com.logicals.lc3.testframework.core.lc3/lib"/>
     <pythonpath>
-        <path location="C:\Users\WolfgangZeller\Neuron\NeuronPowerEngineer\workspace\.metadata\.plugins\com.logicals.lc3.testframework.core.lc3\lib"/>
+        <path location="C:\Users\WolfgangZeller\Neuron\NPE_SE\his_bur\.metadata\.plugins\com.logicals.lc3.testframework.core.lc3\lib"/>
     </pythonpath>
     <excludedForValidation/>
     <isValidatedFileSizeCheckingEnabled>true</isValidatedFileSizeCheckingEnabled>

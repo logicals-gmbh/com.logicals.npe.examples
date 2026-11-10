@@ -1,0 +1,23 @@
+GLOBALS IO
+	VAR_GLOBAL
+
+		{ SECTION_NAME := "EK1914" } dummy1 AT %IX2.1.0.0 : SAFEBOOL { comment := "Not connected. Needed for DXS iteration to work"; };
+	END_VAR
+	VAR_GLOBAL
+		{ SECTION_NAME := "EL2904" } dummy2 AT %QX2.2.0.0 : SAFEBOOL { comment := "Not connected. Needed for DXS iteration to work"; };
+	END_VAR
+	VAR_GLOBAL
+		{ SECTION_NAME := "EL2008" } Button1Indicator AT %QX1.22.0 : BOOL { comment := "Indicator light of first button"; };
+		Button2Indicator AT %QX1.22.1 : BOOL { comment := "Indicator light of second button"; };
+		Button3Indicator AT %QX1.22.2 : BOOL { comment := "Indicator light of third button"; };
+	END_VAR
+	VAR_GLOBAL
+		{ SECTION_NAME := "EL1904" } EStop AT %IX2.3.0.0 : SAFEBOOL { comment := "Emergency stop contact"; };
+
+	END_VAR
+	VAR_GLOBAL
+		{ SECTION_NAME := "EL1008" } Button1Input AT %IX1.22.0 : BOOL { comment := "Input of first button"; };
+		Button2Input AT %IX1.22.1 : BOOL { comment := "Input of second button"; };
+		Button3Input AT %IX1.22.2 : BOOL { comment := "Input of third button"; };
+	END_VAR
+END_GLOBALS

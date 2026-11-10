@@ -1,0 +1,16 @@
+{
+  "artifactMetadata": {
+    "additionalMetadata": {},
+    "artifactName": "IO",
+    "projectName": "HIS_Demo",
+    "projectRelativePath": ""
+  },
+  "md5ChecksumAsHexString": "c04e2b53ea7504f97ded3123e341bda4",
+  "crc32ChecksumAsHexString": "76ACF016",
+  "members": [
+    {
+      "fileName": "GVs.global",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"GVs.global\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"IO\"\n  },\n  \"md5ChecksumAsHexString\": \"a059490274c5baa718b31b3a32b3df89\",\n  \"crc32ChecksumAsHexString\": \"69237AA0\"\n}"
+    }
+  ]
+}

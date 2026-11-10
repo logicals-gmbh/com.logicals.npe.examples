@@ -34,8 +34,27 @@ PROGRAM PRG_HISDemo
 		Lamps : FB_PackagingIndicators;
 	END_VAR
 
+	VAR_EXTERNAL
+		EStop : SAFEBOOL;
+		Button1Input : BOOL;
+		Button2Input : BOOL;
+		Button3Input : BOOL;
+		Button1Indicator : BOOL { description := "��e";
+		comment := "Indicator light of first button";};
+		Button2Indicator : BOOL { description := "��e";
+		comment := "Indicator light of second button";};
+		Button3Indicator : BOOL { description := "��e";
+		comment := "Indicator light of third button";};
+	END_VAR
+
+	/* Assign IO signals */
+	Sim_EStopReleased := EStop;
+	CmdEnable := Button1Input;
+	CmdSafetyReset := Button2Input;
+	CmdStart := Button3Input;
+
 	(* Update both virtual contacts before evaluating safety. *)
-	S_EStopA := Sim_EStopReleased;
+	S_EStopA :=	Sim_EStopReleased;
 	S_EStopB := Sim_EStopReleased;
 
 	(* Order matters: simulated inputs -> safety -> process -> indication. *)
@@ -47,4 +66,9 @@ PROGRAM PRG_HISDemo
 	Line(Enable := CmdEnable, Permit := Safety.S_Permit, Start := CmdStart, Stop := CmdStop, FastCycle := CmdFastCycle, Jam := CmdJam, AckJam := CmdAckJam);
 
 	Lamps(Permit := Safety.S_Permit, Ready := Line.Ready, Infeed := Line.Infeed, Sealing := Line.Sealing, Outfeed := Line.Outfeed, Complete := Line.Complete, Blocked := Line.Blocked, ProcessFault := Line.Fault, SafetyError := Safety.Error, ResetRequest := Safety.ResetRequest, Heartbeat := Line.Heartbeat, LedReady => LedReady, LedConveyor => LedConveyor, LedSealing => LedSealing, LedAttention => LedAttention);
+
+	Button1Indicator := Lamps.LedReady;
+	Button2Indicator := Lamps.LedConveyor;
+	Button3Indicator := Lamps.LedSealing;
+
 END_PROGRAM

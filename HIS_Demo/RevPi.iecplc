@@ -1,0 +1,27 @@
+{
+	TARGET hisRevPiChannel
+		PARAMS := '{
+				"transport" : {
+					"type" : "TCP",
+					"parameters" : {
+						"ip" : "192.168.1.95",
+						"port" : 2050
+					}
+				}
+			}';
+	END_TARGET
+}
+
+CONFIGURATION RevPi
+	RESOURCE local ON HisLinuxA64 { ON_TARGET := hisRevPiChannel, VIA_NCF }
+		{ IO_IMPORT PROVIDER := GenericProvider, SERVICE := EtherCAT }
+		{ IO_IMPORT PROVIDER := GenericProvider, SERVICE := FSoE }
+		
+		{ IO } TASK DefaultTask(INTERVAL := TIME#100ms, PRIORITY := 38229);
+
+		PROGRAM PRG_HISDemo WITH DefaultTask :
+			PRG_HISDemo;
+
+	END_RESOURCE
+END_CONFIGURATION
+
