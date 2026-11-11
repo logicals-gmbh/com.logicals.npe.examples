@@ -5,16 +5,16 @@
     "projectName": "HIS_Demo",
     "projectRelativePath": ""
   },
-  "md5ChecksumAsHexString": "af6bc840819e926d11e59c07de24b711",
-  "crc32ChecksumAsHexString": "CBE2BBC",
+  "md5ChecksumAsHexString": "375961240dcdbd8e6bc0c46d1bc03d51",
+  "crc32ChecksumAsHexString": "C8901E6",
   "members": [
     {
       "fileName": "EcatGVs.global",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"EcatGVs.global\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"IO\"\n  },\n  \"md5ChecksumAsHexString\": \"9b4be1b8774683f82c20738f0a19aa72\",\n  \"crc32ChecksumAsHexString\": \"261EFB10\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"EcatGVs.global\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"IO\"\n  },\n  \"md5ChecksumAsHexString\": \"b2328315979d4baa506954e3fc8061fe\",\n  \"crc32ChecksumAsHexString\": \"695FC02\"\n}"
     },
     {
       "fileName": "FsoeGVs.global",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"FsoeGVs.global\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"IO\"\n  },\n  \"md5ChecksumAsHexString\": \"54919a1084b361df0d174fbe98664845\",\n  \"crc32ChecksumAsHexString\": \"A922A5BB\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"FsoeGVs.global\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"IO\"\n  },\n  \"md5ChecksumAsHexString\": \"7b53878dd6753c3cee8f46405848b129\",\n  \"crc32ChecksumAsHexString\": \"72F4F759\"\n}"
     },
     {
       "fileName": "GVs.global",
@@ -22,7 +22,7 @@
     },
     {
       "fileName": "SimGVs.global",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"SimGVs.global\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"IO\"\n  },\n  \"md5ChecksumAsHexString\": \"cb82f3348f843985ef247b0c384a5fe8\",\n  \"crc32ChecksumAsHexString\": \"9DBFA602\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"SimGVs.global\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"IO\"\n  },\n  \"md5ChecksumAsHexString\": \"458ac09a01e6b178abc49e22a4dd54c7\",\n  \"crc32ChecksumAsHexString\": \"B69F1594\"\n}"
     }
   ]
 }

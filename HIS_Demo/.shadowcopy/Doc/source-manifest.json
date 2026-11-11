@@ -3,12 +3,12 @@
   "documentation_date": "2026-11-11",
   "basis": "Current source files; not online runtime telemetry",
   "active_program": "PRG_HISDemo",
-  "active_pous": 5,
+  "active_pous": 6,
   "declared_global_objects": {
     "IO": 9,
     "SimGVs": 50,
-    "EcatGVs": 24,
-    "FsoeGVs": 15
+    "EcatGVs": 18,
+    "FsoeGVs": 12
   },
   "customer_demo_types": {
     "SAFEBOOL": 5,
@@ -25,7 +25,7 @@
   "sources": [
     {
       "path": "src/PRG_HISDemo.iecst",
-      "sha256": "ee28048bd4420e38fee220994028f4c8f8c447d5b0c3a3b4536d15ef8baa2c1b"
+      "sha256": "cebdad95ca58ddcee22acfe65cd2ae6ad425de0fb888801436b133c5f22157ba"
     },
     {
       "path": "src/FB_HISSafety.iecfbd",
@@ -41,7 +41,7 @@
     },
     {
       "path": "IO/SimGVs.global",
-      "sha256": "cacbe809c9aa47006aea918ddb4496bb22e8c6678f4203d38ed92a90f9d35c3b"
+      "sha256": "dcb801304958f9bac1d65ea9eac9a4f617023459cd10c1efa0200b791732f50a"
     },
     {
       "path": "IO/GVs.global",
@@ -73,13 +73,17 @@
     },
     {
       "path": "IO/EcatGVs.global",
-      "sha256": "1d525e4188164c6a1c5aaae19df55fb9acb54e7585a8d86856789f9b0799a1d7"
+      "sha256": "b040b8eca4c36fe0c4c1dde8e8a05007d4b54c6b1e09bc8ff87e062b64160717"
     },
     {
       "path": "IO/FsoeGVs.global",
-      "sha256": "80eee181c507b15b3761101a647fe1ff62295206408dcf5dbf4b099aeeb2d5c4"
+      "sha256": "1c7cc2b640f23cb85cf2bc766a651bb0e72fad97b72d5d08d9e85ec10f0c782c"
+    },
+    {
+      "path": "src/FB_PackagingDataSimulation.iecst",
+      "sha256": "379947509ba9e328e0c24d5ef0417a5099df142615525c1c5bb24ccec02727d4"
     }
   ],
   "hardware_mode_pous": 4,
-  "simulation_mode_pous": 5
+  "simulation_mode_pous": 6
 }

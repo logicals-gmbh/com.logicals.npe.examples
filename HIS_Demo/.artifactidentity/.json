@@ -5,8 +5,8 @@
     "projectName": "HIS_Demo",
     "projectRelativePath": ""
   },
-  "md5ChecksumAsHexString": "c46fa500a71962d11197a898c6f61877",
-  "crc32ChecksumAsHexString": "2DF50BCD",
+  "md5ChecksumAsHexString": "475735cd6407ca5e734e712be3cc7e4b",
+  "crc32ChecksumAsHexString": "2666DC35",
   "members": [
     {
       "fileName": ".gui",
@@ -30,11 +30,11 @@
     },
     {
       "fileName": "Doc",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"Doc\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"476cce070c73994744923a79965a41a0\",\n  \"crc32ChecksumAsHexString\": \"1B0A39E3\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"Doc\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"fac1f85e6e5bfac12afeabbd7ea2cf69\",\n  \"crc32ChecksumAsHexString\": \"104ACDC0\"\n}"
     },
     {
       "fileName": "IO",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"IO\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"af6bc840819e926d11e59c07de24b711\",\n  \"crc32ChecksumAsHexString\": \"CBE2BBC\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"IO\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"375961240dcdbd8e6bc0c46d1bc03d51\",\n  \"crc32ChecksumAsHexString\": \"C8901E6\"\n}"
     },
     {
       "fileName": "libraries.libref",
@@ -58,11 +58,11 @@
     },
     {
       "fileName": "src",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"src\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"635631d7d660457a56ee0b22512d31b1\",\n  \"crc32ChecksumAsHexString\": \"89F5ABCA\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"src\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"528ca122eb6f84c458262ae8f2d16e71\",\n  \"crc32ChecksumAsHexString\": \"EE6A0EFD\"\n}"
     },
     {
       "fileName": "src-gen",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"src-gen\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"7e4c2ee108b81ed97fc964d4b581319c\",\n  \"crc32ChecksumAsHexString\": \"33BF1BE6\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"src-gen\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"afbd257f27c9370fbca4fbf4995d81a1\",\n  \"crc32ChecksumAsHexString\": \"347E332\"\n}"
     }
   ]
 }

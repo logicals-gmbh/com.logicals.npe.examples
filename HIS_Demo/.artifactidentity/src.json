@@ -5,12 +5,16 @@
     "projectName": "HIS_Demo",
     "projectRelativePath": ""
   },
-  "md5ChecksumAsHexString": "635631d7d660457a56ee0b22512d31b1",
-  "crc32ChecksumAsHexString": "89F5ABCA",
+  "md5ChecksumAsHexString": "528ca122eb6f84c458262ae8f2d16e71",
+  "crc32ChecksumAsHexString": "EE6A0EFD",
   "members": [
     {
       "fileName": "FB_HISSafety.iecfbd",
       "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"FB_HISSafety.iecfbd\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"src\"\n  },\n  \"md5ChecksumAsHexString\": \"7cece5bee554c062e7ea2c7779fd5291\",\n  \"crc32ChecksumAsHexString\": \"E51D8D88\"\n}"
+    },
+    {
+      "fileName": "FB_PackagingDataSimulation.iecst",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"FB_PackagingDataSimulation.iecst\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"src\"\n  },\n  \"md5ChecksumAsHexString\": \"db8f9686d41c91bd2eb62e0ec1be3ac2\",\n  \"crc32ChecksumAsHexString\": \"5BAA372F\"\n}"
     },
     {
       "fileName": "FB_PackagingIndicators.iecfbd",
@@ -26,7 +30,7 @@
     },
     {
       "fileName": "PRG_HISDemo.iecst",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"PRG_HISDemo.iecst\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"src\"\n  },\n  \"md5ChecksumAsHexString\": \"22b1798848484b50af46014428477cab\",\n  \"crc32ChecksumAsHexString\": \"4F9DDF40\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"PRG_HISDemo.iecst\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"src\"\n  },\n  \"md5ChecksumAsHexString\": \"af71ed20c75c6a05b5d67f4e6203f432\",\n  \"crc32ChecksumAsHexString\": \"92E854DA\"\n}"
     },
     {
       "fileName": "Unused",

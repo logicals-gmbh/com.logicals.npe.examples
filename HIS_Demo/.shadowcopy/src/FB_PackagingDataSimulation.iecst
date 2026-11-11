@@ -1,0 +1,270 @@
+(* Simulation-only synthetic process data and harmless demo-load outputs.
+ * Called after FB_PackagingLine, only in SimMode. Not a safety function.
+ *)
+FUNCTION_BLOCK FB_PackagingDataSimulation
+    VAR_INPUT
+        Reset : BOOL;
+        S_Permit : SAFEBOOL;
+        S_EStopReleased : SAFEBOOL;
+        LineState : UINT;
+        LineFault : BOOL;
+        CycleDone : BOOL;
+        FastCycle : BOOL;
+        Heartbeat : BOOL;
+    END_VAR
+    VAR_OUTPUT
+        S_DataPlausible : SAFEBOOL;
+    END_VAR
+    VAR
+        tSecond : TON;
+        PrevJam : BOOL;
+        PrevGuardClosed : SAFEBOOL := TRUE;
+        PrevEStopReleased : SAFEBOOL := FALSE;
+        PreviousLineState : UINT;
+    END_VAR
+    VAR_EXTERNAL
+        S_InfeedGuardClosed : SAFEBOOL;
+        S_SealingGuardClosed : SAFEBOOL;
+        S_OutfeedGuardClosed : SAFEBOOL;
+        S_ServiceDoorClosed : SAFEBOOL;
+        S_AirSupplyReady : SAFEBOOL;
+        S_InfeedZoneStatus : SAFEBYTE;
+        S_SealingZoneStatus : SAFEBYTE;
+        S_OutfeedZoneStatus : SAFEBYTE;
+        S_GuardLockStatus : SAFEBYTE;
+        S_SafeDriveStatus : SAFEBYTE;
+        S_InfeedDiagnosticCode : SAFEWORD;
+        S_SealingDiagnosticCode : SAFEWORD;
+        S_OutfeedDiagnosticCode : SAFEWORD;
+        S_SafetyBusDiagnosticCode : SAFEWORD;
+        S_DriveDiagnosticCode : SAFEWORD;
+        S_ZonePermissionMask : SAFEDWORD;
+        S_GuardMonitoringMask : SAFEDWORD;
+        S_DriveEnableMask : SAFEDWORD;
+        S_ActiveSafetyDemandMask : SAFEDWORD;
+        S_ConfirmedSafetyDemandMask : SAFEDWORD;
+        S_InfeedMotionDirection : SAFESINT;
+        S_SealingMotionDirection : SAFESINT;
+        S_OutfeedMotionDirection : SAFESINT;
+        S_FilmFeedMotionDirection : SAFESINT;
+        S_RejectGateMotionDirection : SAFESINT;
+        S_SealingTemperatureLimit_dC : SAFEINT;
+        S_SealingTemperatureActual_dC : SAFEINT;
+        S_AmbientTemperatureActual_dC : SAFEINT;
+        S_MinSealingTemperature_dC : SAFEINT;
+        S_MaxSealingTemperature_dC : SAFEINT;
+        S_InfeedStopPosition_mm : SAFEDINT;
+        S_SealingStopPosition_mm : SAFEDINT;
+        S_OutfeedStopPosition_mm : SAFEDINT;
+        S_CartonTrackingPosition_mm : SAFEDINT;
+        S_MaxStoppingDistance_mm : SAFEDINT;
+        S_InfeedSensorCount : SAFEUSINT;
+        S_SealingSensorCount : SAFEUSINT;
+        S_OutfeedSensorCount : SAFEUSINT;
+        S_GuardChannelCount : SAFEUSINT;
+        S_DriveFeedbackChannelCount : SAFEUSINT;
+        S_InfeedSpeedLimit_mm_s : SAFEUINT;
+        S_OutfeedSpeedLimit_mm_s : SAFEUINT;
+        S_MinAirPressure_mbar : SAFEUINT;
+        S_MaxAirPressure_mbar : SAFEUINT;
+        S_MotorCurrentLimit_mA : SAFEUINT;
+        S_CompletedCartonCount : SAFEUDINT;
+        S_RejectedCartonCount : SAFEUDINT;
+        S_GuardOpeningCount : SAFEUDINT;
+        S_EStopDemandCount : SAFEUDINT;
+        S_OperatingTime_s : SAFEUDINT;
+        O01 : BOOL;
+        O02 : BOOL;
+        O03 : BOOL;
+        O04 : BOOL;
+        O14 : BOOL;
+        O15 : BOOL;
+        O16 : BOOL;
+        O17 : BOOL;
+        O18 : BOOL;
+        SO01 : SAFEBOOL;
+        SO02 : SAFEBOOL;
+        SO12 : SAFEBOOL;
+        SO13 : SAFEBOOL;
+        SO14 : SAFEBOOL;
+    END_VAR
+
+    IF Reset THEN
+        S_CompletedCartonCount := 0;
+        S_RejectedCartonCount := 0;
+        S_GuardOpeningCount := 0;
+        S_EStopDemandCount := 0;
+        S_OperatingTime_s := 0;
+        S_SealingTemperatureActual_dC := 1650;
+        S_CartonTrackingPosition_mm := 0;
+        PrevJam := LineFault;
+        PrevGuardClosed := TRUE;
+        PrevEStopReleased := S_EStopReleased;
+        PreviousLineState := 0;
+    END_IF;
+    (* Telemetry tick: task-quantised nominal second, not a precision clock. *)
+    tSecond(IN := NOT tSecond.Q AND NOT Reset, PT := T#1s);
+
+    S_InfeedGuardClosed := TRUE;
+    S_SealingGuardClosed := TRUE;
+    S_OutfeedGuardClosed := TRUE;
+    S_ServiceDoorClosed := TRUE;
+    IF LineFault THEN S_ServiceDoorClosed := FALSE; END_IF;
+    S_AirSupplyReady := S_EStopReleased;
+    S_SealingTemperatureLimit_dC := 1800;
+    S_MinSealingTemperature_dC := 1600;
+    S_MaxSealingTemperature_dC := 2000;
+    S_AmbientTemperatureActual_dC := 230;
+    S_InfeedStopPosition_mm := 1000;
+    S_SealingStopPosition_mm := 2000;
+    S_OutfeedStopPosition_mm := 3000;
+    S_MaxStoppingDistance_mm := 200;
+    S_InfeedSpeedLimit_mm_s := 250;
+    S_OutfeedSpeedLimit_mm_s := 250;
+    IF FastCycle THEN
+        S_InfeedSpeedLimit_mm_s := 500;
+        S_OutfeedSpeedLimit_mm_s := 500;
+    END_IF;
+    S_MinAirPressure_mbar := 5500;
+    S_MaxAirPressure_mbar := 7500;
+    S_MotorCurrentLimit_mA := 4500;
+    S_InfeedSensorCount := 2;
+    S_SealingSensorCount := 2;
+    S_OutfeedSensorCount := 2;
+    S_GuardChannelCount := 4;
+    S_DriveFeedbackChannelCount := 3;
+
+    (* Zone status 0 blocked, 1 idle, 2 moving, 3 jam. *)
+    S_InfeedZoneStatus := 0;
+    S_SealingZoneStatus := 0;
+    S_OutfeedZoneStatus := 0;
+    IF S_Permit AND NOT LineFault THEN
+        S_InfeedZoneStatus := 1;
+        S_SealingZoneStatus := 1;
+        S_OutfeedZoneStatus := 1;
+        IF LineState = 20 THEN S_InfeedZoneStatus := 2; END_IF;
+        IF LineState = 30 THEN S_SealingZoneStatus := 2; END_IF;
+        IF LineState = 40 THEN S_OutfeedZoneStatus := 2; END_IF;
+    END_IF;
+    IF LineFault THEN S_SealingZoneStatus := 3; END_IF;
+    S_GuardLockStatus := 1;
+    IF NOT S_ServiceDoorClosed THEN S_GuardLockStatus := 0; END_IF;
+    S_SafeDriveStatus := 0;
+    IF S_Permit AND S_ServiceDoorClosed THEN S_SafeDriveStatus := 1; END_IF;
+    S_InfeedDiagnosticCode := 0;
+    S_SealingDiagnosticCode := 0;
+    S_OutfeedDiagnosticCode := 0;
+    S_SafetyBusDiagnosticCode := 0;
+    S_DriveDiagnosticCode := 0;
+    IF LineFault THEN S_SealingDiagnosticCode := 16#1001; END_IF;
+    IF NOT S_EStopReleased THEN S_SafetyBusDiagnosticCode := 16#2001; END_IF;
+    IF NOT S_Permit THEN S_DriveDiagnosticCode := 16#3001; END_IF;
+
+    (* Zones bits 0..2, guards bits 0..3; demand bit 0 E-stop,
+       bit 1 virtual service access during jam recovery. *)
+    S_ZonePermissionMask := 0;
+    IF S_Permit AND S_ServiceDoorClosed AND S_AirSupplyReady THEN S_ZonePermissionMask := 7; END_IF;
+    S_GuardMonitoringMask := 15;
+    IF NOT S_ServiceDoorClosed THEN S_GuardMonitoringMask := 7; END_IF;
+    S_ActiveSafetyDemandMask := 0;
+    IF NOT S_EStopReleased THEN S_ActiveSafetyDemandMask := S_ActiveSafetyDemandMask + 1; END_IF;
+    IF NOT S_ServiceDoorClosed THEN S_ActiveSafetyDemandMask := S_ActiveSafetyDemandMask + 2; END_IF;
+    S_ConfirmedSafetyDemandMask := S_ActiveSafetyDemandMask;
+    S_DriveEnableMask := 0;
+    S_InfeedMotionDirection := 0;
+    S_SealingMotionDirection := 0;
+    S_OutfeedMotionDirection := 0;
+    S_FilmFeedMotionDirection := 0;
+    S_RejectGateMotionDirection := 0;
+    IF S_ZonePermissionMask = 7 THEN
+        IF LineState = 20 THEN S_DriveEnableMask := 1; S_InfeedMotionDirection := 1; END_IF;
+        IF LineState = 30 THEN S_DriveEnableMask := 2; S_SealingMotionDirection := 1; S_FilmFeedMotionDirection := 1; END_IF;
+        IF LineState = 40 THEN S_DriveEnableMask := 4; S_OutfeedMotionDirection := 1; END_IF;
+    END_IF;
+    (* Signed virtual sample; no physical motor is commanded in reverse. *)
+    IF LineFault THEN S_RejectGateMotionDirection := -1; END_IF;
+
+    IF LineState <> PreviousLineState THEN
+        IF LineState = 20 THEN S_CartonTrackingPosition_mm := 0; END_IF;
+        IF (LineState = 30) OR (LineState = 40) THEN S_CartonTrackingPosition_mm := S_SealingStopPosition_mm; END_IF;
+        IF LineState = 50 THEN S_CartonTrackingPosition_mm := S_OutfeedStopPosition_mm; END_IF;
+    END_IF;
+    IF (LineState = 0) OR (LineState = 10) THEN S_CartonTrackingPosition_mm := 0; END_IF;
+    IF tSecond.Q THEN
+        IF S_OperatingTime_s < 1000000000 THEN S_OperatingTime_s := S_OperatingTime_s + 1; END_IF;
+        IF S_SealingTemperatureActual_dC < S_SealingTemperatureLimit_dC THEN
+            S_SealingTemperatureActual_dC := S_SealingTemperatureActual_dC + 10;
+            IF S_SealingTemperatureActual_dC > S_SealingTemperatureLimit_dC THEN S_SealingTemperatureActual_dC := S_SealingTemperatureLimit_dC; END_IF;
+        END_IF;
+        IF (S_InfeedMotionDirection = 1) AND (S_CartonTrackingPosition_mm < S_InfeedStopPosition_mm) THEN
+            S_CartonTrackingPosition_mm := S_CartonTrackingPosition_mm + 250;
+            IF S_CartonTrackingPosition_mm > S_InfeedStopPosition_mm THEN S_CartonTrackingPosition_mm := S_InfeedStopPosition_mm; END_IF;
+        END_IF;
+        IF (S_OutfeedMotionDirection = 1) AND (S_CartonTrackingPosition_mm < S_OutfeedStopPosition_mm) THEN
+            S_CartonTrackingPosition_mm := S_CartonTrackingPosition_mm + 250;
+            IF S_CartonTrackingPosition_mm > S_OutfeedStopPosition_mm THEN S_CartonTrackingPosition_mm := S_OutfeedStopPosition_mm; END_IF;
+        END_IF;
+    END_IF;
+    (* Separate simulation-session counters, saturated rather than wrapped. *)
+    IF NOT Reset THEN
+        IF CycleDone AND (S_CompletedCartonCount < 1000000000) THEN S_CompletedCartonCount := S_CompletedCartonCount + 1; END_IF;
+        IF LineFault AND NOT PrevJam AND (S_RejectedCartonCount < 1000000000) THEN S_RejectedCartonCount := S_RejectedCartonCount + 1; END_IF;
+        IF NOT S_ServiceDoorClosed AND PrevGuardClosed AND (S_GuardOpeningCount < 1000000000) THEN S_GuardOpeningCount := S_GuardOpeningCount + 1; END_IF;
+        IF NOT S_EStopReleased AND PrevEStopReleased AND (S_EStopDemandCount < 1000000000) THEN S_EStopDemandCount := S_EStopDemandCount + 1; END_IF;
+    END_IF;
+    PrevJam := LineFault;
+    PrevGuardClosed := S_ServiceDoorClosed;
+    PrevEStopReleased := S_EStopReleased;
+    PreviousLineState := LineState;
+
+    (* All 50 globals are read in the validity/data chain below. *)
+    S_DataPlausible :=
+        S_InfeedGuardClosed AND S_SealingGuardClosed AND S_OutfeedGuardClosed
+        AND (S_ServiceDoorClosed OR (S_GuardLockStatus = 0))
+        AND (S_AirSupplyReady OR (S_ActiveSafetyDemandMask <> 0))
+        AND (S_InfeedZoneStatus <= 3) AND (S_SealingZoneStatus <= 3) AND (S_OutfeedZoneStatus <= 3)
+        AND (S_GuardLockStatus <= 1) AND (S_SafeDriveStatus <= 1)
+        AND (S_InfeedDiagnosticCode = 0) AND ((S_SealingDiagnosticCode = 0) OR (S_SealingDiagnosticCode = 16#1001))
+        AND (S_OutfeedDiagnosticCode = 0) AND ((S_SafetyBusDiagnosticCode = 0) OR (S_SafetyBusDiagnosticCode = 16#2001))
+        AND ((S_DriveDiagnosticCode = 0) OR (S_DriveDiagnosticCode = 16#3001))
+        AND (S_ZonePermissionMask <= 7) AND (S_GuardMonitoringMask <= 15) AND (S_DriveEnableMask <= 7)
+        AND (S_ActiveSafetyDemandMask <= 3) AND (S_ConfirmedSafetyDemandMask = S_ActiveSafetyDemandMask)
+        AND (S_InfeedMotionDirection >= 0) AND (S_InfeedMotionDirection <= 1)
+        AND (S_SealingMotionDirection >= 0) AND (S_SealingMotionDirection <= 1)
+        AND (S_OutfeedMotionDirection >= 0) AND (S_OutfeedMotionDirection <= 1)
+        AND (S_FilmFeedMotionDirection >= 0) AND (S_FilmFeedMotionDirection <= 1)
+        AND (S_RejectGateMotionDirection >= -1) AND (S_RejectGateMotionDirection <= 0)
+        AND (S_SealingTemperatureLimit_dC >= S_MinSealingTemperature_dC)
+        AND (S_SealingTemperatureLimit_dC <= S_MaxSealingTemperature_dC)
+        AND (S_SealingTemperatureActual_dC >= S_MinSealingTemperature_dC)
+        AND (S_SealingTemperatureActual_dC <= S_MaxSealingTemperature_dC)
+        AND (S_AmbientTemperatureActual_dC >= 0) AND (S_AmbientTemperatureActual_dC <= 500)
+        AND (S_InfeedStopPosition_mm > S_MaxStoppingDistance_mm)
+        AND (S_SealingStopPosition_mm > S_InfeedStopPosition_mm)
+        AND (S_OutfeedStopPosition_mm > S_SealingStopPosition_mm)
+        AND (S_CartonTrackingPosition_mm >= 0) AND (S_CartonTrackingPosition_mm <= S_OutfeedStopPosition_mm)
+        AND (S_InfeedSensorCount = 2) AND (S_SealingSensorCount = 2) AND (S_OutfeedSensorCount = 2)
+        AND (S_GuardChannelCount = 4) AND (S_DriveFeedbackChannelCount = 3)
+        AND (S_InfeedSpeedLimit_mm_s > 0) AND (S_InfeedSpeedLimit_mm_s <= 500)
+        AND (S_OutfeedSpeedLimit_mm_s > 0) AND (S_OutfeedSpeedLimit_mm_s <= 500)
+        AND (S_MinAirPressure_mbar < S_MaxAirPressure_mbar) AND (S_MotorCurrentLimit_mA > 0)
+        AND (S_CompletedCartonCount <= 1000000000) AND (S_RejectedCartonCount <= 1000000000)
+        AND (S_GuardOpeningCount = S_RejectedCartonCount)
+        AND (S_EStopDemandCount <= 1000000000) AND (S_OperatingTime_s <= 1000000000);
+
+    O01 := S_Permit AND S_DataPlausible AND (S_InfeedMotionDirection = 1);
+    O02 := S_Permit AND S_DataPlausible AND (S_SealingMotionDirection = 1);
+    O03 := S_Permit AND S_DataPlausible AND (S_OutfeedMotionDirection = 1);
+    O04 := S_Permit AND S_DataPlausible AND (S_FilmFeedMotionDirection = 1);
+    O14 := S_Permit AND S_DataPlausible AND (S_ZonePermissionMask = 7);
+    O15 := S_Permit AND S_DataPlausible AND Heartbeat;
+    O16 := S_Permit AND S_DataPlausible AND (S_SealingDiagnosticCode <> 0);
+    O17 := S_Permit AND S_DataPlausible AND (S_SealingTemperatureActual_dC >= S_SealingTemperatureLimit_dC);
+    O18 := S_Permit AND S_DataPlausible AND (S_GuardMonitoringMask = 15);
+    (* Safe-typed expressions; demo indications, not validated safety outputs. *)
+    SO01 := S_Permit AND S_DataPlausible AND S_AirSupplyReady;
+    SO02 := S_Permit AND S_DataPlausible AND S_ServiceDoorClosed;
+    SO12 := S_Permit AND S_DataPlausible AND S_InfeedGuardClosed AND (S_InfeedMotionDirection = 1);
+    SO13 := S_Permit AND S_DataPlausible AND S_SealingGuardClosed AND (S_SealingMotionDirection = 1);
+    SO14 := S_Permit AND S_DataPlausible AND S_OutfeedGuardClosed AND (S_OutfeedMotionDirection = 1);
+END_FUNCTION_BLOCK

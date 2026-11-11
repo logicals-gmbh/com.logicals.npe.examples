@@ -1,6 +1,7 @@
 (* Global variables for simulation purposes: 50 separate SAFE global variables.
  * Packaging-line sample data, initially FALSE / 0; no I/O assignment.
- * The variables are not connected to the process or safety logic.
+ * FB_PackagingDataSimulation updates and processes them only in SimMode.
+ * Values are synthetic, not physical safety feedback.
  *)
 GLOBALS SimGVs
 	VAR_GLOBAL
