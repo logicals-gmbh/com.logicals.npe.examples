@@ -5,8 +5,8 @@
     "projectName": "HIS_Demo",
     "projectRelativePath": ""
   },
-  "md5ChecksumAsHexString": "fac1f85e6e5bfac12afeabbd7ea2cf69",
-  "crc32ChecksumAsHexString": "104ACDC0",
+  "md5ChecksumAsHexString": "c458843a93cd1e32699176edb18346a3",
+  "crc32ChecksumAsHexString": "C5FAAF73",
   "members": [
     {
       "fileName": "index.html",
@@ -14,7 +14,7 @@
     },
     {
       "fileName": "source-manifest.json",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"source-manifest.json\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"Doc\"\n  },\n  \"md5ChecksumAsHexString\": \"39db15f473ed4f0f901b7ecf18989eac\",\n  \"crc32ChecksumAsHexString\": \"D965552C\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"source-manifest.json\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"Doc\"\n  },\n  \"md5ChecksumAsHexString\": \"5646ea82fe392b42f4f7d0df0e5a992a\",\n  \"crc32ChecksumAsHexString\": \"88C972E2\"\n}"
     }
   ]
 }

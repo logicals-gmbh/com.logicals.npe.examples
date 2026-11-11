@@ -5,8 +5,8 @@
     "projectName": "HIS_Demo",
     "projectRelativePath": ""
   },
-  "md5ChecksumAsHexString": "528ca122eb6f84c458262ae8f2d16e71",
-  "crc32ChecksumAsHexString": "EE6A0EFD",
+  "md5ChecksumAsHexString": "996413f8592ec225ac6cc67eca407a41",
+  "crc32ChecksumAsHexString": "49015A76",
   "members": [
     {
       "fileName": "FB_HISSafety.iecfbd",
@@ -14,7 +14,7 @@
     },
     {
       "fileName": "FB_PackagingDataSimulation.iecst",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"FB_PackagingDataSimulation.iecst\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"src\"\n  },\n  \"md5ChecksumAsHexString\": \"db8f9686d41c91bd2eb62e0ec1be3ac2\",\n  \"crc32ChecksumAsHexString\": \"5BAA372F\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"FB_PackagingDataSimulation.iecst\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"src\"\n  },\n  \"md5ChecksumAsHexString\": \"bdb813bd9c58bb213303f9785e13f0ba\",\n  \"crc32ChecksumAsHexString\": \"644F84CA\"\n}"
     },
     {
       "fileName": "FB_PackagingIndicators.iecfbd",

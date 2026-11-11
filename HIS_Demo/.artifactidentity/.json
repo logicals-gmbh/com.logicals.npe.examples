@@ -5,8 +5,8 @@
     "projectName": "HIS_Demo",
     "projectRelativePath": ""
   },
-  "md5ChecksumAsHexString": "475735cd6407ca5e734e712be3cc7e4b",
-  "crc32ChecksumAsHexString": "2666DC35",
+  "md5ChecksumAsHexString": "e112f89ce7eef04799d7842af662a932",
+  "crc32ChecksumAsHexString": "94562D2D",
   "members": [
     {
       "fileName": ".gui",
@@ -30,7 +30,7 @@
     },
     {
       "fileName": "Doc",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"Doc\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"fac1f85e6e5bfac12afeabbd7ea2cf69\",\n  \"crc32ChecksumAsHexString\": \"104ACDC0\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"Doc\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"c458843a93cd1e32699176edb18346a3\",\n  \"crc32ChecksumAsHexString\": \"C5FAAF73\"\n}"
     },
     {
       "fileName": "IO",
@@ -58,11 +58,11 @@
     },
     {
       "fileName": "src",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"src\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"528ca122eb6f84c458262ae8f2d16e71\",\n  \"crc32ChecksumAsHexString\": \"EE6A0EFD\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"src\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"996413f8592ec225ac6cc67eca407a41\",\n  \"crc32ChecksumAsHexString\": \"49015A76\"\n}"
     },
     {
       "fileName": "src-gen",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"src-gen\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"afbd257f27c9370fbca4fbf4995d81a1\",\n  \"crc32ChecksumAsHexString\": \"347E332\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"src-gen\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"5c6473a835d44f1060acfad7f62f0d9f\",\n  \"crc32ChecksumAsHexString\": \"C29959B9\"\n}"
     }
   ]
 }

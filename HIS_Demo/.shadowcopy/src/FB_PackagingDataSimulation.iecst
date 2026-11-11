@@ -166,9 +166,15 @@ FUNCTION_BLOCK FB_PackagingDataSimulation
     IF S_Permit AND S_ServiceDoorClosed AND S_AirSupplyReady THEN S_ZonePermissionMask := 7; END_IF;
     S_GuardMonitoringMask := 15;
     IF NOT S_ServiceDoorClosed THEN S_GuardMonitoringMask := 7; END_IF;
-    S_ActiveSafetyDemandMask := 0;
-    IF NOT S_EStopReleased THEN S_ActiveSafetyDemandMask := S_ActiveSafetyDemandMask + 1; END_IF;
-    IF NOT S_ServiceDoorClosed THEN S_ActiveSafetyDemandMask := S_ActiveSafetyDemandMask + 2; END_IF;
+    (* SAFEDWORD is a bitstring, not an arithmetic integer.
+       Explicit patterns: bit 0 = E-stop, bit 1 = virtual service door. *)
+    S_ActiveSafetyDemandMask := 16#00000000;
+    IF NOT S_EStopReleased THEN
+        S_ActiveSafetyDemandMask := 16#00000001;
+        IF NOT S_ServiceDoorClosed THEN S_ActiveSafetyDemandMask := 16#00000003; END_IF;
+    ELSIF NOT S_ServiceDoorClosed THEN
+        S_ActiveSafetyDemandMask := 16#00000002;
+    END_IF;
     S_ConfirmedSafetyDemandMask := S_ActiveSafetyDemandMask;
     S_DriveEnableMask := 0;
     S_InfeedMotionDirection := 0;
