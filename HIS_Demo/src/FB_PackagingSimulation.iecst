@@ -1,0 +1,149 @@
+(* Automatic exhibition simulation; not a physical safety input source.
+ * Called ONLY while PRG_HISDemo.SimMode is TRUE.
+ * Drives simulated commands through the unchanged safety/process blocks.
+ * Reset on every mode entry; feedback comes from the previous program scan.
+ *)
+FUNCTION_BLOCK FB_PackagingSimulation
+    VAR_INPUT
+        Reset : BOOL;
+        Permit : BOOL;
+        LineReady : BOOL;
+        LineState : UINT;
+        LineFault : BOOL;
+        InjectFaults : BOOL;
+        FastCycle : BOOL;
+    END_VAR
+    VAR_OUTPUT
+        EStopReleased : SAFEBOOL;
+        Enable : BOOL;
+        Start : BOOL;
+        Stop : BOOL;
+        SafetyReset : BOOL;
+        Jam : BOOL;
+        AckJam : BOOL;
+        FastCycleCommand : BOOL;
+        (* 0 boot; 10 release; 20 reset gap; 30 reset pulse; 40 ready;
+           50 start pulse; 60 packaging; 70 jam; 80 clear jam;
+           90 acknowledge; 100 emergency stop. *)
+        State : UINT;
+        AttemptInRound : UINT;
+        (* 0 none; 1 normal carton; 2 jam demonstration; 3 E-stop demonstration. *)
+        Scenario : UINT;
+    END_VAR
+    VAR
+        tBoot : TON;
+        tRelease : TON;
+        tResetGap : TON;
+        tResetPulse : TON;
+        tReady : TON;
+        tStart : TON;
+        tJam : TON;
+        tJamClear : TON;
+        tAck : TON;
+        tEStop : TON;
+    END_VAR
+
+    IF Reset THEN
+        State := 0;
+        AttemptInRound := 0;
+        Scenario := 0;
+    END_IF;
+
+    (* Separate timers ensure every phase receives a fresh interval.
+       Reset also clears timers left active when the block was not called. *)
+    tBoot(IN := (State = 0) AND NOT Reset, PT := T#1s);
+    tRelease(IN := (State = 10) AND NOT Reset, PT := T#1s);
+    tResetGap(IN := (State = 20) AND NOT Reset, PT := T#500ms);
+    tResetPulse(IN := (State = 30) AND NOT Reset, PT := T#500ms);
+    tReady(IN := (State = 40) AND LineReady AND Permit AND NOT Reset, PT := T#500ms);
+    tStart(IN := (State = 50) AND NOT Reset, PT := T#500ms);
+    tJam(IN := (State = 70) AND NOT Reset, PT := T#3s);
+    tJamClear(IN := (State = 80) AND NOT Reset, PT := T#500ms);
+    tAck(IN := (State = 90) AND NOT Reset, PT := T#500ms);
+    tEStop(IN := (State = 100) AND NOT Reset, PT := T#3s);
+
+    IF NOT Reset THEN
+        CASE State OF
+            0:
+                IF tBoot.Q THEN State := 10; END_IF;
+            10:
+                IF tRelease.Q THEN State := 20; END_IF;
+            20:
+                IF Permit THEN
+                    IF LineFault THEN State := 80; ELSE State := 40; END_IF;
+                ELSIF tResetGap.Q THEN
+                    State := 30;
+                END_IF;
+            30:
+                IF tResetPulse.Q THEN
+                    IF Permit THEN
+                        IF LineFault THEN State := 80; ELSE State := 40; END_IF;
+                    ELSE
+                        State := 20;
+                    END_IF;
+                END_IF;
+            40:
+                IF NOT Permit THEN
+                    State := 10;
+                ELSIF LineFault THEN
+                    State := 80;
+                ELSIF tReady.Q THEN
+                    IF AttemptInRound >= 6 THEN AttemptInRound := 0; END_IF;
+                    AttemptInRound := AttemptInRound + 1;
+                    Scenario := 1;
+                    IF InjectFaults AND (AttemptInRound = 3) THEN Scenario := 2; END_IF;
+                    IF InjectFaults AND (AttemptInRound = 6) THEN Scenario := 3; END_IF;
+                    State := 50;
+                END_IF;
+            50:
+                IF NOT Permit THEN
+                    State := 10;
+                ELSIF tStart.Q THEN
+                    State := 60;
+                END_IF;
+            60:
+                IF NOT Permit THEN
+                    State := 10;
+                ELSIF LineFault THEN
+                    State := 80;
+                ELSIF (Scenario = 2) AND (LineState = 30) THEN
+                    State := 70;
+                ELSIF (Scenario = 3) AND (LineState = 30) THEN
+                    State := 100;
+                ELSIF (LineState = 50) OR LineReady THEN
+                    State := 40;
+                END_IF;
+            70:
+                IF tJam.Q THEN State := 80; END_IF;
+            80:
+                IF NOT Permit THEN
+                    State := 10;
+                ELSIF tJamClear.Q THEN
+                    State := 90;
+                END_IF;
+            90:
+                IF NOT Permit THEN
+                    State := 10;
+                ELSIF tAck.Q THEN
+                    IF LineFault THEN State := 80; ELSE State := 40; END_IF;
+                END_IF;
+            100:
+                IF tEStop.Q THEN State := 10; END_IF;
+        ELSE
+            State := 0;
+            Scenario := 0;
+        END_CASE;
+    END_IF;
+
+    (* Defined outputs every scan. Both virtual contacts are mapped together
+       by the calling program; the PLCopen permit is never forced here. *)
+    EStopReleased := FALSE;
+    IF (State <> 0) AND (State <> 100) THEN EStopReleased := TRUE; END_IF;
+    Enable := State <> 0;
+    Start := State = 50;
+    Stop := FALSE;
+    SafetyReset := State = 30;
+    Jam := State = 70;
+    AckJam := State = 90;
+    FastCycleCommand := FastCycle;
+END_FUNCTION_BLOCK

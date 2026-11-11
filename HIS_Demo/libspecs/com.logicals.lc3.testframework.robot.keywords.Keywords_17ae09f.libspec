@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec name="com.logicals.lc3.testframework.robot.keywords.Keywords" type="LIBRARY" format="ROBOT" scope="SUITE" namedargs="true" generated="2026-11-10T13:03:53Z" specversion="2" source="C:\Users\WolfgangZeller\Neuron\NPE_SE\his_bur\.metadata\.plugins\com.logicals.lc3.testframework.core.lc3\lib\com\logicals\lc3\testframework\robot\keywords.py" lineno="5">
+<keywordspec name="com.logicals.lc3.testframework.robot.keywords.Keywords" type="LIBRARY" format="ROBOT" scope="SUITE" namedargs="true" generated="2026-11-11T07:35:12Z" specversion="2" source="C:\Users\WolfgangZeller\Neuron\NPE_SE\his_bur\.metadata\.plugins\com.logicals.lc3.testframework.core.lc3\lib\com\logicals\lc3\testframework\robot\keywords.py" lineno="5">
 <version>1.0</version>
 <scope>test suite</scope>
 <namedargs>yes</namedargs>

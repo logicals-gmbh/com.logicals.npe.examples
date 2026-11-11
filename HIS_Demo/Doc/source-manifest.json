@@ -1,12 +1,14 @@
 {
   "project": "HIS_Demo",
-  "documentation_date": "2026-11-10",
+  "documentation_date": "2026-11-11",
   "basis": "Current source files; not online runtime telemetry",
   "active_program": "PRG_HISDemo",
-  "active_pous": 4,
+  "active_pous": 5,
   "declared_global_objects": {
     "IO": 9,
-    "CustomerDemo": 50
+    "SimGVs": 50,
+    "EcatGVs": 24,
+    "FsoeGVs": 15
   },
   "customer_demo_types": {
     "SAFEBOOL": 5,
@@ -23,7 +25,7 @@
   "sources": [
     {
       "path": "src/PRG_HISDemo.iecst",
-      "sha256": "7762503e48a95053ed6d49caf7a7a8094d5195c9dda0c57e784358f142d99a33"
+      "sha256": "ee28048bd4420e38fee220994028f4c8f8c447d5b0c3a3b4536d15ef8baa2c1b"
     },
     {
       "path": "src/FB_HISSafety.iecfbd",
@@ -38,8 +40,8 @@
       "sha256": "c99992d1b63585c4c439ef87dc71302235f8b5e360c670fbb3c303b8635b1c7c"
     },
     {
-      "path": "src/GV_CustomerDemo.global",
-      "sha256": "ea4fa350347046270d614c1a8baa86a63f0bed513602476e75cca348d754687d"
+      "path": "IO/SimGVs.global",
+      "sha256": "cacbe809c9aa47006aea918ddb4496bb22e8c6678f4203d38ed92a90f9d35c3b"
     },
     {
       "path": "IO/GVs.global",
@@ -64,6 +66,20 @@
     {
       "path": "libraries.libref",
       "sha256": "de40a1c8f3746c31cf1b3964dbd0836296bc287b95e38a4110a7f27f71ef9f8c"
+    },
+    {
+      "path": "src/FB_PackagingSimulation.iecst",
+      "sha256": "178281b523448d693f7ce101455792a66a9d03c0fa9eb1346a33434b376de2e3"
+    },
+    {
+      "path": "IO/EcatGVs.global",
+      "sha256": "1d525e4188164c6a1c5aaae19df55fb9acb54e7585a8d86856789f9b0799a1d7"
+    },
+    {
+      "path": "IO/FsoeGVs.global",
+      "sha256": "80eee181c507b15b3761101a647fe1ff62295206408dcf5dbf4b099aeeb2d5c4"
     }
-  ]
+  ],
+  "hardware_mode_pous": 4,
+  "simulation_mode_pous": 5
 }

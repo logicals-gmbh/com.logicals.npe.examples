@@ -1,14 +1,19 @@
-(* RTS MAX SOFTWARE SIMULATION ONLY.
- *    Not for use with physical safety I/O or real actuators.
- *    Sim_EStopReleased drives both virtual contacts in the same scan.
- *    This replaces the hardware-oriented PRG_HISDemo for offline testing only.
- *    All other POUs remain unchanged. No simulation enable/bypass is added to
- *    FB_HISSafety or its PLCopen block instances.
+(* HIS Packaging Demo: hardware operation or automatic exhibition simulation.
+ * SimMode defaults to FALSE. Simulation ignores the four physical inputs.
+ * Only the demo inputs/commands are substituted; PLCopen blocks stay active.
+ * Intended for this indicator-only demonstrator, not real actuator operation.
  *)
 PROGRAM PRG_HISDemo
 	VAR
-		(* FALSE = simulated emergency stop pressed; TRUE = released.
-		 Write only this variable to operate the simulated two-channel device. *)
+		SimMode : BOOL := FALSE; (* TRUE = autonomous simulation; FALSE = physical inputs. *)
+		SimInjectFaults : BOOL := TRUE; (* Jam on attempt 3, E-stop on attempt 6. *)
+		SimFastCycle : BOOL := FALSE;
+		SimModePrev : BOOL := FALSE;
+		ModeChanged : BOOL;
+		HardwareCommandsArmed : BOOL := TRUE;
+		Simulation : FB_PackagingSimulation;
+		(* Selected E-stop input: FALSE = pressed; TRUE = released.
+		 Derived every scan from hardware or the simulation block. *)
 		Sim_EStopReleased : SAFEBOOL := FALSE;
 		(* Derived virtual contacts, overwritten every scan; do not edit online. *)
 		S_EStopA : SAFEBOOL;
@@ -49,16 +54,51 @@ PROGRAM PRG_HISDemo
 		comment := "Indicator light of third button";};
 	END_VAR
 
-	/* Assign IO signals */
-	Sim_EStopReleased := EStop;
-	(* A held button toggles only once. Ignore a button already held at startup. *)
-	IF Button1Input AND NOT EnableButtonPrev AND NOT EnableButtonFirstScan THEN
-		CmdEnable := NOT CmdEnable;
+	(* Returning to hardware always requires a new enable/start action.
+	   Ignore a held physical enable button during the transition. *)
+	ModeChanged := SimMode <> SimModePrev;
+	IF ModeChanged THEN
+		CmdEnable := FALSE;
+		CmdStart := FALSE;
+		CmdSafetyReset := FALSE;
+		CmdStop := FALSE;
+		CmdFastCycle := FALSE;
+		CmdJam := FALSE;
+		CmdAckJam := FALSE;
+		EnableButtonFirstScan := TRUE;
+		HardwareCommandsArmed := FALSE;
 	END_IF;
-	EnableButtonPrev := Button1Input;
-	EnableButtonFirstScan := FALSE;
-	CmdSafetyReset := Button2Input;
-	CmdStart := Button3Input;
+
+	IF SimMode THEN
+		(* No physical input is read in this branch. Feedback is one scan old. *)
+		Simulation(Reset := ModeChanged, Permit := Safety.S_Permit,
+			LineReady := Line.Ready, LineState := Line.State, LineFault := Line.Fault,
+			InjectFaults := SimInjectFaults, FastCycle := SimFastCycle);
+		Sim_EStopReleased := Simulation.EStopReleased;
+		CmdEnable := Simulation.Enable;
+		CmdStart := Simulation.Start;
+		CmdSafetyReset := Simulation.SafetyReset;
+		CmdStop := Simulation.Stop;
+		CmdFastCycle := Simulation.FastCycleCommand;
+		CmdJam := Simulation.Jam;
+		CmdAckJam := Simulation.AckJam;
+	ELSE
+		Sim_EStopReleased := EStop;
+		(* One scan with no E-stop permit on mode exit resets the safety path.
+		   Hardware reset/start buttons must also be released before reuse. *)
+		IF ModeChanged THEN Sim_EStopReleased := FALSE; END_IF;
+		IF Button1Input AND NOT EnableButtonPrev AND NOT EnableButtonFirstScan THEN
+			CmdEnable := NOT CmdEnable;
+		END_IF;
+		EnableButtonPrev := Button1Input;
+		EnableButtonFirstScan := FALSE;
+		IF NOT ModeChanged AND NOT Button2Input AND NOT Button3Input THEN
+			HardwareCommandsArmed := TRUE;
+		END_IF;
+		CmdSafetyReset := Button2Input AND HardwareCommandsArmed AND NOT ModeChanged;
+		CmdStart := Button3Input AND HardwareCommandsArmed AND NOT ModeChanged;
+	END_IF;
+	SimModePrev := SimMode;
 
 	(* Update both virtual contacts before evaluating safety. *)
 	S_EStopA :=	Sim_EStopReleased;

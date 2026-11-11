@@ -5,8 +5,8 @@
     "projectName": "HIS_Demo",
     "projectRelativePath": ""
   },
-  "md5ChecksumAsHexString": "33c81d00e3555e994fdc1447a75cb5dd",
-  "crc32ChecksumAsHexString": "86351AEF",
+  "md5ChecksumAsHexString": "635631d7d660457a56ee0b22512d31b1",
+  "crc32ChecksumAsHexString": "89F5ABCA",
   "members": [
     {
       "fileName": "FB_HISSafety.iecfbd",
@@ -21,12 +21,12 @@
       "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"FB_PackagingLine.iecst\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"src\"\n  },\n  \"md5ChecksumAsHexString\": \"f22b0c265cdcef0ce9b9439e9b12543e\",\n  \"crc32ChecksumAsHexString\": \"EAC6E243\"\n}"
     },
     {
-      "fileName": "GV_CustomerDemo.global",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"GV_CustomerDemo.global\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"src\"\n  },\n  \"md5ChecksumAsHexString\": \"20495686471c68c96292110ba1fe9755\",\n  \"crc32ChecksumAsHexString\": \"7CFD8D29\"\n}"
+      "fileName": "FB_PackagingSimulation.iecst",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"FB_PackagingSimulation.iecst\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"src\"\n  },\n  \"md5ChecksumAsHexString\": \"4c4a395a31c2026753aed37ac217fb40\",\n  \"crc32ChecksumAsHexString\": \"FC991F95\"\n}"
     },
     {
       "fileName": "PRG_HISDemo.iecst",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"PRG_HISDemo.iecst\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"src\"\n  },\n  \"md5ChecksumAsHexString\": \"02bcff61d1ee1b30a730f1bbf84fa752\",\n  \"crc32ChecksumAsHexString\": \"2B1DA780\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"PRG_HISDemo.iecst\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"src\"\n  },\n  \"md5ChecksumAsHexString\": \"22b1798848484b50af46014428477cab\",\n  \"crc32ChecksumAsHexString\": \"4F9DDF40\"\n}"
     },
     {
       "fileName": "Unused",

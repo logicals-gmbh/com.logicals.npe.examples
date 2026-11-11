@@ -1,0 +1,292 @@
+{
+  "lc3ProductVersion": "3.32.0-202611092237",
+  "lc3ApplicationMd5Checksum": "d18af643938d50ce34fa674141deb91e",
+  "lc3ConfigurationMd5Checksum": "8d790e77927a96a17a3ada3cbc3a1d98",
+  "platformToolkit": "HisLinuxA64",
+  "safePtk": true,
+  "resourceInstancePath": "HIS_Demo/RevPi.local",
+  "startedAt": 1794383839881,
+  "startedBy": "DEMO",
+  "appFingerprint": "8D57C0E3",
+  "finishedAt": 1794383844612,
+  "resultCode": 0,
+  "metaDataBuildFailed": false,
+  "appName": "RTSCode.so",
+  "appSize": 248648,
+  "htmlOutputPath": "C:\\SRC\\com.logicals.npe.examples\\HIS_Demo\\.log\\builds\\2026-11-11_08_57_24-DEMO-RevPi-local-HisLinuxA64\\build_report.html",
+  "compileResultPath": "C:\\SRC\\com.logicals.npe.examples\\HIS_Demo\\.log\\builds\\2026-11-11_08_57_24-DEMO-RevPi-local-HisLinuxA64\\compile_result.txt",
+  "programInstances": [
+    {
+      "programInstanceName": "PRG_HISDemo",
+      "programTypeName": "PRG_HISDEMO",
+      "fingerprint": "02987D88",
+      "taskName": "DefaultTask",
+      "interval": 100000,
+      "priority": 38229,
+      "ioTask": true
+    }
+  ],
+  "usedBlocks": [
+    {
+      "name": "FB_HISSafety",
+      "fingerprint": "94C63C39",
+      "namespace": "",
+      "includeFileName": "",
+      "extraIncludes": [],
+      "libraryName": ""
+    },
+    {
+      "name": "FB_PackagingIndicators",
+      "fingerprint": "1C979B4E",
+      "namespace": "",
+      "includeFileName": "",
+      "extraIncludes": [],
+      "libraryName": ""
+    },
+    {
+      "name": "FB_PackagingLine",
+      "fingerprint": "3D019EDA",
+      "namespace": "",
+      "includeFileName": "",
+      "extraIncludes": [],
+      "libraryName": ""
+    },
+    {
+      "name": "FB_PackagingSimulation",
+      "fingerprint": "1C9CAF6A",
+      "namespace": "",
+      "includeFileName": "",
+      "extraIncludes": [],
+      "libraryName": ""
+    }
+  ],
+  "usedTypes": [],
+  "usedLibraryTypes": [
+    {
+      "name": "SAFEBOOL",
+      "fingerprint": "2155940A",
+      "namespace": "",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "SAFEBYTE",
+      "fingerprint": "026C1746",
+      "namespace": "",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "SAFEDINT",
+      "fingerprint": "9B554CB1",
+      "namespace": "",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "SAFEDWORD",
+      "fingerprint": "A8CBAECA",
+      "namespace": "",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "SAFEINT",
+      "fingerprint": "EB8E9D6A",
+      "namespace": "",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "SAFESINT",
+      "fingerprint": "179F9AFF",
+      "namespace": "",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "SFB_GenericSafetyDemand_State",
+      "fingerprint": "84932827",
+      "namespace": "safety.plcopen",
+      "extraIncludes": [],
+      "libraryName": "safety.plcopen__1.7.0-SNAPSHOT"
+    },
+    {
+      "name": "SAFEUDINT",
+      "fingerprint": "D0E294BB",
+      "namespace": "",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "SAFEUINT",
+      "fingerprint": "0C5663E8",
+      "namespace": "",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "SAFEUSINT",
+      "fingerprint": "7A2E6A94",
+      "namespace": "",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "SAFEWORD",
+      "fingerprint": "CA118651",
+      "namespace": "",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    }
+  ],
+  "usedLibraryBlocks": [
+    {
+      "name": "AND",
+      "fingerprint": "835FBBAA",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__AND",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "NOT",
+      "fingerprint": "1936F6A9",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__NOT",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "OR",
+      "fingerprint": "7CBCD812",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__OR",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "R_TRIG",
+      "fingerprint": "C13D52F6",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__R_TRIG",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "SF_EmergencyStop",
+      "fingerprint": "579B2100",
+      "namespace": "safety.plcopen",
+      "includeFileName": "lcfu___safety.plcopen.sf_emergencystop",
+      "extraIncludes": [],
+      "libraryName": "safety.plcopen__1.7.0-SNAPSHOT"
+    },
+    {
+      "name": "SF_Equivalent",
+      "fingerprint": "375ACEBA",
+      "namespace": "safety.plcopen",
+      "includeFileName": "lcfu___safety.plcopen.sf_equivalent",
+      "extraIncludes": [],
+      "libraryName": "safety.plcopen__1.7.0-SNAPSHOT"
+    },
+    {
+      "name": "SFB_GenericSafetyDemand",
+      "fingerprint": "888FA390",
+      "namespace": "safety.plcopen",
+      "extraIncludes": [],
+      "libraryName": "safety.plcopen__1.7.0-SNAPSHOT"
+    },
+    {
+      "name": "TO_UINT",
+      "fingerprint": "3D745203",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__CONVERT",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "TO_WORD",
+      "fingerprint": "3D745203",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__CONVERT",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    },
+    {
+      "name": "TON",
+      "fingerprint": "098BC6BD",
+      "namespace": "",
+      "includeFileName": "lcfu_iec61131__TON",
+      "extraIncludes": [],
+      "libraryName": "com.logicals.lc3.library.standard__4.0.0-SNAPSHOT"
+    }
+  ],
+  "usedLibraries": [
+    {
+      "name": "com.logicals.lc3.library.standard",
+      "version": "4.0.0-SNAPSHOT",
+      "corruptionDetectionModeArtifactIdentity": false
+    },
+    {
+      "name": "safety.plcopen",
+      "version": "1.7.0-SNAPSHOT",
+      "corruptionDetectionModeArtifactIdentity": false
+    }
+  ],
+  "messages": {
+    "errorMessages": [
+      "Die Quelldatei \"C:/lc3/NPESE_3.32.0-SN_10.11.2026/plugins/com.logicals.ptk_3.32.0.202611092237/API/uRTS3/LC3CGSFC.c\" mit der Prüfsumme \"A08CB989\" konnte nicht verifiziert werden",
+      "Die Quelldatei \"C:/lc3/NPESE_3.32.0-SN_10.11.2026/plugins/com.logicals.ptk_3.32.0.202611092237/API/uRTS3/LC3CGSFC.h\" mit der Prüfsumme \"F167207A\" konnte nicht verifiziert werden",
+      "Die Quelldatei \"C:/lc3/NPESE_3.32.0-SN_10.11.2026/plugins/com.logicals.ptk_3.32.0.202611092237/API/uRTS3/LC3CGStmt.h\" mit der Prüfsumme \"CBCAB0D3\" konnte nicht verifiziert werden",
+      "Die Quelldatei \"C:/lc3/NPESE_3.32.0-SN_10.11.2026/plugins/com.logicals.ptk_3.32.0.202611092237/API/uRTS3/LC3CGString.c\" mit der Prüfsumme \"FEA4582\" konnte nicht verifiziert werden",
+      "Die Quelldatei \"C:/lc3/NPESE_3.32.0-SN_10.11.2026/plugins/com.logicals.ptk_3.32.0.202611092237/API/uRTS3/LC3CGString.h\" mit der Prüfsumme \"154F3BF5\" konnte nicht verifiziert werden",
+      "Die Quelldatei \"C:/lc3/NPESE_3.32.0-SN_10.11.2026/plugins/com.logicals.ptk_3.32.0.202611092237/API/uRTS3/LCoop.c\" mit der Prüfsumme \"501730ED\" konnte nicht verifiziert werden",
+      "Die Quelldatei \"C:/lc3/NPESE_3.32.0-SN_10.11.2026/plugins/com.logicals.ptk_3.32.0.202611092237/API/uRTS3/LCoop.h\" mit der Prüfsumme \"FB4A35E7\" konnte nicht verifiziert werden",
+      "Die Quelldatei \"C:/lc3/NPESE_3.32.0-SN_10.11.2026/plugins/com.logicals.ptk_3.32.0.202611092237/API/uRTS3/RTSAPI/RTS3API.h\" mit der Prüfsumme \"E1FF5271\" konnte nicht verifiziert werden",
+      "Die Quelldatei \"RTConfig.h\" konnte nicht verifiziert werden (die Prüfsumme \"165E0D91\" stimmt nicht mit der erwarteten Prüfsumme \"937C4050\" überein).",
+      "Die Quelldatei \"RTLibCompatMath.h\" konnte nicht verifiziert werden (die Prüfsumme \"A8B6BDC5\" stimmt nicht mit der erwarteten Prüfsumme \"DB55824C\" überein).",
+      "Die Quelldatei \"RTLibCompatString.h\" konnte nicht verifiziert werden (die Prüfsumme \"37E2AF32\" stimmt nicht mit der erwarteten Prüfsumme \"F1D4C8C6\" überein)."
+    ],
+    "infoMessages": [
+      "Die Quelldatei \"IOAccessHelper.c\" wurde verifiziert (Prüfsumme ist \"C3C333C6\").",
+      "Die Quelldatei \"IOAccessHelper.h\" wurde verifiziert (Prüfsumme ist \"EEC21576\").",
+      "Die Quelldatei \"LC3CGAnyBitOp.h\" wurde verifiziert (Prüfsumme ist \"BB68D30D\").",
+      "Die Quelldatei \"LC3CGAnyIntOp.h\" wurde verifiziert (Prüfsumme ist \"516852A2\").",
+      "Die Quelldatei \"LC3CGAppEvent.h\" wurde verifiziert (Prüfsumme ist \"3F926DF0\").",
+      "Die Quelldatei \"LC3CGArray.c\" wurde verifiziert (Prüfsumme ist \"41EFB9FB\").",
+      "Die Quelldatei \"LC3CGArray.h\" wurde verifiziert (Prüfsumme ist \"A36D3E2C\").",
+      "Die Quelldatei \"LC3CGBase.h\" wurde verifiziert (Prüfsumme ist \"F9D91816\").",
+      "Die Quelldatei \"LC3CGConvert.h\" wurde verifiziert (Prüfsumme ist \"8ED0D81D\").",
+      "Die Quelldatei \"LC3CGEntryData.h\" wurde verifiziert (Prüfsumme ist \"32FD757\").",
+      "Die Quelldatei \"LC3CGError.c\" wurde verifiziert (Prüfsumme ist \"E049FE79\").",
+      "Die Quelldatei \"LC3CGError.h\" wurde verifiziert (Prüfsumme ist \"4BC806F3\").",
+      "Die Quelldatei \"LC3CGErrorIds.h\" wurde verifiziert (Prüfsumme ist \"2C318659\").",
+      "Die Quelldatei \"LC3CGPointer.h\" wurde verifiziert (Prüfsumme ist \"F31E12C1\").",
+      "Die Quelldatei \"LC3CGStruct.h\" wurde verifiziert (Prüfsumme ist \"F5BC5DE5\").",
+      "Die Quelldatei \"LC3CGVarAccess.h\" wurde verifiziert (Prüfsumme ist \"15BDF8DB\").",
+      "Die Quelldatei \"LC3Globals.h\" wurde verifiziert (Prüfsumme ist \"BCC48320\").",
+      "Die Quelldatei \"LC3RTLibMath.h\" wurde verifiziert (Prüfsumme ist \"8FAB8DD8\").",
+      "Die Quelldatei \"LC3RTLibMem.h\" wurde verifiziert (Prüfsumme ist \"AF50C5F7\").",
+      "Die Quelldatei \"LC3RTLibSpecial.h\" wurde verifiziert (Prüfsumme ist \"B2B3745E\").",
+      "Die Quelldatei \"LC3RTLibStdTypes.h\" wurde verifiziert (Prüfsumme ist \"6ED67995\").",
+      "Die Quelldatei \"LC3RTLibString.h\" wurde verifiziert (Prüfsumme ist \"C58617FC\").",
+      "Die Quelldatei \"LC3TDIECTypes.h\" wurde verifiziert (Prüfsumme ist \"9D1C7309\").",
+      "Die Quelldatei \"LCAPI.h\" wurde verifiziert (Prüfsumme ist \"7C6936F1\").",
+      "Die Quelldatei \"LCAPIApplicationInfo.h\" wurde verifiziert (Prüfsumme ist \"C56A6061\").",
+      "Die Quelldatei \"LCAPIApplicationInfoT.h\" wurde verifiziert (Prüfsumme ist \"429365E\").",
+      "Die Quelldatei \"LCAPIIOAcc.h\" wurde verifiziert (Prüfsumme ist \"5CB166CE\").",
+      "Die Quelldatei \"LCAPIIOAccT.h\" wurde verifiziert (Prüfsumme ist \"C7DF3565\").",
+      "Die Quelldatei \"LCAPIT.h\" wurde verifiziert (Prüfsumme ist \"9E3D7401\").",
+      "Die Quelldatei \"LCAPI_GenCode.c\" wurde verifiziert (Prüfsumme ist \"B26ED22B\").",
+      "Die Quelldatei \"LCAPI_GenCode.h\" wurde verifiziert (Prüfsumme ist \"1E4F39A8\").",
+      "Die Quelldatei \"LCAPI_GenCodeTypes.h\" wurde verifiziert (Prüfsumme ist \"C84D1796\").",
+      "Die Quelldatei \"MBRTMain.c\" wurde verifiziert (Prüfsumme ist \"F3C6B39D\").",
+      "Die Quelldatei \"RTAPITimer.h\" wurde verifiziert (Prüfsumme ist \"C9E9FD79\").",
+      "Die Quelldatei \"RTSAPI.h\" wurde verifiziert (Prüfsumme ist \"94D0C475\").",
+      "Die Quelldatei \"RTSTrace.h\" wurde verifiziert (Prüfsumme ist \"7A8D32FD\").",
+      "Die plattformspezifische Quelldatei \"RTConfigVals.h\" wurde verifiziert (Prüfsumme ist \"F2EA75E0\").",
+      "Die plattformspezifische Quelldatei \"RTIECTypes.h\" wurde verifiziert (Prüfsumme ist \"F3A3F957\").",
+      "Die plattformspezifische Quelldatei \"RTSAPIHw.h\" wurde verifiziert (Prüfsumme ist \"753DABCD\")."
+    ]
+  }
+}

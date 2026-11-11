@@ -1,0 +1,20 @@
+{
+  "artifactMetadata": {
+    "additionalMetadata": {},
+    "artifactName": "Doc",
+    "projectName": "HIS_Demo",
+    "projectRelativePath": ""
+  },
+  "md5ChecksumAsHexString": "476cce070c73994744923a79965a41a0",
+  "crc32ChecksumAsHexString": "1B0A39E3",
+  "members": [
+    {
+      "fileName": "index.html",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"index.html\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"Doc\"\n  },\n  \"md5ChecksumAsHexString\": \"c82a8d94eaecf73edb8500efbeeeea0f\",\n  \"crc32ChecksumAsHexString\": \"11C180FA\"\n}"
+    },
+    {
+      "fileName": "source-manifest.json",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"source-manifest.json\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"Doc\"\n  },\n  \"md5ChecksumAsHexString\": \"5626123683beced7fb41a185a5ed4649\",\n  \"crc32ChecksumAsHexString\": \"E84C94E2\"\n}"
+    }
+  ]
+}

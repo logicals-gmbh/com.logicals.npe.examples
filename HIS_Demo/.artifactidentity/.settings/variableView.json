@@ -5,12 +5,12 @@
     "projectName": "HIS_Demo",
     "projectRelativePath": ".settings"
   },
-  "md5ChecksumAsHexString": "74699141a93e0d836b1596c36d6ae577",
-  "crc32ChecksumAsHexString": "10178FE2",
+  "md5ChecksumAsHexString": "ef3fc71254849b39e943e9d1061b10a2",
+  "crc32ChecksumAsHexString": "EAB65274",
   "members": [
     {
       "fileName": "testVariables.xml",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"testVariables.xml\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings/variableView\"\n  },\n  \"md5ChecksumAsHexString\": \"549729e867a8a50727b6e61d4fe41f4e\",\n  \"crc32ChecksumAsHexString\": \"FE70F90A\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"testVariables.xml\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings/variableView\"\n  },\n  \"md5ChecksumAsHexString\": \"d536ddf09d6a931ba9e104af2f1a52a0\",\n  \"crc32ChecksumAsHexString\": \"AF6A932D\"\n}"
     }
   ]
 }

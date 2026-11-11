@@ -5,12 +5,24 @@
     "projectName": "HIS_Demo",
     "projectRelativePath": ""
   },
-  "md5ChecksumAsHexString": "c04e2b53ea7504f97ded3123e341bda4",
-  "crc32ChecksumAsHexString": "76ACF016",
+  "md5ChecksumAsHexString": "af6bc840819e926d11e59c07de24b711",
+  "crc32ChecksumAsHexString": "CBE2BBC",
   "members": [
+    {
+      "fileName": "EcatGVs.global",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"EcatGVs.global\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"IO\"\n  },\n  \"md5ChecksumAsHexString\": \"9b4be1b8774683f82c20738f0a19aa72\",\n  \"crc32ChecksumAsHexString\": \"261EFB10\"\n}"
+    },
+    {
+      "fileName": "FsoeGVs.global",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"FsoeGVs.global\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"IO\"\n  },\n  \"md5ChecksumAsHexString\": \"54919a1084b361df0d174fbe98664845\",\n  \"crc32ChecksumAsHexString\": \"A922A5BB\"\n}"
+    },
     {
       "fileName": "GVs.global",
       "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"GVs.global\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"IO\"\n  },\n  \"md5ChecksumAsHexString\": \"a059490274c5baa718b31b3a32b3df89\",\n  \"crc32ChecksumAsHexString\": \"69237AA0\"\n}"
+    },
+    {
+      "fileName": "SimGVs.global",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"SimGVs.global\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"IO\"\n  },\n  \"md5ChecksumAsHexString\": \"cb82f3348f843985ef247b0c384a5fe8\",\n  \"crc32ChecksumAsHexString\": \"9DBFA602\"\n}"
     }
   ]
 }

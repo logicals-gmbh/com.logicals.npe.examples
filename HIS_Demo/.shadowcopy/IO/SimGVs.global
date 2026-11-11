@@ -1,8 +1,8 @@
-(* SPS 2026 customer demonstration: 50 separate SAFE global variables.
+(* Global variables for simulation purposes: 50 separate SAFE global variables.
  * Packaging-line sample data, initially FALSE / 0; no I/O assignment.
  * The variables are not connected to the process or safety logic.
  *)
-GLOBALS CustomerDemo
+GLOBALS SimGVs
 	VAR_GLOBAL
 
 		(* Guard and supply feedback *)

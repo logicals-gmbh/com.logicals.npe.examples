@@ -10,6 +10,7 @@
             <variable instancePath="VAR_GLOBAL.Button3Input"/>
             <variable instancePath="VAR_GLOBAL.EStop"/>
             <variable instancePath="PRG_HISDemo.CmdEnable"/>
+            <variable instancePath="PRG_HISDemo.SimMode"/>
         </resource>
     </configuration>
 </project>

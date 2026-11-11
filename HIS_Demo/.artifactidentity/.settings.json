@@ -5,8 +5,8 @@
     "projectName": "HIS_Demo",
     "projectRelativePath": ""
   },
-  "md5ChecksumAsHexString": "495eb2a932b0766caf1e7fac09134206",
-  "crc32ChecksumAsHexString": "1193C860",
+  "md5ChecksumAsHexString": "235f94f24ff22335f8115cc80b1722d8",
+  "crc32ChecksumAsHexString": "7AB3C57C",
   "members": [
     {
       "fileName": "com.logicals.debugging.prefs",
@@ -42,7 +42,7 @@
     },
     {
       "fileName": "variableView",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"variableView\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings\"\n  },\n  \"md5ChecksumAsHexString\": \"74699141a93e0d836b1596c36d6ae577\",\n  \"crc32ChecksumAsHexString\": \"10178FE2\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"variableView\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \".settings\"\n  },\n  \"md5ChecksumAsHexString\": \"ef3fc71254849b39e943e9d1061b10a2\",\n  \"crc32ChecksumAsHexString\": \"EAB65274\"\n}"
     }
   ]
 }

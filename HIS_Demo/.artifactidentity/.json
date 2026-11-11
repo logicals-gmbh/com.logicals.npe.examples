@@ -5,8 +5,8 @@
     "projectName": "HIS_Demo",
     "projectRelativePath": ""
   },
-  "md5ChecksumAsHexString": "9ba27737f47646e4fa08e257ff9cfce7",
-  "crc32ChecksumAsHexString": "D97EFCF2",
+  "md5ChecksumAsHexString": "c46fa500a71962d11197a898c6f61877",
+  "crc32ChecksumAsHexString": "2DF50BCD",
   "members": [
     {
       "fileName": ".gui",
@@ -26,11 +26,15 @@
     },
     {
       "fileName": ".settings",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \".settings\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"495eb2a932b0766caf1e7fac09134206\",\n  \"crc32ChecksumAsHexString\": \"1193C860\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \".settings\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"235f94f24ff22335f8115cc80b1722d8\",\n  \"crc32ChecksumAsHexString\": \"7AB3C57C\"\n}"
+    },
+    {
+      "fileName": "Doc",
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"Doc\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"476cce070c73994744923a79965a41a0\",\n  \"crc32ChecksumAsHexString\": \"1B0A39E3\"\n}"
     },
     {
       "fileName": "IO",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"IO\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"c04e2b53ea7504f97ded3123e341bda4\",\n  \"crc32ChecksumAsHexString\": \"76ACF016\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"IO\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"af6bc840819e926d11e59c07de24b711\",\n  \"crc32ChecksumAsHexString\": \"CBE2BBC\"\n}"
     },
     {
       "fileName": "libraries.libref",
@@ -46,7 +50,7 @@
     },
     {
       "fileName": "RevPi.iecplc.res.RevPi.local.mrclog",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"RevPi.iecplc.res.RevPi.local.mrclog\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"ba7daa08059ce51b11de75bbc8e74eed\",\n  \"crc32ChecksumAsHexString\": \"81838E0D\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"RevPi.iecplc.res.RevPi.local.mrclog\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"18d399b96a67c90166b38543f275fcc8\",\n  \"crc32ChecksumAsHexString\": \"F2477CE8\"\n}"
     },
     {
       "fileName": "RTSMicroSafeLocal.iecplc",
@@ -54,11 +58,11 @@
     },
     {
       "fileName": "src",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"src\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"33c81d00e3555e994fdc1447a75cb5dd\",\n  \"crc32ChecksumAsHexString\": \"86351AEF\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"src\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"635631d7d660457a56ee0b22512d31b1\",\n  \"crc32ChecksumAsHexString\": \"89F5ABCA\"\n}"
     },
     {
       "fileName": "src-gen",
-      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"src-gen\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"119aab6b724f5c46127ec1f19f62ef8c\",\n  \"crc32ChecksumAsHexString\": \"DE8CD96C\"\n}"
+      "artifactData": "{\n  \"artifactMetadata\": {\n    \"additionalMetadata\": {},\n    \"artifactName\": \"src-gen\",\n    \"projectName\": \"HIS_Demo\",\n    \"projectRelativePath\": \"\"\n  },\n  \"md5ChecksumAsHexString\": \"7e4c2ee108b81ed97fc964d4b581319c\",\n  \"crc32ChecksumAsHexString\": \"33BF1BE6\"\n}"
     }
   ]
 }
